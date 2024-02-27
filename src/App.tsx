@@ -1,7 +1,15 @@
-import Teste from './teste'
+import GlobalStyle from './GlobalStyle'
+import Container from './containers//container/container'
+// import MenuPortfolio from './containers/menu/Menu'
 
 function App() {
-  return <Teste />
+  return (
+    <>
+      {/* <MenuPortfolio /> */}
+      <GlobalStyle />
+      <Container />
+    </>
+  )
 }
 
 export default App
