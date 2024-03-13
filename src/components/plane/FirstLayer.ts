@@ -1,20 +1,34 @@
+import { css } from 'styled-components'
 import { styled, keyframes } from 'styled-components'
 
-const changeAnimation = keyframes`
+const animationIn = keyframes`
   0% {
-    transform: translate(-50%, -50%) translateZ(0) rotateY(0deg);
+    transform: translate(-50%, -50%) translateZ(0) rotateY(180deg);
   }
 
   50% {
-    transform: translate(-50%, -50%) translateZ(-100px) rotateY(90deg);
+    transform: translate(-50%, -50%) translateZ(-400px) rotateY(270deg);
   }
 
   100% {
     transform: translate(-50%, -50%) translateZ(0) rotateY(360deg);
   }
 `
+const animationOut = keyframes`
+  0% {
+    transform: translate(-50%, -50%) translateZ(0) rotateY(0deg);
+  }
 
-export const FirstLayer = styled.div`
+  50% {
+    transform: translate(-50%, -50%) translateZ(-400px) rotateY(90deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) translateZ(0) rotateY(180deg);
+  }
+`
+
+export const FirstLayer = styled.div<{ trigger: string }>`
   position: absolute;
   left: 50%;
   top: 50%;
@@ -24,10 +38,22 @@ export const FirstLayer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
   transform-style: preserve-3d;
-  // transform: translate(-50%, -50%) translateZ(0) rotateY(80deg);
-  animation: ${changeAnimation} 10s linear infinite;
+
+  animation: ${({ trigger }) => {
+    switch (trigger) {
+      case 'animationIn':
+        return css`
+          ${animationIn} 2s linear
+        `
+      case 'animationOut':
+        return css`
+          ${animationOut} 2s linear
+        `
+      default:
+        return 'none'
+    }
+  }};
 
   max-width: 400px;
   max-height: 400px;

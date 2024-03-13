@@ -1,13 +1,21 @@
+import { useDispatch } from 'react-redux'
+import { selectPage } from '../../store/reducers/changepage'
+
 import { MenuItem, MenuContainer } from './Menu.styles'
 
-function menu() {
+const Menu = () => {
+  const dispatch = useDispatch()
+  const handleClick = (page: string) => {
+    dispatch(selectPage(page))
+  }
+
   return (
     <MenuContainer>
-      <MenuItem>Sobre</MenuItem>
-      <MenuItem>Competências</MenuItem>
-      <MenuItem>Projetos</MenuItem>
+      <MenuItem onClick={() => handleClick('about')}>Sobre</MenuItem>
+      <MenuItem onClick={() => handleClick('skills')}>Competências</MenuItem>
+      <MenuItem onClick={() => handleClick('projects')}>Projetos</MenuItem>
     </MenuContainer>
   )
 }
 
-export default menu
+export default Menu

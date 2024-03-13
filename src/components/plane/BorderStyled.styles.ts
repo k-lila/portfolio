@@ -9,13 +9,8 @@ export type borderProps = {
 
 const borderAnimation = (props: borderProps) => keyframes`
   0% {
-    transform: translate(-50%, -50%) translateZ(0);
-  }
-
-  50% {
     transform: translate(-50%, -50%) translateZ(${props.$zheight});
   }
-
   100% {
     transform: translate(-50%, -50%) translateZ(0);
   }
@@ -29,5 +24,5 @@ export const BordersStyled = styled.div<borderProps>`
   border: ${(props) => props.$wborder} solid black;
   height: ${(props) => props.$height};
   width: ${(props) => props.$width};
-  animation: ${borderAnimation} 10s linear infinite;
+  animation: ${borderAnimation} 2.5s linear;
 `
