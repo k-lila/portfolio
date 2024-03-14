@@ -30,7 +30,10 @@ export const BordersStyled = styled.div<borderProps>`
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) translateZ(${(props) => props.$zheight});
+  transform: translate(-50%, -50%)
+    translateZ(
+      ${(props) => (props.trigger === 'none' ? '1px' : props.$zheight)}
+    );
   border: ${(props) => props.$wborder} solid black;
   height: ${(props) => props.$height};
   width: ${(props) => props.$width};
