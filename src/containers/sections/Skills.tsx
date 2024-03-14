@@ -2,7 +2,7 @@ import Section from '../../components/section/Section'
 const Skills = (props: { trigger: string }) => {
   return (
     <Section trigger={props.trigger} name="Skills" render={true}>
-      <h2></h2>
+      <h2>Competências</h2>
     </Section>
   )
 }

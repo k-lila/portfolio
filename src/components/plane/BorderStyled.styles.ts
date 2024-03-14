@@ -41,11 +41,11 @@ export const BordersStyled = styled.div<borderProps>`
     switch (trigger) {
       case 'animationIn':
         return css`
-          ${animationIn({ $zheight })} 1.5s linear forwards
+          ${animationIn({ $zheight })} 1.75s linear forwards
         `
       case 'animationOut':
         return css`
-          ${animationOut({ $zheight })} 1.5s linear forwards
+          ${animationOut({ $zheight })} 1.75s linear forwards
         `
       default:
         return 'none'

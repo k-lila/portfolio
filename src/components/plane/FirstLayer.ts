@@ -5,11 +5,9 @@ const animationIn = keyframes`
   0% {
     transform: translate(-50%, -50%) translateZ(0px) rotateY(180deg);
   }
-
   50% {
     transform: translate(-50%, -50%) translateZ(-400px) rotateY(270deg);
   }
-
   100% {
     transform: translate(-50%, -50%) translateZ(0px) rotateY(360deg);
   }
@@ -18,11 +16,9 @@ const animationOut = keyframes`
   0% {
     transform: translate(-50%, -50%) translateZ(0px) rotateY(0deg);
   }
-
   50% {
     transform: translate(-50%, -50%) translateZ(-400px) rotateY(90deg);
   }
-
   100% {
     transform: translate(-50%, -50%) translateZ(0px) rotateY(180deg);
     display: none
@@ -45,11 +41,11 @@ export const FirstLayer = styled.div<{ trigger: string }>`
     switch (trigger) {
       case 'animationIn':
         return css`
-          ${animationIn} 2s linear forwards
+          ${animationIn} 1.75s linear forwards
         `
       case 'animationOut':
         return css`
-          ${animationOut} 2s linear forwards
+          ${animationOut} 1.75s linear forwards
         `
       default:
         return 'none'
