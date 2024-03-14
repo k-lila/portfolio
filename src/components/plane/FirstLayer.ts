@@ -3,7 +3,7 @@ import { styled, keyframes } from 'styled-components'
 
 const animationIn = keyframes`
   0% {
-    transform: translate(-50%, -50%) translateZ(0) rotateY(180deg);
+    transform: translate(-50%, -50%) translateZ(0px) rotateY(180deg);
   }
 
   50% {
@@ -11,12 +11,12 @@ const animationIn = keyframes`
   }
 
   100% {
-    transform: translate(-50%, -50%) translateZ(0) rotateY(360deg);
+    transform: translate(-50%, -50%) translateZ(0px) rotateY(360deg);
   }
 `
 const animationOut = keyframes`
   0% {
-    transform: translate(-50%, -50%) translateZ(0) rotateY(0deg);
+    transform: translate(-50%, -50%) translateZ(0px) rotateY(0deg);
   }
 
   50% {
@@ -24,7 +24,8 @@ const animationOut = keyframes`
   }
 
   100% {
-    transform: translate(-50%, -50%) translateZ(0) rotateY(180deg);
+    transform: translate(-50%, -50%) translateZ(0px) rotateY(180deg);
+    display: none
   }
 `
 
@@ -33,7 +34,7 @@ export const FirstLayer = styled.div<{ trigger: string }>`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgb(255, 0, 0, 0.75);
+  background-color: rgb(255, 0, 0, 1);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -44,11 +45,11 @@ export const FirstLayer = styled.div<{ trigger: string }>`
     switch (trigger) {
       case 'animationIn':
         return css`
-          ${animationIn} 2s linear
+          ${animationIn} 2s linear forwards
         `
       case 'animationOut':
         return css`
-          ${animationOut} 2s linear
+          ${animationOut} 2s linear forwards
         `
       default:
         return 'none'
