@@ -1,14 +1,11 @@
 import styled from 'styled-components'
 
-export const MenuItem = styled.button`
-  cursor: pointer;
-`
-
 export const MenuContainer = styled.div`
-  border: 3px solid black;
-  padding: 5px;
-
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
-  margin: 0 auto;
-  width: min-content;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5em;
 `
