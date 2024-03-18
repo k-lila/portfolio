@@ -9,9 +9,15 @@ const sectionProps: { [key: string]: BoxProps } = {
     $width: '15em',
     $height: '8em',
 
-    $topsm: '7em',
-    $leftsm: '76%',
-    $widthsm: '9em',
+    $topxsm: '20%',
+    $leftxsm: '80%',
+    $widthxsm: '25%',
+    $heightxsm: '20%',
+
+    $topsm: '18em',
+    $leftsm: '25%',
+    $widthsm: '33%',
+    $heightsm: '3em',
 
     $topmd: '10em',
     $leftmd: '74%',
@@ -33,12 +39,7 @@ const sectionProps: { [key: string]: BoxProps } = {
 }
 
 const sectionContent: { [key: string]: JSX.Element } = {
-  about: (
-    <h1>
-      asdasd
-      <span>asd</span>
-    </h1>
-  ),
+  about: <h1>asdasd</h1>,
   skills: <h2>asd</h2>,
   projects: <h3>ddd</h3>
 }

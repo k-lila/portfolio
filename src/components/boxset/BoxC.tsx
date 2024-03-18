@@ -6,12 +6,17 @@ const sectionProps: { [key: string]: BoxProps } = {
   about: {
     $top: '63%',
     $left: '50%',
-    $width: '88%',
+    $width: '33%',
     $height: '40%',
 
-    $topsm: '58%',
-    $heightsm: '55%',
+    $topxsm: '42%',
+    $leftxsm: '50%',
+    $widthxsm: '80%',
+    $heightxsm: '10%',
 
+    $topsm: '18em',
+    $leftsm: '75%',
+    $heightsm: '15%',
     $topmd: '60%',
     $heightmd: '52%'
   },

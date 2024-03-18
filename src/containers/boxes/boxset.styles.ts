@@ -1,13 +1,12 @@
 import styled from 'styled-components'
 
 const BoxSet = styled.div`
-  position: absolute;
-  display: flex;
+  position: relative;
   background-color: rgba(0, 0, 0, 0.5);
   transform: translate(-50%, -50%);
   top: 54%;
   left: 50%;
-  width: 90%;
+  width: 95%;
   max-width: 500px;
   height: 85%;
   border-radius: 10px;

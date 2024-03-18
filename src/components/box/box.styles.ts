@@ -11,7 +11,15 @@ const BoxStyled = styled.div<BoxProps>`
   transform: translate(-50%, -50%);
   background-color: black;
   transition: all 0.5s ease-in;
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: 576px) {
+    top: ${(props) => (props.$topxsm ? props.$topxsm : props.$top)};
+    left: ${(props) => (props.$leftxsm ? props.$leftxsm : props.$left)};
+    width: ${(props) => (props.$widthxsm ? props.$widthxsm : props.$width)};
+    height: ${(props) => (props.$heightxsm ? props.$heightxsm : props.$height)};
+  }
+
+  @media screen and (min-width: 577px) and (max-width: 768px) {
     top: ${(props) => (props.$topsm ? props.$topsm : props.$top)};
     left: ${(props) => (props.$leftsm ? props.$leftsm : props.$left)};
     width: ${(props) => (props.$widthsm ? props.$widthsm : props.$width)};

@@ -3,18 +3,27 @@ import BoxStyled from './box.styles'
 
 export type BoxProps = {
   children?: ReactNode
+
   $top: string
+  $topxsm?: string
   $topsm?: string
   $topmd?: string
-  $left: string
+
+  $leftxsm?: string
   $leftsm?: string
   $leftmd?: string
-  $width: string
+  $left: string
+
+  $widthxsm?: string
   $widthsm?: string
   $widthmd?: string
-  $height: string
+  $width: string
+
+  $heightxsm?: string
   $heightsm?: string
   $heightmd?: string
+  $height: string
+
   $bradius?: string
 }
 

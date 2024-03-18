@@ -21,7 +21,7 @@ export const MenuBtn = styled.button`
   border: none;
   border-radius: 0.4em;
   padding: 0.2em 0.5em;
-  margin: 0 1em;
+  margin: 0;
   background-color: white;
   cursor: pointer;
   transition: all 0.3s;
