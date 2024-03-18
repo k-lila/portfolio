@@ -25,6 +25,8 @@ export type BoxProps = {
   $height: string
 
   $bradius?: string
+  $maxw?: string
+  $maxh?: string
 }
 
 const Box = ({ children, ...props }: BoxProps) => {
