@@ -4,15 +4,25 @@ import Box, { BoxProps } from '../box/box'
 
 const sectionProps: { [key: string]: BoxProps } = {
   about: {
-    $top: '8.5em',
-    $left: '74%',
-    $width: '38%',
-    $height: '8em',
+    $top: '33svh',
+    $left: '60%',
+    $width: '7%',
+    $height: '25vh',
 
     $topxsm: '16svh',
     $leftxsm: '76vw',
     $widthxsm: '25vw',
-    $heightxsm: '25vw'
+    $heightxsm: '25vw',
+
+    $topsm: '16svh',
+    $leftsm: '70%',
+    $widthsm: '20%',
+    $heightsm: '25vw',
+
+    $topmd: '33svh',
+    $leftmd: '75%',
+    $widthmd: '20%',
+    $heightmd: '25vh'
   },
   skills: {
     $top: '30%',
