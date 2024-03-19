@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const MenuContainer = styled.div`
-  position: absolute;
-  top: 5%;
+  position: fixed;
+  top: 95vh;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;

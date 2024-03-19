@@ -9,20 +9,10 @@ const sectionProps: { [key: string]: BoxProps } = {
     $width: '38%',
     $height: '8em',
 
-    $topxsm: '20%',
-    $leftxsm: '78%',
-    $widthxsm: '22%',
-    $heightxsm: '25%',
-
-    $topsm: '20%',
-    $leftsm: '78%',
-    $widthsm: '22%',
-    $heightsm: '25%',
-
-    $topmd: '11em',
-    $leftmd: '75%',
-    $widthmd: '25%',
-    $heightmd: '20%'
+    $topxsm: '18vh',
+    $leftxsm: '76vw',
+    $widthxsm: '25vw',
+    $heightxsm: '25vw'
   },
   skills: {
     $top: '30%',
@@ -34,8 +24,7 @@ const sectionProps: { [key: string]: BoxProps } = {
     $top: '30%',
     $left: '90%',
     $width: '100px',
-    $height: '200px',
-    $bradius: '20px'
+    $height: '200px'
   }
 }
 

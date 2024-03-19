@@ -4,7 +4,7 @@ export const BtnBorder = styled.div`
   position: absolute;
   width: 0%;
   margin: 0 auto;
-  top: -0.2em;
+  top: em;
   left: -5%;
   right: 0;
   bottom: -0.2em;

@@ -6,6 +6,9 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+  body {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
 `
 
 export default GlobalStyle

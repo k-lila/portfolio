@@ -1,12 +1,16 @@
 import ContainerStyled from './Container.styles'
-import Menu from '../menu/Menu'
-import Boxes from '../boxes/Boxes'
+import BoxA from '../../components/boxset/BoxA'
+import BoxB from '../../components/boxset/BoxB'
+import BoxC from '../../components/boxset/BoxC'
+import BoxD from '../../components/boxset/BoxD'
 
 const Container = () => {
   return (
     <ContainerStyled>
-      <Menu />
-      <Boxes />
+      <BoxA />
+      <BoxB />
+      <BoxC />
+      <BoxD />
     </ContainerStyled>
   )
 }
