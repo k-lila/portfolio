@@ -9,7 +9,7 @@ const sectionProps: { [key: string]: BoxProps } = {
     $width: '38%',
     $height: '8em',
 
-    $topxsm: '18svh',
+    $topxsm: '16svh',
     $leftxsm: '76vw',
     $widthxsm: '25vw',
     $heightxsm: '25vw'

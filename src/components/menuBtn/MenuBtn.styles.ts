@@ -4,7 +4,7 @@ export const BtnBorder = styled.div`
   position: absolute;
   width: 0%;
   margin: 0 auto;
-  top: em;
+  // top: em;
   left: -5%;
   right: 0;
   bottom: -0.2em;
@@ -12,9 +12,6 @@ export const BtnBorder = styled.div`
 export const Span = styled.span`
   font-size: 1.5em;
   text-align: center;
-  @media screen and (max-width: 500px) {
-    font-size: 5vw;
-  }
 `
 export const MenuBtn = styled.button`
   position: relative;
