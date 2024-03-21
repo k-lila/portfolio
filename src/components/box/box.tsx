@@ -17,12 +17,12 @@ export type BoxProps = {
   $widthxsm?: string
   $widthsm?: string
   $widthmd?: string
-  $width: string
+  $width?: string
 
   $heightxsm?: string
   $heightsm?: string
   $heightmd?: string
-  $height: string
+  $height?: string
 
   $bradius?: string
 }

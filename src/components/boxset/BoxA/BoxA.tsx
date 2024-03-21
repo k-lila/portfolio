@@ -1,31 +1,33 @@
 import { useSelector } from 'react-redux'
-import { RootReducer } from '../../store'
-import Box, { BoxProps } from '../box/box'
+import { RootReducer } from '../../../store'
+import Box, { BoxProps } from '../../box/box'
+import AboutA from './about'
 
 const sectionProps: { [key: string]: BoxProps } = {
   about: {
-    $top: '46svh',
+    $bradius: '100%',
+    $top: '25svh',
     $left: '40%',
-    $width: '20%',
-    $height: '8svh',
+    $width: '25svh',
+    $height: '25svh',
 
-    $topxsm: '38svh',
-    $leftxsm: '50%',
-    $widthxsm: '80%',
-    $heightxsm: '10svh',
+    $topxsm: '16svh',
+    $leftxsm: '32vw',
+    $widthxsm: '50vw',
+    $heightxsm: '50vw',
 
-    $topsm: '38svh',
-    $leftsm: '50%',
-    $widthsm: '80%',
-    $heightsm: '10svh',
+    $topsm: '16svh',
+    $leftsm: '33%',
+    $widthsm: '25svh',
+    $heightsm: '25svh',
 
-    $topmd: '46svh',
+    $topmd: '25svh',
     $leftmd: '33%',
-    $widthmd: '40%',
-    $heightmd: '8svh'
+    $widthmd: '25svh',
+    $heightmd: '25svh'
   },
   skills: {
-    $top: '30%',
+    $top: '50vh',
     $left: '50%',
     $width: '100px',
     $height: '200px'
@@ -39,20 +41,14 @@ const sectionProps: { [key: string]: BoxProps } = {
 }
 
 const sectionContent: { [key: string]: JSX.Element } = {
-  about: (
-    <h1>
-      asdasd
-      <span>asd</span>
-    </h1>
-  ),
+  about: <AboutA />,
   skills: <h2>asd</h2>,
   projects: <h3>ddd</h3>
 }
 
-const BoxC = () => {
+const BoxA = () => {
   const state = useSelector((state: RootReducer) => state.select.section)
-
   return <Box {...sectionProps[state]}>{sectionContent[state]}</Box>
 }
 
-export default BoxC
+export default BoxA

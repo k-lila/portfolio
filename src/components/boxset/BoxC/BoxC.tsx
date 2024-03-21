@@ -1,33 +1,25 @@
 import { useSelector } from 'react-redux'
-import { RootReducer } from '../../store'
-import Box, { BoxProps } from '../box/box'
+import { RootReducer } from '../../../store'
+import Box, { BoxProps } from '../../box/box'
+import AboutC from './AboutC.styles'
 
 const sectionProps: { [key: string]: BoxProps } = {
   about: {
-    $bradius: '100%',
-    $top: '25svh',
+    $top: '46svh',
     $left: '40%',
-    $width: '25svh',
-    $height: '25svh',
 
-    $topxsm: '16svh',
-    $leftxsm: '32vw',
-    $widthxsm: '50vw',
-    $heightxsm: '50vw',
+    $topxsm: '38svh',
+    $leftxsm: '50%',
 
-    $topsm: '16svh',
-    $leftsm: '33%',
-    $widthsm: '25svh',
-    $heightsm: '25svh',
+    $topsm: '38svh',
+    $leftsm: '50%',
 
-    $topmd: '25svh',
-    $leftmd: '33%',
-    $widthmd: '25svh',
-    $heightmd: '25svh'
+    $topmd: '46svh',
+    $leftmd: '33%'
   },
   skills: {
-    $top: '30%',
-    $left: '50%',
+    $top: '50vh',
+    $left: '75%',
     $width: '100px',
     $height: '200px'
   },
@@ -41,17 +33,20 @@ const sectionProps: { [key: string]: BoxProps } = {
 
 const sectionContent: { [key: string]: JSX.Element } = {
   about: (
-    <h1>
-      <span>a</span>
-    </h1>
+    <AboutC>
+      <h5>Desenvolvedor Front End</h5>
+      <h3>Krishna Lila Palandi</h3>
+      <h5>Santa Maria, RS</h5>
+    </AboutC>
   ),
   skills: <h2>asd</h2>,
   projects: <h3>ddd</h3>
 }
 
-const BoxA = () => {
+const BoxC = () => {
   const state = useSelector((state: RootReducer) => state.select.section)
+
   return <Box {...sectionProps[state]}>{sectionContent[state]}</Box>
 }
 
-export default BoxA
+export default BoxC
