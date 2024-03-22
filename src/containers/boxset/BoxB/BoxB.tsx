@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux'
 import { RootReducer } from '../../../store'
-import Box, { BoxProps } from '../../box/box'
-import AboutB from './AboutB.styles'
+import Box, { BoxProps } from '../../../components/box/box'
+import ContactList from '../../../components/About/ContactList'
 
 const sectionProps: { [key: string]: BoxProps } = {
   about: {
@@ -33,30 +33,8 @@ const sectionProps: { [key: string]: BoxProps } = {
   }
 }
 
-const CopyInfo = (text: string) => {
-  navigator.clipboard.writeText(text)
-}
-
-// const HandleClick = (type: string) => {}
-
 const sectionContent: { [key: string]: JSX.Element } = {
-  about: (
-    <AboutB>
-      <a href="tel:+55123456789">
-        <img src="/logos/add_call_FILL0_wght400_GRAD0_opsz24.png" alt="" />
-      </a>
-      <a href="mailto:seuemail@example.com">
-        <img src="/logos/mail_FILL0_wght400_GRAD0_opsz24.png" alt="E-mail" />
-      </a>
-
-      <a href="https://github.com/k-lila/" target="_blank" rel="noreferrer">
-        <img src="/logos/GitHub_Logo_White.png" alt="GitHub" />
-      </a>
-      <a href="https://br.linkedin.com/" target="_blank" rel="noreferrer">
-        <img src="/logos/LI-Logo.png" alt="LinkedIn" />
-      </a>
-    </AboutB>
-  ),
+  about: <ContactList />,
   skills: <h2>asd</h2>,
   projects: <h3>ddd</h3>
 }

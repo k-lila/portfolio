@@ -1,8 +1,8 @@
 import ContainerStyled from './Container.styles'
-import BoxA from '../../components/boxset/BoxA/BoxA'
-import BoxB from '../../components/boxset/BoxB/BoxB'
-import BoxC from '../../components/boxset/BoxC/BoxC'
-import BoxD from '../../components/boxset/BoxD'
+import BoxA from '../boxset/BoxA/BoxA'
+import BoxB from '../boxset/BoxB/BoxB'
+import BoxC from '../boxset/BoxC/BoxC'
+import BoxD from '../boxset/BoxD'
 
 const Container = () => {
   return (
