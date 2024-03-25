@@ -11,6 +11,7 @@ export const BtnBorder = styled.div`
 `
 export const Span = styled.span`
   font-size: 1.5em;
+  background-color: red;
   text-align: center;
 `
 export const MenuBtn = styled.button`

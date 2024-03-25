@@ -10,6 +10,7 @@ const BoxStyled = styled.div<BoxProps>`
   height: ${(props) => props.$height};
   transform: translate(-50%, -50%);
   background-color: black;
+
   transition: all 0.5s ease-in;
 
   @media screen and (max-width: 576px) {
