@@ -1,9 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
 import selectReducer from './reducers/changepage'
-
+import deviceReducer from './reducers/selectdevice'
 export const store = configureStore({
   reducer: {
-    select: selectReducer
+    select: selectReducer,
+    device: deviceReducer
   }
 })
 
