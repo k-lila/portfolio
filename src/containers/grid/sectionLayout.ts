@@ -10,8 +10,8 @@ type Layouts = {
 const sectionLayouts: Layouts = {
   about: {
     cel: {
-      columns: '5vw 40vw 2vw 3vw 4vw 2vw 5vw 24vw 5vw',
-      rows: '6svh 2svh 30svh 3svh 6svh 6svh 6svh 6svh 6svh 6svh'
+      columns: '5vw 5vw 3vw 3vw 40vw 4vw 5vw 20vw 5vw',
+      rows: '6svh 40svh 2svh 2svh 10svh 2svh 15svh 6svh 6svh 6svh'
     },
     tab: {
       columns: '10vw 5vw 2vw 4vw 4vw 6vw 8vw 13svw 15vw',

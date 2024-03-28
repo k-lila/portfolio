@@ -49,7 +49,7 @@ const setProjects = (boxes: Array<any>, device: string) => {
 
 const boxGen = (section: string, device: string) => {
   const boxes = Array.from({ length: 24 }, (_, index) => (
-    <Box key={index}>{index}</Box>
+    <Box key={index}></Box>
   ))
   boxes[4] = <Box key={4} $gcol="span 6"></Box>
   boxes[5] = <Box key={5} $gcol="span 2" $grow="span 2"></Box>

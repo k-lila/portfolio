@@ -5,7 +5,7 @@ const BoxStyled = styled.div<BoxProps>`
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 2s;
+  transition: all 1s;
 
   background-color: ${(props) => (props.$bgcolor ? props.$bgcolor : 'white')};
   height: ${(props) => (props.$height ? props.$height : '100%')};
