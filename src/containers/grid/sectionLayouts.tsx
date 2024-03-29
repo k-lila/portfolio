@@ -13,8 +13,8 @@ type Layouts = {
 export const sectionLayouts: Layouts = {
   about: {
     cel: {
-      columns: '5vw 5vw 30vw 5vw 3vw 5vw 30vw 5vw 5vw',
-      rows: '6svh 10svh 3svh 30svh 2svh 2svh 2svh 3svh 35svh 2svh'
+      columns: '5vw 2vw 32vw 4vw 4vw 4vw 32vw 2vw 5vw',
+      rows: '6svh 12svh 2svh 30svh 2svh 2svh 2svh 2svh 35svh 2svh'
     },
     tab: {
       columns: '10vw 5vw 2vw 4vw 4vw 6vw 8vw 13svw 15vw',
@@ -87,7 +87,7 @@ export const genLayoutA = () => {
 }
 
 export const genLayoutB = () => {
-  const boxes = Array.from({ length: 24 }, (_, index) => (
+  const boxes = Array.from({ length: 23 }, (_, index) => (
     <Box key={index}></Box>
   ))
   boxes[1] = (

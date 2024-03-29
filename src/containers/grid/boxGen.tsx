@@ -1,5 +1,4 @@
 import React from 'react'
-import Box from '../../components/box/box'
 import { genLayoutA, genLayoutB } from './sectionLayouts'
 
 const setAbout = (device: string) => {
