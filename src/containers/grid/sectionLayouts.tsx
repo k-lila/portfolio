@@ -14,7 +14,7 @@ export const sectionLayouts: Layouts = {
   about: {
     cel: {
       columns: '5vw 2vw 32vw 4vw 4vw 4vw 32vw 2vw 5vw',
-      rows: '6svh 12svh 2svh 30svh 2svh 2svh 2svh 2svh 35svh 2svh'
+      rows: '6svh 12svh 2svh 30svh 2svh 2svh 2svh 2svh 33svh 4svh'
     },
     tab: {
       columns: '10vw 5vw 2vw 4vw 4vw 6vw 8vw 13svw 15vw',

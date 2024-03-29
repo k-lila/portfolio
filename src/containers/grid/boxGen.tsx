@@ -1,12 +1,16 @@
 import React from 'react'
 import { genLayoutA, genLayoutB } from './sectionLayouts'
+import ContactList from '../../components/contactList/ContactList'
 
 const setAbout = (device: string) => {
   const boxes = genLayoutB()
   const modified = boxes.map((box, index) => {
-    if (index === 4 || index === 8 || index === 10 || index === 19) {
+    if (index === 4 || index === 8 || index === 19) {
       const newProps = { ...box.props, $bgcolor: 'wheat' }
       return React.cloneElement(box, newProps)
+    } else if (index === 10) {
+      // const newProps = { ...box.props }
+      return React.cloneElement(box, { ...box.props }, <ContactList />)
     } else {
       return box
     }
