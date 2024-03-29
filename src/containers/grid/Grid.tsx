@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import StyledGrid from './StyledGrid.styles'
 import { RootReducer } from '../../store'
 import { selectDevice } from '../../store/reducers/selectdevice'
-import sectionLayouts from './sectionLayout'
+import { sectionLayouts } from './sectionLayouts'
 import { discoverDevice } from '../../utils'
-import boxGen from './utils/boxGen'
+import boxGen from './boxGen'
 
 const Grid = () => {
   const dispatch = useDispatch()
