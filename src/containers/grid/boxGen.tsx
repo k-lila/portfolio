@@ -9,8 +9,11 @@ const setAbout = (device: string) => {
       const newProps = { ...box.props, $bgcolor: 'wheat' }
       return React.cloneElement(box, newProps)
     } else if (index === 10) {
-      // const newProps = { ...box.props }
-      return React.cloneElement(box, { ...box.props }, <ContactList />)
+      return React.cloneElement(
+        box,
+        { ...box.props, $bgcolor: 'wheat' },
+        <ContactList />
+      )
     } else {
       return box
     }
