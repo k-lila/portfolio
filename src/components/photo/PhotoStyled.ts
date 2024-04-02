@@ -5,13 +5,11 @@ const show = keyframes`
   to { opacity: 1 }
 `
 
-const ContactListStyled = styled.section`
-  height: 100%;
+const Img = styled.img`
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  height: 100%;
+  object-fit: cover;
   animation: ${show} 0.5s linear forwards;
 `
 
-export default ContactListStyled
+export default Img

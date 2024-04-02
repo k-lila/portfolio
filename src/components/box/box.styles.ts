@@ -6,7 +6,7 @@ const BoxStyled = styled.div<BoxProps>`
   align-items: center;
   justify-content: center;
   transition: all 1s;
-  overflow: scroll;
+  overflow: auto;
 
   background-color: ${(props) => (props.$bgcolor ? props.$bgcolor : 'white')};
   height: ${(props) => (props.$height ? props.$height : '100%')};

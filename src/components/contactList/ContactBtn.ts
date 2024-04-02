@@ -4,9 +4,9 @@ const ContactBtn = styled.div`
   background-color: #00008b;
   display: flex;
   align-items: center;
-  margin: 0.5em;
-  border-radius: 3px;
-  padding: 1px 3px;
+  margin: 0.5em 0 0.5em 1em;
+  border-radius: 5px 0 0 5px;
+  padding: 2px 0;
   a {
     display: flex;
     align-items: center;

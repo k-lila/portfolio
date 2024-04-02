@@ -2,30 +2,37 @@ import React from 'react'
 import { genLayoutA, genLayoutB } from './sectionLayouts'
 import ContactList from '../../components/contactList/ContactList'
 import Presentation from '../../components/presentation/Presentation'
+import Photo from '../../components/photo/Photo'
 
 const setAbout = (device: string) => {
   const boxes = genLayoutB()
-  const modified = boxes.map((box, index) => {
-    if (index === 8 || index === 19) {
-      const newProps = { ...box.props, $bgcolor: 'wheat' }
-      return React.cloneElement(box, newProps)
-    } else if (index === 4) {
-      return React.cloneElement(
-        box,
-        { ...box.props, $bgcolor: 'wheat' },
-        <Presentation />
-      )
-    } else if (index === 10) {
-      return React.cloneElement(
-        box,
-        { ...box.props, $bgcolor: 'wheat' },
-        <ContactList />
-      )
-    } else {
-      return box
-    }
-  })
-  return modified
+  if (device === 'cel') {
+    const modified = boxes.map((box, index) => {
+      if (index === 19) {
+        const newProps = { ...box.props, $bgcolor: 'wheat' }
+        return React.cloneElement(box, newProps)
+      } else if (index === 4) {
+        return React.cloneElement(
+          box,
+          { ...box.props, $bgcolor: 'wheat' },
+          <Presentation />
+        )
+      } else if (index === 8) {
+        return React.cloneElement(box, { ...box.props }, <Photo />)
+      } else if (index === 10) {
+        return React.cloneElement(
+          box,
+          { ...box.props, $bgcolor: 'wheat' },
+          <ContactList />
+        )
+      } else {
+        return box
+      }
+    })
+    return modified
+  } else {
+    return boxes
+  }
 }
 
 const setSkills = (device: string) => {
