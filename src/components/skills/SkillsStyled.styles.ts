@@ -3,27 +3,15 @@ import styled from 'styled-components'
 const GridSkills = styled.div`
   height: 100%;
   width: 100%;
-  ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 100%;
-    li {
-      height: 30%;
-      align-items: center;
-    }
-    :nth-child(1),
-    :nth-child(3) {
-      display: flex;
-      justify-content: space-around;
-    }
-    :nth-child(2) {
-      display: flex;
-      justify-content: space-evenly;
-    }
-  }
+  gap: 1svw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
   img {
-    height: 100%;
+    max-height: 75%;
+    max-width: 75%;
   }
 `
 export default GridSkills

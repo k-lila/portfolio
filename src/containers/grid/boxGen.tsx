@@ -44,11 +44,7 @@ const setSkills = (device: string) => {
       const newProps = { ...box.props, $bgcolor: 'wheat' }
       return React.cloneElement(box, newProps)
     } else if (index === 7) {
-      return React.cloneElement(
-        box,
-        { ...box.props, $bgcolor: 'wheat' },
-        <Skills />
-      )
+      return React.cloneElement(box, { ...box.props }, <Skills />)
     } else {
       return box
     }
