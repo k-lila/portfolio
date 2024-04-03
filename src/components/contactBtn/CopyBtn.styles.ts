@@ -6,7 +6,7 @@ const CopyBtn = styled.button`
   align-items: center;
   cursor: pointer;
   background-color: transparent;
-  margin: 0 4px;
+  margin: 0 10px;
   img {
     height: 3vh;
   }

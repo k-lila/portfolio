@@ -1,7 +1,6 @@
-import Box from '../box/box'
-import ContactBtn from './ContactBtn'
+import ContactBtn from '../../components/contactBtn/ContactBtn'
 import ContactListStyled from './ContactList.styles'
-import CopyBtn from './CopyBtn.styles'
+import CopyBtn from '../../components/contactBtn/CopyBtn.styles'
 
 const handleClick = (text: string) => {
   navigator.clipboard.writeText(text)

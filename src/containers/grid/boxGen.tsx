@@ -1,9 +1,10 @@
 import React from 'react'
 import { genLayoutA, genLayoutB } from './sectionLayouts'
-import ContactList from '../../components/contactList/ContactList'
+import ContactList from '../contactList/ContactList'
 import Presentation from '../../components/presentation/Presentation'
 import Photo from '../../components/photo/Photo'
 import Description from '../../components/description/Description'
+import Skills from '../../components/skills/Skills'
 
 const setAbout = (device: string) => {
   const boxes = genLayoutB()
@@ -39,9 +40,15 @@ const setAbout = (device: string) => {
 const setSkills = (device: string) => {
   const boxes = genLayoutA()
   const modified = boxes.map((box, index) => {
-    if (index === 7 || index === 12 || index === 19 || index == 23) {
+    if (index === 12 || index === 19 || index == 23) {
       const newProps = { ...box.props, $bgcolor: 'wheat' }
       return React.cloneElement(box, newProps)
+    } else if (index === 7) {
+      return React.cloneElement(
+        box,
+        { ...box.props, $bgcolor: 'wheat' },
+        <Skills />
+      )
     } else {
       return box
     }
