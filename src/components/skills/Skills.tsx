@@ -12,6 +12,8 @@ const Skills = () => {
       />
       <img src="./skills/ts-logo-512.svg" alt="Typescript logo" />
       <img src="./skills/Python-logo-notext.svg" alt="Python logo" />
+      <img src="./skills/bootstrap-logo.svg" alt="Bootstrap logo" />
+      <img src="./skills/React-icon.svg" alt="React logo" />
       <img src="./skills/reduxlogo.svg" alt="Redux logo" />
       <img
         src="./skills/styled-components-1.svg"
