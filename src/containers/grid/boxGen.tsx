@@ -5,28 +5,22 @@ import Presentation from '../../components/presentation/Presentation'
 import Photo from '../../components/photo/Photo'
 import Description from '../../components/description/Description'
 import Skills from '../../components/skills/Skills'
+import MastersD from '../../components/training/mastersD'
+import FullStack from '../../components/training/fullstack'
+import Timeline from '../../components/timeline/Timeline'
 
 const setAbout = (device: string) => {
   const boxes = genLayoutB()
   if (device === 'cel') {
     const modified = boxes.map((box, index) => {
       if (index === 19) {
-        const newProps = { ...box.props, $bgcolor: 'wheat' }
-        return React.cloneElement(box, newProps, <Description />)
+        return React.cloneElement(box, { ...box.props }, <Description />)
       } else if (index === 4) {
-        return React.cloneElement(
-          box,
-          { ...box.props, $bgcolor: 'wheat' },
-          <Presentation />
-        )
+        return React.cloneElement(box, { ...box.props }, <Presentation />)
       } else if (index === 8) {
         return React.cloneElement(box, { ...box.props }, <Photo />)
       } else if (index === 10) {
-        return React.cloneElement(
-          box,
-          { ...box.props, $bgcolor: 'wheat' },
-          <ContactList />
-        )
+        return React.cloneElement(box, { ...box.props }, <ContactList />)
       } else {
         return box
       }
@@ -39,17 +33,25 @@ const setAbout = (device: string) => {
 
 const setSkills = (device: string) => {
   const boxes = genLayoutA()
-  const modified = boxes.map((box, index) => {
-    if (index === 12 || index === 19 || index == 23) {
-      const newProps = { ...box.props, $bgcolor: 'wheat' }
-      return React.cloneElement(box, newProps)
-    } else if (index === 7) {
-      return React.cloneElement(box, { ...box.props }, <Skills />)
-    } else {
-      return box
-    }
-  })
-  return modified
+
+  if (device === 'cel') {
+    const modified = boxes.map((box, index) => {
+      if (index === 7) {
+        return React.cloneElement(box, { ...box.props }, <Skills />)
+      } else if (index === 12) {
+        return React.cloneElement(box, { ...box.props }, <FullStack />)
+      } else if (index === 19) {
+        return React.cloneElement(box, { ...box.props }, <MastersD />)
+      } else if (index === 23) {
+        return React.cloneElement(box, { ...box.props }, <Timeline />)
+      } else {
+        return box
+      }
+    })
+    return modified
+  } else {
+    return boxes
+  }
 }
 
 const setProjects = (device: string) => {

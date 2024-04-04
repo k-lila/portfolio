@@ -1,4 +1,4 @@
-import Img from './PhotoStyled'
+import Img from './PhotoStyled.styles'
 
 const Photo = () => {
   return <Img src="./foto.jpg" />
