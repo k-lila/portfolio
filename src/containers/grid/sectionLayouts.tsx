@@ -28,7 +28,7 @@ export const sectionLayouts: Layouts = {
   skills: {
     cel: {
       columns: '5vw 2vw 12vw 20vw 20vw 12vw 12vw 2svw 5vw',
-      rows: '6svh 2svh 20svh 4svh 10svh 4svh 10svh 4svh 25svh 5svh'
+      rows: '6svh 2svh 20svh 2svh 14svh 2svh 14svh 2svh 25svh 5svh'
     },
     tab: {
       columns: '5vw 5vw 10vw 20vw 20vw 12vw 8vw 5svw 5vw',
