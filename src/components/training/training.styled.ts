@@ -7,7 +7,7 @@ const Training = styled.div`
   padding: 2%;
   justify-content: space-between;
   div {
-    font-size: 2.5svh;
+    font-size: 2svh;
     text-align: justify;
     padding: 1%;
     display: flex;
