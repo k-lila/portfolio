@@ -14,7 +14,13 @@ const Training = styled.div`
     flex-direction: column;
     justify-content: space-evenly;
   }
-  button {
+  a {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.75svw solid black;
+    background-color: transparent;
     margin: auto 2%;
     width: 20%;
     height: 75%;

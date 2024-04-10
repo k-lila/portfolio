@@ -17,8 +17,8 @@ export const sectionLayouts: Layouts = {
       rows: '6svh 12svh 2svh 30svh 2svh 2svh 2svh 2svh 32svh 3.5svh'
     },
     tab: {
-      columns: '5vw 2vw 32vw 4vw 4vw 4vw 32vw 2vw 5vw',
-      rows: '6svh 12svh 2svh 30svh 2svh 2svh 2svh 2svh 33svh 4svh'
+      columns: '10vw 2vw 24vw 6vw 12vw 14vw 10vw 2vw 10vw',
+      rows: '8svh 12svh 2svh 34svh 2svh 2svh 2svh 13svh 12svh 4svh'
     },
     pc: {
       columns: '5vw 2vw 32vw 4vw 4vw 4vw 32vw 2vw 5vw',
@@ -31,8 +31,8 @@ export const sectionLayouts: Layouts = {
       rows: '6svh 2svh 20svh 2svh 14svh 2svh 14svh 2svh 25svh 5svh'
     },
     tab: {
-      columns: '5vw 5vw 10vw 20vw 20vw 12vw 8vw 5svw 5vw',
-      rows: '6svh 2svh 20svh 4svh 15svh 4svh 15svh 4svh 20svh 5svh'
+      columns: '10vw 3vw 12vw 14vw 16vw 14vw 8vw 3svw 10vw',
+      rows: '8svh 2svh 18svh 4svh 12svh 4svh 12svh 4svh 22svh 5svh'
     },
     pc: {
       columns: '5vw 5vw 10vw 20vw 20vw 12vw 8vw 5svw 5vw',
@@ -45,8 +45,8 @@ export const sectionLayouts: Layouts = {
       rows: '6svh 2svh 2svh 24svh 3svh 24svh 3svh 24svh 5svh 2svh'
     },
     tab: {
-      columns: '5vw 5vw 5vw 15vw 30vw 15vw 3vw 7vw 5vw',
-      rows: '6svh 2svh 2svh 24svh 3svh 24svh 3svh 24svh 5svh 2svh'
+      columns: '10vw 5vw 3vw 15vw 24vw 15vw 3vw 5vw 10vw',
+      rows: '8svh 2svh 2svh 20svh 4svh 20svh 4svh 24svh 5svh 2svh'
     },
     pc: {
       columns: '5vw 5vw 5vw 15vw 30vw 15vw 3vw 7vw 5vw',
@@ -55,8 +55,8 @@ export const sectionLayouts: Layouts = {
   }
 }
 
-export const genLayoutA = () => {
-  const boxes = Array.from({ length: 24 }, (_, index) => (
+export const genLayout = (modify?: boolean) => {
+  const boxes = Array.from({ length: modify ? 23 : 25 }, (_, index) => (
     <Box key={index}></Box>
   ))
   boxes[1] = (
@@ -77,40 +77,18 @@ export const genLayoutA = () => {
   boxes[14] = <Box key={14} $gcol="span 2" $grow="span 3"></Box>
   boxes[16] = <Box key={16} $gcol="span 3"></Box>
   boxes[17] = <Box key={17} $gcol="span 2"></Box>
-  boxes[19] = <Box key={19} $gcol="span 5"></Box>
-  boxes[20] = <Box key={20} $gcol="span 2" $grow="span 3"></Box>
-  boxes[21] = <Box key={21} $gcol="span 5"></Box>
-  boxes[22] = <Box key={22} $gcol="span 2" $grow="span 2"></Box>
-  boxes[23] = <Box key={23} $gcol="span 5"></Box>
-  boxes[24] = <Box key={24} $gcol="span 7"></Box>
-  return boxes
-}
-
-export const genLayoutB = () => {
-  const boxes = Array.from({ length: 23 }, (_, index) => (
-    <Box key={index}></Box>
-  ))
-  boxes[1] = (
-    <Box key={1} $gcol="span 7">
-      <Menu />
-    </Box>
-  )
-  boxes[4] = <Box key={4} $gcol="span 6"></Box>
-  boxes[5] = <Box key={5} $gcol="span 2" $grow="span 2"></Box>
-  boxes[6] = <Box key={6} $gcol="span 2"></Box>
-  boxes[7] = <Box key={7} $gcol="span 5"></Box>
-  boxes[8] = <Box key={8} $gcol="span 3"></Box>
-  boxes[9] = <Box key={9} $gcol="span 3"></Box>
-  boxes[10] = <Box key={10} $gcol="span 3"></Box>
-  boxes[11] = <Box key={11} $gcol="span 2"></Box>
-  boxes[12] = <Box key={12} $gcol="span 5"></Box>
-  boxes[13] = <Box key={13} $gcol="span 2"></Box>
-  boxes[14] = <Box key={14} $gcol="span 2" $grow="span 3"></Box>
-  boxes[16] = <Box key={16} $gcol="span 3"></Box>
-  boxes[17] = <Box key={17} $gcol="span 2"></Box>
-  boxes[19] = <Box key={19} $gcol="span 5" $grow="span 3"></Box>
-  boxes[20] = <Box key={20} $gcol="span 2" $grow="span 3"></Box>
-  boxes[21] = <Box key={21} $gcol="span 2" $grow="span 2"></Box>
-  boxes[22] = <Box key={22} $gcol="span 7"></Box>
+  if (modify) {
+    boxes[19] = <Box key={19} $gcol="span 5" $grow="span 3"></Box>
+    boxes[20] = <Box key={20} $gcol="span 2" $grow="span 3"></Box>
+    boxes[21] = <Box key={21} $gcol="span 2" $grow="span 2"></Box>
+    boxes[22] = <Box key={22} $gcol="span 7"></Box>
+  } else {
+    boxes[19] = <Box key={19} $gcol="span 5"></Box>
+    boxes[20] = <Box key={20} $gcol="span 2" $grow="span 3"></Box>
+    boxes[21] = <Box key={21} $gcol="span 5"></Box>
+    boxes[22] = <Box key={22} $gcol="span 2" $grow="span 2"></Box>
+    boxes[23] = <Box key={23} $gcol="span 5"></Box>
+    boxes[24] = <Box key={24} $gcol="span 7"></Box>
+  }
   return boxes
 }

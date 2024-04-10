@@ -10,9 +10,11 @@ const DescriptionStyled = styled.div`
   text-align: justify;
   font-size: 17px;
   animation: ${show} 0.5s linear forwards;
-
   p {
     margin: 1em 0.5em;
+  }
+  > :nth-child(1) {
+    height: 90%;
   }
 `
 export default DescriptionStyled

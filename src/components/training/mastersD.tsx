@@ -10,7 +10,16 @@ const MastersD = () => {
           Arendt.
         </p>
       </div>
-      <button>link</button>
+      <a
+        href="https://repositorio.ufsm.br/handle/1/19729"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img
+          src="./logos/open_in_new_FILL0_wght400_GRAD0_opsz24.png"
+          alt="Open link"
+        />
+      </a>
     </Training>
   )
 }
