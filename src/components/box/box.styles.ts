@@ -7,10 +7,9 @@ const BoxStyled = styled.div<BoxProps>`
   justify-content: center;
   transition: all 1s;
   overflow: auto;
-
-  background-color: ${(props) => (props.$bgcolor ? props.$bgcolor : 'white')};
+  width: ${(props) => (props.$width ? props.$width : '100%')}
   height: ${(props) => (props.$height ? props.$height : '100%')};
-
+  background-color: ${(props) => (props.$bgcolor ? props.$bgcolor : 'white')};
   grid-column: ${(props) => (props.$gcol ? props.$gcol : 'auto')};
   grid-row: ${(props) => (props.$grow ? props.$grow : 'auto')};
 `
