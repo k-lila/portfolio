@@ -8,6 +8,10 @@ export type BoxProps = {
   $bgcolor?: string
   $gcol?: string
   $grow?: string
+  $btop?: boolean
+  $bbot?: boolean
+  $bright?: boolean
+  $bleft?: boolean
 }
 
 const Box = ({ children, ...props }: BoxProps) => {

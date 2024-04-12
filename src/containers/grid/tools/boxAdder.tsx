@@ -12,7 +12,9 @@ type NewBoxes = {
 
 const newB: NewBoxes = {
   cel: {
-    about: {},
+    about: {
+      9: <MondrianBox />
+    },
     skills: {},
     projects: {}
   },
@@ -24,7 +26,9 @@ const newB: NewBoxes = {
     projects: {}
   },
   pc: {
-    about: {},
+    about: {
+      9: <MondrianBox />
+    },
     skills: {},
     projects: {}
   }
