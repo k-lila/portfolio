@@ -9,13 +9,13 @@ const BoxStyled = styled.div<BoxProps>`
   overflow: auto;
   width: ${(props) => (props.$width ? props.$width : '100%')};
   height: ${(props) => (props.$height ? props.$height : '100%')};
-  background-color: ${(props) => (props.$bgcolor ? props.$bgcolor : 'white')};
   grid-column: ${(props) => (props.$gcol ? props.$gcol : 'auto')};
   grid-row: ${(props) => (props.$grow ? props.$grow : 'auto')};
   border-top: ${(props) => (props.$btop ? '1vmin solid black' : 'none')};
   border-bottom: ${(props) => (props.$bbot ? '1vmin solid black' : 'none')};
   border-right: ${(props) => (props.$bright ? '1vmin solid black' : 'none')};
   border-left: ${(props) => (props.$bleft ? '1vmin solid black' : 'none')};
+  background-color: ${(props) => (props.$bgcolor ? props.$bgcolor : 'white')};
 `
 
 export default BoxStyled

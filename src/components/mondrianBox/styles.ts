@@ -13,11 +13,13 @@ const horizontal = keyframes`
 
 const MGrid = styled.div<MondrianProps>`
   display: grid;
-  grid-template-columns: ${(props) => (props.$horizontal ? '1fr' : '1fr 1fr')};
-  grid-template-rows: ${(props) => (props.$horizontal ? '1fr 1fr' : '1fr')};
+  grid-template-columns: ${(props) =>
+    props.$gcol ? props.$gcol : props.$horizontal ? '1fr' : '1fr 1fr'};
+  grid-template-rows: ${(props) =>
+    props.$grow ? props.$grow : props.$horizontal ? '1fr 1fr' : '1fr'};
   width: 100%;
   height: 100%;
-  animation: ${(props) => (props.$horizontal ? horizontal : vertical)} 0.3s
+  animation: ${(props) => (props.$horizontal ? horizontal : vertical)} 0.2s
     ease-in;
 `
 export default MGrid

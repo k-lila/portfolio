@@ -1,6 +1,16 @@
 import React from 'react'
 import { ReactElement } from 'react'
-import MondrianBox from '../../../components/mondrianBox/MondrianBox'
+import {
+  MondrianBoxA,
+  MondrianBoxB,
+  MondrianBoxC,
+  MondrianBoxD,
+  MondrianBoxE,
+  MondrianBoxF,
+  MondrianBoxG,
+  MondrianBoxH,
+  MondrianBoxI
+} from '../../../components/mondrianBox/MondrianBox'
 
 type NewBoxes = {
   [key: string]: {
@@ -13,21 +23,28 @@ type NewBoxes = {
 const newB: NewBoxes = {
   cel: {
     about: {
-      9: <MondrianBox />
+      9: <MondrianBoxA />
     },
     skills: {},
     projects: {}
   },
   tab: {
     about: {
-      9: <MondrianBox />
+      0: <MondrianBoxB />,
+      2: <MondrianBoxC />,
+      3: <MondrianBoxD />,
+      5: <MondrianBoxE />,
+      9: <MondrianBoxA />,
+      12: <MondrianBoxG />,
+      14: <MondrianBoxH />,
+      20: <MondrianBoxF />
     },
     skills: {},
     projects: {}
   },
   pc: {
     about: {
-      9: <MondrianBox />
+      9: <MondrianBoxA />
     },
     skills: {},
     projects: {}
