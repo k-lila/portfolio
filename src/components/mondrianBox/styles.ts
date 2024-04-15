@@ -20,6 +20,6 @@ const MGrid = styled.div<MondrianProps>`
   width: 100%;
   height: 100%;
   animation: ${(props) => (props.$horizontal ? horizontal : vertical)} 0.2s
-    ease-in;
+    ease-in forwards;
 `
 export default MGrid
