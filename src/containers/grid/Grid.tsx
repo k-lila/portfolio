@@ -3,10 +3,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { StyledGrid, GridContainer } from './StyledGrid.styles'
 import { RootReducer } from '../../store'
 import { selectDevice } from '../../store/reducers/selectdevice'
-import { sectionLayouts } from './tools/sectionLayouts'
+import { sectionLayouts } from './tools/layouts'
 import { discoverDevice } from '../../utils'
-import boxGen from './tools/boxGen'
-import boxAdder from './tools/boxAdder'
+import boxGen from './tools/boxes'
 
 const Grid = () => {
   const dispatch = useDispatch()
@@ -25,8 +24,7 @@ const Grid = () => {
 
   const cols = sectionLayouts[section][device].columns
   const rows = sectionLayouts[section][device].rows
-  let box_list = boxGen(section)
-  box_list = boxAdder(section, device, box_list)
+  const box_list = boxGen(section, device)
 
   return (
     <GridContainer>

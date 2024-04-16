@@ -3,16 +3,14 @@ import Box, { BoxProps } from '../box/box'
 import { MGrid } from './styles'
 import { ReactNode, useEffect, useState } from 'react'
 
-export type MondrianProps = {
-  children?: ReactNode
+export type MondrianGridProps = {
+  children: ReactNode
   $horizontal?: boolean
   $gcol?: string
   $grow?: string
 }
 
 type MondrianSimpleProps = {
-  children?: ReactNode
-  $first?: boolean
   $horizontal?: boolean
   $grid?: string
 }
@@ -33,7 +31,7 @@ type MondrianBlockProps = {
 
 export const MondrianColor = ({ ...props }: BoxProps) => {
   const [background, setbackground] = useState('white')
-  const [duration, setduration] = useState(random.int(500, 2000))
+  const [duration, setduration] = useState(random.int(500, 1500))
   const palette = [
     '#314290',
     '#4A71C0',
@@ -66,45 +64,43 @@ export const MondrianColor = ({ ...props }: BoxProps) => {
   return <Box $bgcolor={background} {...props}></Box>
 }
 
-const MondrianGrid = ({ children, ...props }: MondrianProps) => {
-  return <MGrid {...props}>{children}</MGrid>
-}
-
-export const MondrianSimple = ({ children, ...props }: MondrianSimpleProps) => {
-  if (props.$horizontal) {
-    return (
-      <MondrianGrid $horizontal $grow={props.$grid}>
-        <MondrianColor $bbot>{props.$first ? children : null}</MondrianColor>
-        <MondrianColor>{!props.$first ? children : null}</MondrianColor>
-      </MondrianGrid>
-    )
-  }
-
+export const MondrianSimple = ({ ...props }: MondrianSimpleProps) => {
   return (
-    <MondrianGrid $gcol={props.$grid}>
-      <MondrianColor $bright>{props.$first ? children : null}</MondrianColor>
-      <MondrianColor>{!props.$first ? children : null}</MondrianColor>
-    </MondrianGrid>
+    <MGrid
+      $horizontal={props.$horizontal}
+      $gcol={!props.$horizontal ? props.$grid : '1fr'}
+      $grow={props.$horizontal ? props.$grid : '1fr'}
+    >
+      <MondrianColor $bbot={props.$horizontal} $bright={!props.$horizontal} />
+      <MondrianColor />
+    </MGrid>
   )
 }
 
 export const MondrianCompound = ({ ...props }: MondrianCompoundProps) => {
   return (
-    <MondrianSimple
-      $first={props.$first}
+    <MGrid
       $horizontal={props.$horizontal}
-      $grid={props.$gridA}
+      $gcol={props.$horizontal ? '1fr' : props.$gridA}
+      $grow={props.$horizontal ? props.$gridA : '1fr'}
     >
-      <MondrianSimple $horizontal={!props.$horizontal} $grid={props.$gridB} />
-    </MondrianSimple>
+      {props.$first ? (
+        <MondrianSimple $grid={props.$gridB} $horizontal={!props.$horizontal} />
+      ) : (
+        <MondrianColor $bbot={props.$horizontal} $bright={!props.$horizontal} />
+      )}
+      {props.$first ? (
+        <MondrianColor $bleft={!props.$horizontal} $btop={props.$horizontal} />
+      ) : (
+        <MondrianSimple $grid={props.$gridB} $horizontal={!props.$horizontal} />
+      )}
+    </MGrid>
   )
 }
 
-//  ============================
-
 export const MondrianBlock = ({ ...props }: MondrianBlockProps) => {
   return (
-    <MondrianGrid
+    <MGrid
       $horizontal={props.$horizontal}
       $gcol={!props.$horizontal ? props.$grid : '1fr'}
       $grow={props.$horizontal ? props.$grid : '1fr'}
@@ -117,6 +113,6 @@ export const MondrianBlock = ({ ...props }: MondrianBlockProps) => {
         <MondrianColor $bbot={props.$horizontal} $bright={!props.$horizontal} />
       )}
       {props.childrenB ? <Box>{props.childrenB}</Box> : <MondrianColor />}
-    </MondrianGrid>
+    </MGrid>
   )
 }

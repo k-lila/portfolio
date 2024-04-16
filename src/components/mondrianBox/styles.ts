@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components'
-import { MondrianProps } from './MondrianBox'
+import { MondrianGridProps } from './MondrianBox'
 
 const vertical = keyframes`
   from {height: 0;}
@@ -9,7 +9,7 @@ const horizontal = keyframes`
   from {width: 0;}
   to {width: 100%;}
 `
-export const MGrid = styled.div<MondrianProps>`
+export const MGrid = styled.div<MondrianGridProps>`
   display: grid;
   grid-template-columns: ${(props) =>
     props.$gcol ? props.$gcol : props.$horizontal ? '1fr' : '1fr 1fr'};
