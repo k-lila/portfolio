@@ -7,6 +7,8 @@ const BoxStyled = styled.div<BoxProps>`
   justify-content: center;
   transition: all 1s ease-in;
   overflow: auto;
+  height: 100%;
+  width: 100%;
   grid-column: ${(props) => (props.$gcol ? props.$gcol : 'auto')};
   grid-row: ${(props) => (props.$grow ? props.$grow : 'auto')};
   border-bottom: ${(props) => (props.$bbot ? '1vmin solid black' : 'none')};
