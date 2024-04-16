@@ -15,15 +15,13 @@ type MondrianSimpleProps = {
   $first?: boolean
   $horizontal?: boolean
   $grid?: string
-  key?: number
 }
 
 type MondrianCompoundProps = {
   $horizontal?: boolean
   $first?: boolean
-  gridA?: string
-  gridB?: string
-  key?: number
+  $gridA?: string
+  $gridB?: string
 }
 
 type MondrianBlockProps = {
@@ -37,14 +35,12 @@ export const MondrianColor = ({ ...props }: BoxProps) => {
   const [background, setbackground] = useState('white')
   const [duration, setduration] = useState(random.int(500, 2000))
   const palette = [
-    'blue',
     '#314290',
     '#4A71C0',
     'white',
     '#F1F2ED',
     'wheat',
     '#F0D32D',
-    'red',
     '#AB3A2C',
     'black'
   ]
@@ -52,7 +48,6 @@ export const MondrianColor = ({ ...props }: BoxProps) => {
   useEffect(() => {
     const timer = setInterval(() => {
       setbackground(palette[random.int(0, palette.length - 1)])
-      console.log(duration)
     }, duration)
     return () => {
       clearInterval(timer)
@@ -98,9 +93,9 @@ export const MondrianCompound = ({ ...props }: MondrianCompoundProps) => {
     <MondrianSimple
       $first={props.$first}
       $horizontal={props.$horizontal}
-      $grid={props.gridA}
+      $grid={props.$gridA}
     >
-      <MondrianSimple $horizontal={!props.$horizontal} $grid={props.gridB} />
+      <MondrianSimple $horizontal={!props.$horizontal} $grid={props.$gridB} />
     </MondrianSimple>
   )
 }
@@ -121,7 +116,7 @@ export const MondrianBlock = ({ ...props }: MondrianBlockProps) => {
       ) : (
         <MondrianColor $bbot={props.$horizontal} $bright={!props.$horizontal} />
       )}
-      {props.childrenB ? props.childrenB : <MondrianColor />}
+      {props.childrenB ? <Box>{props.childrenB}</Box> : <MondrianColor />}
     </MondrianGrid>
   )
 }
