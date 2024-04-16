@@ -22,6 +22,20 @@ const newB: NewBoxes = {
       2: <MondrianCompound key={2} $first gridA="65% 35%" gridB="65%" />,
       3: <MondrianCompound key={3} gridA="40% 60%" gridB="60%" />,
       5: <MondrianCompound key={4} gridA="45% 55%" gridB="70%" />,
+      9: (
+        <MondrianBlock
+          $grid="40% 60%"
+          childrenA={<MondrianSimple $grid="30% 70%" $horizontal />}
+          childrenB={
+            <MondrianCompound
+              $horizontal
+              $first
+              gridA="75% 25%"
+              gridB="70% 30%"
+            />
+          }
+        />
+      ),
       12: <MondrianSimple key={6} $grid="10% 90%" />,
       14: <MondrianSimple key={7} $grid="35% 65%" />,
       20: <MondrianCompound key={8} gridA="30% 70%" gridB="68%" $horizontal />
