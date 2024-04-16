@@ -1,7 +1,9 @@
 import React from 'react'
 import { ReactElement } from 'react'
 import {
-  MondrianComplexI,
+  MondrianBlock,
+  MondrianColor,
+  MondrianCompound,
   MondrianSimple
 } from '../../../components/mondrianBox/MondrianBox'
 
@@ -16,107 +18,118 @@ type NewBoxes = {
 const newB: NewBoxes = {
   cel: {
     about: {
-      0: <MondrianComplexI key={1} gridA="80% 20%" gridB="35%" />,
-      2: <MondrianComplexI key={2} $first gridA="65% 35%" gridB="65%" />,
-      3: <MondrianComplexI key={3} gridA="40% 60%" gridB="60%" />,
-      5: <MondrianComplexI key={4} gridA="45% 55%" gridB="70%" />,
-
-      // 9: <MondrianBoxA />,
-
+      0: <MondrianCompound key={1} gridA="80% 20%" gridB="35%" />,
+      2: <MondrianCompound key={2} $first gridA="65% 35%" gridB="65%" />,
+      3: <MondrianCompound key={3} gridA="40% 60%" gridB="60%" />,
+      5: <MondrianCompound key={4} gridA="45% 55%" gridB="70%" />,
       12: <MondrianSimple key={6} $grid="10% 90%" />,
       14: <MondrianSimple key={7} $grid="35% 65%" />,
-      20: <MondrianComplexI key={8} gridA="30% 70%" gridB="68%" $horizontal />
+      20: <MondrianCompound key={8} gridA="30% 70%" gridB="68%" $horizontal />
     },
     skills: {
-      0: <MondrianComplexI key={9} gridA="50% 50%" gridB="35% 65%" />,
-      2: <MondrianComplexI key={10} $first gridA="65% 35%" gridB="55% 45%" />,
-      6: <MondrianComplexI key={11} $first gridB="72%" />,
-      5: <MondrianComplexI key={12} $horizontal $first gridA="60%" />,
+      0: <MondrianCompound key={9} gridA="50% 50%" gridB="35% 65%" />,
+      2: <MondrianCompound key={10} $first gridA="65% 35%" gridB="55% 45%" />,
+      6: <MondrianCompound key={11} $first gridB="72%" />,
+      5: <MondrianCompound key={12} $horizontal $first gridA="60%" />,
       13: <MondrianSimple key={13} />,
       14: <MondrianSimple key={14} $grid="65% 35%" />,
       20: (
-        <MondrianComplexI key={15} $horizontal $first gridA="80%" gridB="60%" />
+        <MondrianCompound key={15} $horizontal $first gridA="80%" gridB="60%" />
       ),
-      22: <MondrianComplexI key={16} $horizontal gridA="37%" gridB="45%" />
+      22: <MondrianCompound key={16} $horizontal gridA="37%" gridB="45%" />
     },
     projects: {
-      0: <MondrianComplexI key={17} />,
-      2: <MondrianComplexI key={18} gridA="43% 57%" gridB="70%" />,
-      8: <MondrianComplexI key={19} $first gridA="65%" gridB="68%" />,
-      10: <MondrianComplexI key={20} $first gridA="58% 42%" gridB="38%" />,
+      0: <MondrianCompound key={17} />,
+      2: <MondrianCompound key={18} gridA="43% 57%" gridB="70%" />,
+      8: <MondrianCompound key={19} $first gridA="65%" gridB="68%" />,
+      10: <MondrianCompound key={20} $first gridA="58% 42%" gridB="38%" />,
       14: <MondrianSimple key={21} />,
       18: <MondrianSimple key={22} $horizontal $grid="68%" />,
-      20: <MondrianComplexI key={23} $horizontal gridA="30%" gridB="65%" />
+      20: <MondrianCompound key={23} $horizontal gridA="30%" gridB="65%" />
     }
   },
   tab: {
     about: {
-      0: <MondrianComplexI key={1} gridA="80% 20%" gridB="35%" />,
-      2: <MondrianComplexI key={2} $first gridA="65% 35%" gridB="65%" />,
-      3: <MondrianComplexI key={3} gridA="40% 60%" gridB="60%" />,
-      5: <MondrianComplexI key={4} gridA="45% 55%" gridB="70%" />,
+      0: <MondrianCompound key={1} gridA="80% 20%" gridB="35%" />,
+      2: <MondrianCompound key={2} $first gridA="65% 35%" gridB="65%" />,
+      3: <MondrianCompound key={3} gridA="40% 60%" gridB="60%" />,
+      5: <MondrianCompound key={4} gridA="45% 55%" gridB="70%" />,
 
-      // 9: <MondrianBoxA />,
+      9: (
+        <MondrianBlock
+          $grid="40% 60%"
+          childrenA={<MondrianSimple $grid="30% 70%" $horizontal />}
+          childrenB={
+            <MondrianCompound
+              $horizontal
+              $first
+              gridA="75% 25%"
+              gridB="70% 30%"
+            />
+          }
+        />
+      ),
 
       12: <MondrianSimple key={6} $grid="10% 90%" />,
       14: <MondrianSimple key={7} $grid="35% 65%" />,
-      20: <MondrianComplexI key={8} gridA="30% 70%" gridB="68%" $horizontal />
+      20: <MondrianCompound key={8} gridA="30% 70%" gridB="68%" $horizontal />,
+      21: <MondrianColor />
     },
     skills: {
-      0: <MondrianComplexI key={9} gridA="50% 50%" gridB="35% 65%" />,
-      2: <MondrianComplexI key={10} $first gridA="65% 35%" gridB="55% 45%" />,
-      6: <MondrianComplexI key={11} $first gridB="72%" />,
-      5: <MondrianComplexI key={12} $horizontal $first gridA="60%" />,
+      0: <MondrianCompound key={9} gridA="50% 50%" gridB="35% 65%" />,
+      2: <MondrianCompound key={10} $first gridA="65% 35%" gridB="55% 45%" />,
+      6: <MondrianCompound key={11} $first gridB="72%" />,
+      5: <MondrianCompound key={12} $horizontal $first gridA="60%" />,
+      11: <MondrianColor />,
       13: <MondrianSimple key={13} />,
       14: <MondrianSimple key={14} $grid="65% 35%" />,
+      18: <MondrianColor />,
       20: (
-        <MondrianComplexI key={15} $horizontal $first gridA="80%" gridB="60%" />
+        <MondrianCompound key={15} $horizontal $first gridA="80%" gridB="60%" />
       ),
-      22: <MondrianComplexI key={16} $horizontal gridA="37%" gridB="45%" />
+      22: <MondrianCompound key={16} $horizontal gridA="37%" gridB="45%" />
     },
     projects: {
-      0: <MondrianComplexI key={17} />,
-      2: <MondrianComplexI key={18} gridA="43% 57%" gridB="70%" />,
-      8: <MondrianComplexI key={19} $first gridA="65%" gridB="68%" />,
-      10: <MondrianComplexI key={20} $first gridA="58% 42%" gridB="38%" />,
+      0: <MondrianCompound key={17} />,
+      2: <MondrianCompound key={18} gridA="43% 57%" gridB="70%" />,
+      8: <MondrianCompound key={19} $first gridA="65%" gridB="68%" />,
+      10: <MondrianCompound key={20} $first gridA="58% 42%" gridB="38%" />,
       14: <MondrianSimple key={21} />,
       18: <MondrianSimple key={22} $horizontal $grid="68%" />,
-      20: <MondrianComplexI key={23} $horizontal gridA="30%" gridB="65%" />
+      20: <MondrianCompound key={23} $horizontal gridA="30%" gridB="65%" />,
+      22: <MondrianColor />
     }
   },
   pc: {
     about: {
-      0: <MondrianComplexI key={1} gridA="80% 20%" gridB="35%" />,
-      2: <MondrianComplexI key={2} $first gridA="65% 35%" gridB="65%" />,
-      3: <MondrianComplexI key={3} gridA="40% 60%" gridB="60%" />,
-      5: <MondrianComplexI key={4} gridA="45% 55%" gridB="70%" />,
-
-      // 9: <MondrianBoxA />,
-
+      0: <MondrianCompound key={1} gridA="80% 20%" gridB="35%" />,
+      2: <MondrianCompound key={2} $first gridA="65% 35%" gridB="65%" />,
+      3: <MondrianCompound key={3} gridA="40% 60%" gridB="60%" />,
+      5: <MondrianCompound key={4} gridA="45% 55%" gridB="70%" />,
       12: <MondrianSimple key={6} $grid="10% 90%" />,
       14: <MondrianSimple key={7} $grid="35% 65%" />,
-      20: <MondrianComplexI key={8} gridA="30% 70%" gridB="68%" $horizontal />
+      20: <MondrianCompound key={8} gridA="30% 70%" gridB="68%" $horizontal />
     },
     skills: {
-      0: <MondrianComplexI key={9} gridA="50% 50%" gridB="35% 65%" />,
-      2: <MondrianComplexI key={10} $first gridA="65% 35%" gridB="55% 45%" />,
-      6: <MondrianComplexI key={11} $first gridB="72%" />,
-      5: <MondrianComplexI key={12} $horizontal $first gridA="60%" />,
+      0: <MondrianCompound key={9} gridA="50% 50%" gridB="35% 65%" />,
+      2: <MondrianCompound key={10} $first gridA="65% 35%" gridB="55% 45%" />,
+      5: <MondrianCompound key={12} $horizontal $first gridA="60%" />,
+      6: <MondrianCompound key={11} $first gridB="72%" />,
       13: <MondrianSimple key={13} />,
       14: <MondrianSimple key={14} $grid="65% 35%" />,
       20: (
-        <MondrianComplexI key={15} $horizontal $first gridA="80%" gridB="60%" />
+        <MondrianCompound key={15} $horizontal $first gridA="80%" gridB="60%" />
       ),
-      22: <MondrianComplexI key={16} $horizontal gridA="37%" gridB="45%" />
+      22: <MondrianCompound key={16} $horizontal gridA="37%" gridB="45%" />
     },
     projects: {
-      0: <MondrianComplexI key={17} />,
-      2: <MondrianComplexI key={18} gridA="43% 57%" gridB="70%" />,
-      8: <MondrianComplexI key={19} $first gridA="65%" gridB="68%" />,
-      10: <MondrianComplexI key={20} $first gridA="58% 42%" gridB="38%" />,
+      0: <MondrianCompound key={17} />,
+      2: <MondrianCompound key={18} gridA="43% 57%" gridB="70%" />,
+      8: <MondrianCompound key={19} $first gridA="65%" gridB="68%" />,
+      10: <MondrianCompound key={20} $first gridA="58% 42%" gridB="38%" />,
       14: <MondrianSimple key={21} />,
       18: <MondrianSimple key={22} $horizontal $grid="68%" />,
-      20: <MondrianComplexI key={23} $horizontal gridA="30%" gridB="65%" />
+      20: <MondrianCompound key={23} $horizontal gridA="30%" gridB="65%" />
     }
   }
 }

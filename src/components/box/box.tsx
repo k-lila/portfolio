@@ -1,6 +1,5 @@
 import { ReactNode } from 'react'
 import BoxStyled from './styles'
-import { Keyframes } from 'styled-components/dist/types'
 
 export type BoxProps = {
   children?: ReactNode
@@ -13,10 +12,6 @@ export type BoxProps = {
   $bbot?: boolean
   $bright?: boolean
   $bleft?: boolean
-  $animation?: boolean
-  $animationKey?: number
-  $animationDur?: number
-  $keyframes?: Keyframes
 }
 
 const Box = ({ children, ...props }: BoxProps) => {
