@@ -1,10 +1,17 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
-const GridSkills = styled.div`
+const show = keyframes`
+  from {opacity: 0}
+  to {opacity: 1}
+`
+
+const GridSkills = styled.div<{ $display: string }>`
   height: 100%;
   width: 100%;
+  opacity: 0;
   gap: 1svw;
-  display: grid;
+  display: ${(props) => props.$display};
+  animation: ${show} 0.5s forwards;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 1fr);
   justify-items: center;

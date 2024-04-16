@@ -1,8 +1,16 @@
+import { useEffect, useState } from 'react'
 import GridSkills from './SkillsStyled.styles'
 
 const Skills = () => {
+  const [display, setdisplay] = useState('none')
+  useEffect(() => {
+    setTimeout(() => {
+      setdisplay('grid')
+    }, 300)
+  }, [])
+
   return (
-    <GridSkills>
+    <GridSkills $display={display}>
       <img src="./skills/HTML5_logo_and_wordmark.svg" alt="HTML5 logo" />
       <img src="./skills/CSS3_logo_and_wordmark.svg" alt="CSS3 logo" />
       <img
