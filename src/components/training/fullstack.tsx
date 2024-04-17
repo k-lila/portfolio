@@ -5,13 +5,13 @@ const FullStack = () => {
   return (
     <ItemContainer>
       <Training>
-        <div>
+        <article>
           <h3>Desenvolvedor Full Stack</h3>
           <p>
             Curso de desenvolvimento web com abrangência em Front-end e
             Back-end.
           </p>
-        </div>
+        </article>
         <a
           href="https://ebaconline.com.br/full-stack-python"
           target="_blank"

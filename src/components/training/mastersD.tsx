@@ -5,13 +5,13 @@ const MastersD = () => {
   return (
     <ItemContainer>
       <Training>
-        <div>
+        <article>
           <h3>Mestrado em Filosofia</h3>
           <p>
             Investigação sobre a capacidade humana de julgar na obra de Hannah
             Arendt.
           </p>
-        </div>
+        </article>
         <a
           href="https://repositorio.ufsm.br/handle/1/19729"
           target="_blank"

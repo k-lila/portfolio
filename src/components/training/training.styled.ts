@@ -4,15 +4,16 @@ const Training = styled.article`
   display: flex;
   width: 100%;
   height: 100%;
-  padding: 2%;
+  // padding: 2%;
   justify-content: space-between;
-  div {
-    font-size: 2svh;
+  font-size: 0.9em;
+  article {
     text-align: justify;
-    padding: 1%;
+    margin-left: 3%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    line-height: 150%;
   }
   a {
     cursor: pointer;
@@ -21,9 +22,12 @@ const Training = styled.article`
     justify-content: center;
     border: 0.75svw solid black;
     background-color: transparent;
-    margin: auto 2%;
+    margin: auto 3%;
     width: 20%;
     height: 75%;
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
   }
 `
 
