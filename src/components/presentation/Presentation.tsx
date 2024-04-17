@@ -1,18 +1,18 @@
-import PresentationStyled from './Presentation.styles'
+import ItemContainer from '../../containers/itemContainer/ItemContainer'
+import { MondrianColor } from '../mondrianBox/MondrianBox'
+import PresentationStyled from './styles'
 
 const Presentation = () => {
   return (
-    <PresentationStyled>
-      <span>Front-End Developer</span>
-      <span>Krishna Lila Palandi</span>
-      <span>
-        <img
-          src="./logos/home_pin_FILL0_wght400_GRAD0_opsz24.png"
-          alt="House Pin"
-        />
-        Santa Maria, RS
-      </span>
-    </PresentationStyled>
+    <ItemContainer>
+      <PresentationStyled>
+        <p>Desenvolvedor Front-End</p>
+        <span>
+          <MondrianColor />
+        </span>
+        <p>Krishna Lila Palandi</p>
+      </PresentationStyled>
+    </ItemContainer>
   )
 }
 

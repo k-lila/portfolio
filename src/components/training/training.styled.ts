@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const Training = styled.div`
+const Training = styled.article`
   display: flex;
   width: 100%;
   height: 100%;

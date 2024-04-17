@@ -5,12 +5,12 @@ const show = keyframes`
   to {opacity: 1}
 `
 
-const GridSkills = styled.div<{ $display: string }>`
+const GridSkills = styled.div`
   height: 100%;
   width: 100%;
   opacity: 0;
   gap: 1svw;
-  display: ${(props) => props.$display};
+  display: grid;
   animation: ${show} 0.5s forwards;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 1fr);

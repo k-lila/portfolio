@@ -1,20 +1,21 @@
 import styled from 'styled-components'
 
 const ContactBtn = styled.div`
-  background-color: #00008b;
+  background-color: #afd0c9;
+  border-top: 1vmin solid black;
+  border-bottom: 1vmin solid black;
+  border-left: 1vmin solid black;
   display: flex;
   align-items: center;
-  margin: 0.5em 0 0.5em 1em;
   border-radius: 5px 0 0 5px;
-  padding: 2px 0;
+  padding: 2% 0px;
   a {
     display: flex;
     align-items: center;
     margin: 0 auto;
   }
   img {
-    height: 25px;
-    margin: 2px 4px;
+    height: 3vh;
   }
 `
 export default ContactBtn

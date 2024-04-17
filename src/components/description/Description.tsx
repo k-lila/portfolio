@@ -1,8 +1,9 @@
-import DescriptionStyled from './DescriptionStyled.styles'
+import ItemContainer from '../../containers/itemContainer/ItemContainer'
+import DescriptionStyled from './styles'
 
 const Description = () => {
   return (
-    <>
+    <ItemContainer>
       <DescriptionStyled>
         <p>
           Desenvolvedor Full Stack Python em formação pela EBAC – Escola
@@ -32,7 +33,7 @@ const Description = () => {
           tecnológicas e projetos inovadores na área da programação.
         </p>
       </DescriptionStyled>
-    </>
+    </ItemContainer>
   )
 }
 
