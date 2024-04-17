@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const ContactListStyled = styled.nav`
+const ContactListStyled = styled.address`
   height: 100%;
   width: 100%;
   margin-left: 15%;

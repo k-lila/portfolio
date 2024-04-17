@@ -16,7 +16,7 @@ const PresentationStyled = styled.div`
     justify-content: center;
   }
   span {
-    height: 7%;
+    height: 1%;
     margin: 2px;
   }
   > :nth-child(1) {
@@ -28,6 +28,7 @@ const PresentationStyled = styled.div`
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     width: 85%;
     p {
+      justify-content: end;
       font-size: 2.5em;
     }
   }

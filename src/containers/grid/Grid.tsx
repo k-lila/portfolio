@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { StyledGrid, GridContainer } from './StyledGrid.styles'
+import { StyledGrid, GridContainer } from './styles'
 import { RootReducer } from '../../store'
 import { selectDevice } from '../../store/reducers/selectdevice'
 import { sectionLayouts } from './tools/layouts'

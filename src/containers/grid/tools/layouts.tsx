@@ -16,7 +16,7 @@ export const sectionLayouts: Layouts = {
       rows: '6svh 12svh 2svh 30svh 2svh 2svh 2svh 32svh 2svh 3.5svh'
     },
     tab: {
-      columns: '10vw 2vw 24vw 6vw 12vw 14vw 10vw 2vw 10vw',
+      columns: '10vw 2vw 23vw 5vw 10vw 10vw 15vw 5vw 10vw',
       rows: '8svh 12svh 2svh 34svh 2svh 2svh 2svh 24svh 1svh 4svh'
     },
     pc: {

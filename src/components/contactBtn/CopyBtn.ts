@@ -1,14 +1,15 @@
 import styled from 'styled-components'
 
 const CopyBtn = styled.button`
+  background-color: transparent;
   border: none;
   display: flex;
   align-items: center;
   cursor: pointer;
-  background-color: transparent;
   margin: 0 10px;
+  height: 100%;
   img {
-    height: 3vh;
+    height: 70%;
   }
 `
 
