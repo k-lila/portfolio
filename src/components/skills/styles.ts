@@ -1,24 +1,25 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 
-const show = keyframes`
-  from {opacity: 0}
-  to {opacity: 1}
-`
-
-const GridSkills = styled.div`
+export const GridSkills = styled.div`
+  padding: 2vmin;
   height: 100%;
   width: 100%;
-  opacity: 0;
-  gap: 1svw;
+  row-gap: 10%;
+  column-gap: 3vmin;
   display: grid;
-  animation: ${show} 0.5s forwards;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  justify-items: center;
+  grid-template-rows: 45% 45%;
+`
+export const ImgContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
   align-items: center;
+  justify-content: center;
   img {
-    max-height: 75%;
-    max-width: 75%;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
   }
 `
-export default GridSkills

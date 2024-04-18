@@ -24,10 +24,21 @@ const Training = styled.article`
     background-color: transparent;
     margin: auto 3%;
     width: 20%;
-    height: 75%;
+    height: 60%;
     -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    font-size: 1.4em;
+
+    a {
+      width: 15%;
+      -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+    }
   }
 `
 
