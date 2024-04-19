@@ -54,6 +54,51 @@ export const sectionLayouts: Layouts = {
   }
 }
 
+export const projectsLayout: Layouts = {
+  expandA: {
+    cel: {
+      columns: '',
+      rows: '6svh 2svh 2svh 58svh 3svh 6svh 3svh 6svh 5svh 2.5svh'
+    },
+    tab: {
+      columns: '',
+      rows: '8svh 2svh 2svh 20svh 4svh 20svh 4svh 24svh 5svh 2svh'
+    },
+    pc: {
+      columns: '',
+      rows: '6svh 2svh 2svh 24svh 3svh 24svh 3svh 24svh 5svh 2svh'
+    }
+  },
+  expandB: {
+    cel: {
+      columns: '',
+      rows: '6svh 2svh 2svh 6svh 3svh 58svh 3svh 6svh 5svh 2.5svh'
+    },
+    tab: {
+      columns: '',
+      rows: '8svh 2svh 2svh 20svh 4svh 20svh 4svh 24svh 5svh 2svh'
+    },
+    pc: {
+      columns: '',
+      rows: '6svh 2svh 2svh 24svh 3svh 24svh 3svh 24svh 5svh 2svh'
+    }
+  },
+  expandC: {
+    cel: {
+      columns: '',
+      rows: '6svh 2svh 2svh 6svh 3svh 6svh 3svh 58svh 5svh 2.5svh'
+    },
+    tab: {
+      columns: '',
+      rows: '8svh 2svh 2svh 20svh 4svh 20svh 4svh 24svh 5svh 2svh'
+    },
+    pc: {
+      columns: '',
+      rows: '6svh 2svh 2svh 24svh 3svh 24svh 3svh 24svh 5svh 2svh'
+    }
+  }
+}
+
 export const genLayout = (modify?: boolean) => {
   const common = [
     <Box key={0} />,

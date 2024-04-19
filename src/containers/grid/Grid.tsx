@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { StyledGrid, GridContainer } from './styles'
 import { RootReducer } from '../../store'
 import { selectDevice } from '../../store/reducers/selectdevice'
-import { sectionLayouts } from './tools/layouts'
+import { projectsLayout, sectionLayouts } from './tools/layouts'
 import { discoverDevice } from '../../utils'
 import boxGen from './tools/boxes'
 
@@ -11,7 +11,7 @@ const Grid = () => {
   const dispatch = useDispatch()
   const section = useSelector((state: RootReducer) => state.select.section)
   const device = useSelector((dev: RootReducer) => dev.device.device)
-
+  const expand = useSelector((state: RootReducer) => state.expand.expand)
   useEffect(() => {
     const handleResize = () => {
       dispatch(selectDevice(discoverDevice()))
@@ -23,7 +23,12 @@ const Grid = () => {
   }, [dispatch])
 
   const cols = sectionLayouts[section][device].columns
-  const rows = sectionLayouts[section][device].rows
+  let rows
+  if (expand === 'none') {
+    rows = sectionLayouts[section][device].rows
+  } else {
+    rows = projectsLayout[expand][device].rows
+  }
   const box_list = boxGen(section, device)
 
   return (

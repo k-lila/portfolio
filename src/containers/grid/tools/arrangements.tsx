@@ -14,6 +14,7 @@ import {
   MondrianCompound,
   MondrianSimple
 } from '../../../components/mondrianBox/MondrianBox'
+import Project from '../../../components/projects/projects'
 
 type componentArrangement = {
   [key: string]: {
@@ -45,7 +46,9 @@ export const componentArrangement: componentArrangement = {
     23: <Timeline />
   },
   projects: {
-    1: <Menu />
+    1: <Menu />,
+    9: <Project />,
+    16: <Project />
   }
 }
 

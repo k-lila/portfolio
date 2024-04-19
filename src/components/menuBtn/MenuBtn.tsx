@@ -2,11 +2,13 @@ import { useDispatch } from 'react-redux'
 import { selectPage } from '../../store/reducers/changepage'
 
 import { MenuBtn, BtnBorder, Span } from './MenuBtn.styles'
+import { selectExpand } from '../../store/reducers/expand'
 
 const MenuButton = ({ page, name }: { page: string; name: string }) => {
   const dispatch = useDispatch()
   const handleClick = (page: string) => {
     dispatch(selectPage(page))
+    dispatch(selectExpand('none'))
   }
   return (
     <MenuBtn onClick={() => handleClick(page)}>
