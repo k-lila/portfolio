@@ -6,7 +6,7 @@ export const BtnA = () => {
   const handleClick = () => {
     dispatch(selectExpand('expandA'))
   }
-  return <button onClick={() => handleClick()}>A</button>
+  return <button onClick={() => handleClick()}>Ver</button>
 }
 
 export const BtnB = () => {
@@ -14,7 +14,7 @@ export const BtnB = () => {
   const handleClick = () => {
     dispatch(selectExpand('expandB'))
   }
-  return <button onClick={() => handleClick()}>B</button>
+  return <button onClick={() => handleClick()}>Ver</button>
 }
 
 export const BtnC = () => {

@@ -10,7 +10,7 @@ import boxGen from './tools/boxes'
 const Grid = () => {
   const dispatch = useDispatch()
   const section = useSelector((state: RootReducer) => state.select.section)
-  const device = useSelector((dev: RootReducer) => dev.device.device)
+  const device = useSelector((state: RootReducer) => state.device.device)
   const expand = useSelector((state: RootReducer) => state.expand.expand)
   useEffect(() => {
     const handleResize = () => {

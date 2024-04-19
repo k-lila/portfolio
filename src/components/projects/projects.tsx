@@ -1,5 +1,5 @@
 import ItemContainer from '../../containers/itemContainer/ItemContainer'
-import Projects from './styles'
+import { Projects } from './styles'
 import { BtnA, BtnB, BtnBack, BtnC } from './ProjectBtn'
 
 const Project = () => {
