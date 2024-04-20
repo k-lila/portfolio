@@ -37,7 +37,7 @@ export const MondrianColor = ({ ...props }: BoxProps) => {
     '#4A71C0',
     'white',
     '#F1F2ED',
-    'wheat',
+    // 'wheat',
     '#F0D32D',
     '#AB3A2C',
     'black'

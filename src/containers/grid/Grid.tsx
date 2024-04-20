@@ -23,12 +23,11 @@ const Grid = () => {
   }, [dispatch])
 
   const cols = sectionLayouts[section][device].columns
-  let rows
-  if (expand === 'none') {
-    rows = sectionLayouts[section][device].rows
-  } else {
-    rows = projectsLayout[expand][device].rows
-  }
+  const rows =
+    expand === 'none'
+      ? sectionLayouts[section][device].rows
+      : projectsLayout[expand][device].rows
+
   const box_list = boxGen(section, device)
 
   return (

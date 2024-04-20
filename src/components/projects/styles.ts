@@ -29,13 +29,34 @@ export const ProjectExpand = styled.div`
   animation: ${showComponent} 0.5s;
   h3 {
     text-align: center;
+    margin-top: 3%;
   }
 `
 
 export const Projects = styled.div`
-  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
   text-align: justify;
   span {
     font-weight: bold;
   }
+  nav {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    a {
+      height: 1.5em;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      img {
+        height: 100%;
+      }
+    }
+  }
+`
+export const Spacer = styled.div`
+  height: 2px;
+  background-color: black;
 `

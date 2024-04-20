@@ -3,6 +3,8 @@ import BoxStyled from './styles'
 
 export type BoxProps = {
   children?: ReactNode
+  $width?: string
+  $height?: string
   $bgcolor?: string
   $gcol?: string
   $grow?: string

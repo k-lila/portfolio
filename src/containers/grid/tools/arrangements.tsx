@@ -14,7 +14,6 @@ import {
   MondrianCompound,
   MondrianSimple
 } from '../../../components/mondrianBox/MondrianBox'
-import Project from '../../../components/projects/projects'
 import ProjectA from '../../../components/projects/ProjectA'
 import ProjectB from '../../../components/projects/ProjectB'
 
