@@ -15,5 +15,5 @@ export const BtnBack = () => {
   const handleClick = () => {
     dispatch(selectExpand('none'))
   }
-  return <Back onClick={() => handleClick()}>back</Back>
+  return <Back onClick={() => handleClick()}>Voltar</Back>
 }

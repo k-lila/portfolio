@@ -17,7 +17,7 @@ const ProjectB = () => {
       {expand == 'none' ? (
         <ProjectDefault>
           <h3>Python</h3>
-          <p>Os primeiros projetos autorais envolvendo programação.</p>
+          <p>Os primeiros passos na programação</p>
           <BtnExpand target="expandB" />
         </ProjectDefault>
       ) : expand == 'expandB' ? (

@@ -1,12 +1,27 @@
-import { MenuContainer } from './Menu.styles'
+import { MenuContainer } from './styles'
 import MenuButton from '../../components/menuBtn/MenuBtn'
+import { RootReducer } from '../../store'
+import { useSelector } from 'react-redux'
 
 const Menu = () => {
+  const section = useSelector((state: RootReducer) => state.select.section)
   return (
-    <MenuContainer>
-      <MenuButton page="about" name="Sobre"></MenuButton>
-      <MenuButton page="skills" name="Competências"></MenuButton>
-      <MenuButton page="projects" name="Projetos"></MenuButton>
+    <MenuContainer $section={section}>
+      <MenuButton
+        $active={section == 'about' ? true : false}
+        page="about"
+        name="Sobre"
+      ></MenuButton>
+      <MenuButton
+        $active={section == 'skills' ? true : false}
+        page="skills"
+        name="Competências"
+      ></MenuButton>
+      <MenuButton
+        $active={section == 'projects' ? true : false}
+        page="projects"
+        name="Projetos"
+      ></MenuButton>
     </MenuContainer>
   )
 }

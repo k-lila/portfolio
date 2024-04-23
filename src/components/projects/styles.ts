@@ -17,11 +17,12 @@ export const ProjectMin = styled.div`
 `
 export const ProjectDefault = styled.div`
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  text-align: justify;
+  text-align: center;
   padding: 5%;
   animation: ${showComponent} 0.2s;
   h3 {
@@ -81,6 +82,10 @@ export const Back = styled.button`
   -webkit-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.75);
+  transition: all 0.1s;
+  &:active {
+    transform: scale(0.95);
+  }
 `
 export const Expand = styled.button`
   background-color: white;
@@ -90,4 +95,8 @@ export const Expand = styled.button`
   -webkit-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.75);
+  transition: all 0.1s;
+  &:active {
+    transform: scale(0.95);
+  }
 `

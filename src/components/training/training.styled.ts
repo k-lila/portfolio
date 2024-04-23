@@ -28,6 +28,10 @@ const Training = styled.article`
     -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+    transition: all 0.1s;
+    &:active {
+      transform: scale(0.95);
+    }
   }
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {
