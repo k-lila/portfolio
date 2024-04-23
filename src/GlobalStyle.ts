@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
     @media screen and (min-width: 768px) and (max-width: 1024px) {
       font-size: 24px;
     }

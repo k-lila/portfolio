@@ -2,7 +2,7 @@ import styled, { keyframes } from 'styled-components'
 
 const pressed = keyframes`
   from {transform: scale(1);}
-  to {transform: scale(0.9); background-color: rgba(255, 255, 255, 0.5); font-weight: bold;}
+  to {transform: scale(0.95); background-color: rgba(255, 255, 255, 0.5); font-weight: bold;}
 `
 
 const MenuBtn = styled.button<{ $active: boolean }>`
