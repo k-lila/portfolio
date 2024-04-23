@@ -8,10 +8,11 @@ const DescriptionStyled = styled.article`
     margin-top: 2%;
     text-align: right;
     letter-spacing: -1px;
+    font-size: 110%;
   }
   p {
     margin: 5% 0;
-    line-height: 125%;
+    line-height: 1.75em;
   }
 `
 export default DescriptionStyled
