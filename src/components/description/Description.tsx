@@ -19,13 +19,11 @@ const Description = () => {
           caminho de aprendizado.
         </p>
         <p>
-          Com a linguagem Python, tive a oportunidade de colocar algumas ideias
-          em prática, que se tornaram projetos autorais. E, com o
-          desenvolvimento web, adquiri experiência com HTML, CSS, LESS e layouts
-          Front-end. O Javascript e Typescript tornaram-se parte de meus
-          conhecimentos, com particular interesse na biblioteca React. Além
-          disso, possuo alguma experiência com manipulação de dados com a
-          biblioteca Pandas, SQL e Postgre.
+          Com a linguagem Python, encontrei a porta de entrada para a
+          programação, e tive a oportunidade de colocar algumas ideias em
+          prática, que se tornaram projetos autorais. E, com o desenvolvimento
+          web, me familiarizei com HTML, CSS, Javascript e Typescript. Adquiri
+          particular interesse na biblioteca React.
         </p>
         <p>
           Busco oportunidades que me permitam por em prática minhas habilidades

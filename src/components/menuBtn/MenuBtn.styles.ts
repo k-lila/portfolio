@@ -10,7 +10,6 @@ export const BtnBorder = styled.div`
   bottom: -0.2em;
 `
 export const Span = styled.span`
-  font-size: 1.5em;
   background-color: red;
   text-align: center;
 `

@@ -7,16 +7,17 @@ const PresentationStyled = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  margin: 0 auto;
   text-wrap: nowrap;
   animation: ${showComponent} 1s forwards;
   p {
-    font-size: 1.5em;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.5em;
   }
   span {
-    height: 1%;
+    height: 2%;
     margin: 2px;
   }
   > :nth-child(1) {
@@ -29,7 +30,7 @@ const PresentationStyled = styled.div`
     width: 85%;
     p {
       justify-content: end;
-      font-size: 2.5em;
+      // font-size: 1.75em;
     }
   }
 `

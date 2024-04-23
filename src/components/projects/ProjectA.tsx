@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 import ItemContainer from '../../containers/itemContainer/ItemContainer'
-import { BtnA, BtnBack } from './ProjectBtn'
+import { BtnBack, BtnExpand } from './ProjectBtn'
 import {
   ProjectDefault,
   ProjectExpand,
@@ -9,7 +9,6 @@ import {
   Spacer
 } from './styles'
 import { RootReducer } from '../../store'
-import { MondrianColor } from '../mondrianBox/MondrianBox'
 
 const ProjectA = () => {
   const expand = useSelector((state: RootReducer) => state.expand.expand)
@@ -22,11 +21,10 @@ const ProjectA = () => {
             Projetos que mostram a evolução do meu aprendizado no
             desenvolvimento web.
           </p>
-          <BtnA />
+          <BtnExpand target="expandA" />
         </ProjectDefault>
       ) : expand == 'expandA' ? (
         <ProjectExpand>
-          <h3>Front end</h3>
           <Projects>
             <p>
               <span>Portfólio:</span> esta página foi construída utilizando
@@ -90,14 +88,14 @@ const ProjectA = () => {
                 <img src="./logos/github-mark.png" />
               </a>
             </nav>
+            <Spacer />
           </Projects>
-
           <BtnBack />
         </ProjectExpand>
       ) : (
         <ProjectMin>
           <h3>Front End</h3>
-          <BtnA />
+          <BtnExpand target="expandA" />
         </ProjectMin>
       )}
     </ItemContainer>

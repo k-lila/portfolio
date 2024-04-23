@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 import ItemContainer from '../../containers/itemContainer/ItemContainer'
-import { BtnB, BtnBack } from './ProjectBtn'
+import { BtnBack, BtnExpand } from './ProjectBtn'
 import {
   ProjectDefault,
   ProjectExpand,
@@ -18,11 +18,10 @@ const ProjectB = () => {
         <ProjectDefault>
           <h3>Python</h3>
           <p>Os primeiros projetos autorais envolvendo programação.</p>
-          <BtnB />
+          <BtnExpand target="expandB" />
         </ProjectDefault>
       ) : expand == 'expandB' ? (
         <ProjectExpand>
-          <h3>Python</h3>
           <Projects>
             <p>
               <span>GOESWallpaper:</span> um pequeno script python que seleciona
@@ -58,13 +57,14 @@ const ProjectB = () => {
                 <img src="./logos/github-mark.png" />
               </a>
             </nav>
+            <Spacer />
           </Projects>
           <BtnBack />
         </ProjectExpand>
       ) : (
         <ProjectMin>
           <h3>Python</h3>
-          <BtnB />
+          <BtnExpand target="expandB" />
         </ProjectMin>
       )}
     </ItemContainer>

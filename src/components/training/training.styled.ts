@@ -31,8 +31,6 @@ const Training = styled.article`
   }
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {
-    font-size: 1.4em;
-
     a {
       width: 15%;
       -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);

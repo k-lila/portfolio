@@ -1,28 +1,13 @@
 import { useDispatch } from 'react-redux'
 import { selectExpand } from '../../store/reducers/expand'
+import { Back, Expand } from './styles'
 
-export const BtnA = () => {
+export const BtnExpand = ({ target }: { target: string }) => {
   const dispatch = useDispatch()
   const handleClick = () => {
-    dispatch(selectExpand('expandA'))
+    dispatch(selectExpand(target))
   }
-  return <button onClick={() => handleClick()}>Ver</button>
-}
-
-export const BtnB = () => {
-  const dispatch = useDispatch()
-  const handleClick = () => {
-    dispatch(selectExpand('expandB'))
-  }
-  return <button onClick={() => handleClick()}>Ver</button>
-}
-
-export const BtnC = () => {
-  const dispatch = useDispatch()
-  const handleClick = () => {
-    dispatch(selectExpand('expandC'))
-  }
-  return <button onClick={() => handleClick()}>C</button>
+  return <Expand onClick={() => handleClick()}>Ver</Expand>
 }
 
 export const BtnBack = () => {
@@ -30,5 +15,5 @@ export const BtnBack = () => {
   const handleClick = () => {
     dispatch(selectExpand('none'))
   }
-  return <button onClick={() => handleClick()}>back</button>
+  return <Back onClick={() => handleClick()}>back</Back>
 }
