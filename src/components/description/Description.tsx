@@ -5,6 +5,7 @@ const Description = () => {
   return (
     <ItemContainer>
       <DescriptionStyled>
+        <h3>...um pouco sobre mim</h3>
         <p>
           Desenvolvedor Full Stack Python em formação pela EBAC – Escola
           Britânica de Artes Criativas e Tecnologia. Profissional com perfil
