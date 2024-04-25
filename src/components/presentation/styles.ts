@@ -33,5 +33,8 @@ const PresentationStyled = styled.div`
       // font-size: 1.75em;
     }
   }
+  @media screen and (min-width: 1025px) {
+    width: 60%;
+  }
 `
 export default PresentationStyled

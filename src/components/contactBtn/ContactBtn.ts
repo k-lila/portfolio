@@ -23,5 +23,15 @@ const ContactBtn = styled.div`
   img {
     height: 80%;
   }
+  @media screen and (min-width: 1025px) {
+    border: 0.75vmin solid black;
+    border-radius: 5px;
+    margin: 0 auto;
+    height: 50%;
+    width: 75%;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  }
 `
 export default ContactBtn

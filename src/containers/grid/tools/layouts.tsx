@@ -20,8 +20,8 @@ export const sectionLayouts: Layouts = {
       rows: '8svh 12svh 2svh 34svh 2svh 2svh 2svh 24svh 1svh 4svh'
     },
     pc: {
-      columns: '5vw 2vw 32vw 4vw 4vw 4vw 32vw 2vw 5vw',
-      rows: '6svh 12svh 2svh 30svh 2svh 2svh 2svh 2svh 33svh 4svh'
+      columns: '5vw 3vw 30vw 4vw 4vw 5vw 30vw 3vw 5vw',
+      rows: '6svh 12svh 2svh 30svh 2svh 4svh 4svh 4svh 20svh 4svh'
     }
   },
   skills: {
@@ -34,8 +34,8 @@ export const sectionLayouts: Layouts = {
       rows: '8svh 2svh 18svh 4svh 12svh 4svh 12svh 4svh 22svh 5svh'
     },
     pc: {
-      columns: '5vw 5vw 10vw 20vw 20vw 12vw 8vw 5svw 5vw',
-      rows: '6svh 2svh 20svh 4svh 15svh 4svh 15svh 4svh 20svh 5svh'
+      columns: '5vw 12vw 10vw 10vw 15vw 10vw 10vw 12svw 5vw',
+      rows: '6svh 2svh 10svh 4svh 14svh 4svh 14svh 4svh 25svh 5svh'
     }
   },
   projects: {
@@ -48,8 +48,8 @@ export const sectionLayouts: Layouts = {
       rows: '8svh 2svh 2svh 20svh 4svh 20svh 4svh 24svh 5svh 2svh'
     },
     pc: {
-      columns: '5vw 5vw 5vw 15vw 30vw 15vw 3vw 7vw 5vw',
-      rows: '6svh 2svh 2svh 24svh 3svh 24svh 3svh 24svh 5svh 2svh'
+      columns: '5vw 5vw 5vw 14vw 30vw 14vw 5vw 6vw 5vw',
+      rows: '6svh 4svh 4svh 20svh 3svh 20svh 4svh 20svh 5svh 2svh'
     }
   }
 }

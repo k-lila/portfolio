@@ -2,6 +2,9 @@ import ContactBtn from '../../components/contactBtn/ContactBtn'
 import ContactListStyled from './styles'
 import CopyBtn from '../../components/contactBtn/CopyBtn'
 import ItemContainer from '../itemContainer/ItemContainer'
+import Box from '../../components/box/box'
+import { useSelector } from 'react-redux'
+import { RootReducer } from '../../store'
 
 const handleClick = (text: string) => {
   navigator.clipboard.writeText(text)
@@ -9,6 +12,7 @@ const handleClick = (text: string) => {
 }
 
 const ContactList = () => {
+  const device = useSelector((state: RootReducer) => state.device.device)
   return (
     <ItemContainer>
       <ContactListStyled>
@@ -51,6 +55,7 @@ const ContactList = () => {
           </a>
         </ContactBtn>
       </ContactListStyled>
+      {device == 'pc' ? <Box $bleft $width="2vw" /> : null}
     </ItemContainer>
   )
 }

@@ -19,5 +19,9 @@ const MenuBtn = styled.button<{ $active: boolean }>`
   -moz-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.75);
   animation: ${(props) => (props.$active ? pressed : 'none')} 0.3s forwards;
+
+  @media screen and (min-width: 1025px) {
+    padding: 1% 5%;
+  }
 `
 export default MenuBtn

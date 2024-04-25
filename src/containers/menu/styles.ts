@@ -14,4 +14,7 @@ export const MenuContainer = styled.div<{ $section: string }>`
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   transition: all 1s;
+  @media screen and (min-width: 1025px) {
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+  }
 `
