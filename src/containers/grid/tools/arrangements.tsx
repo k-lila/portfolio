@@ -16,6 +16,7 @@ import {
 } from '../../../components/mondrianBox/MondrianBox'
 import ProjectA from '../../../components/projects/ProjectA'
 import ProjectB from '../../../components/projects/ProjectB'
+import ProjectC from '../../../components/projects/ProjectC'
 
 type componentArrangement = {
   [key: string]: {
@@ -49,7 +50,8 @@ export const componentArrangement: componentArrangement = {
   projects: {
     1: <Menu />,
     9: <ProjectA />,
-    16: <ProjectB />
+    16: <ProjectB />,
+    21: <ProjectC />
   }
 }
 
