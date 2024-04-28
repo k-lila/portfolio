@@ -35,6 +35,7 @@ const PresentationStyled = styled.div`
   }
   @media screen and (min-width: 1025px) {
     width: 60%;
+    font-size: 2.75vmin;
   }
 `
 export default PresentationStyled

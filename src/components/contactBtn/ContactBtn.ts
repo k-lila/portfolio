@@ -21,14 +21,16 @@ const ContactBtn = styled.div`
     margin: 2%;
   }
   img {
+    object-fit: contain;
     height: 80%;
+    width: 100%;
   }
   @media screen and (min-width: 1025px) {
     border: 0.75vmin solid black;
     border-radius: 5px;
-    margin: 0 auto;
-    height: 50%;
-    width: 75%;
+    width: 80%;
+    height: 12%;
+    // margin: auto;
     -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);

@@ -4,7 +4,6 @@ const Training = styled.article`
   display: flex;
   width: 100%;
   height: 100%;
-  // padding: 2%;
   justify-content: space-between;
   font-size: 0.9em;
   article {
@@ -40,6 +39,15 @@ const Training = styled.article`
       -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
       -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
       box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+    }
+  }
+
+  @media screen and (min-width: 1025px) {
+    article {
+      font-size: 2.5vmin;
+    }
+    a {
+      border: 0.75vmin solid black;
     }
   }
 `

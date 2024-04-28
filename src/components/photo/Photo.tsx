@@ -8,7 +8,7 @@ const Photo = () => {
   const device = useSelector((state: RootReducer) => state.device.device)
   return (
     <ItemContainer>
-      {device == 'pc' ? <MondrianColor $width="40vw" $bright /> : null}
+      {device == 'pc' ? <MondrianColor $width="5vw" $bright /> : null}
       <Img src="./foto.jpg" />
     </ItemContainer>
   )

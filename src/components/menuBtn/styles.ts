@@ -22,6 +22,7 @@ const MenuBtn = styled.button<{ $active: boolean }>`
 
   @media screen and (min-width: 1025px) {
     padding: 1% 5%;
+    font-size: 3vmin;
   }
 `
 export default MenuBtn

@@ -15,6 +15,12 @@ export const TimelineStyled = styled.div`
   span {
     font-weight: bold;
   }
+  @media screen and (min-width: 1025px) {
+    font-size: 2.5vmin;
+    p {
+      margin: 2%;
+    }
+  }
 `
 
 export const Spacer = styled.div`

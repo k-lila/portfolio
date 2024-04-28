@@ -1,9 +1,14 @@
+import { useSelector } from 'react-redux'
 import ItemContainer from '../../containers/itemContainer/ItemContainer'
+import { MondrianColor } from '../mondrianBox/MondrianBox'
 import Training from './training.styled'
+import { RootReducer } from '../../store'
 
 const MastersD = () => {
+  const device = useSelector((state: RootReducer) => state.device.device)
   return (
     <ItemContainer>
+      {device == 'pc' ? <MondrianColor $bright $width="25vw" /> : null}
       <Training>
         <article>
           <h3>Mestrado em Filosofia</h3>

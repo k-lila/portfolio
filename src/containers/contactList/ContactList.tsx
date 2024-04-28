@@ -5,6 +5,7 @@ import ItemContainer from '../itemContainer/ItemContainer'
 import Box from '../../components/box/box'
 import { useSelector } from 'react-redux'
 import { RootReducer } from '../../store'
+import { MondrianColor } from '../../components/mondrianBox/MondrianBox'
 
 const handleClick = (text: string) => {
   navigator.clipboard.writeText(text)
@@ -55,7 +56,7 @@ const ContactList = () => {
           </a>
         </ContactBtn>
       </ContactListStyled>
-      {device == 'pc' ? <Box $bleft $width="2vw" /> : null}
+      {device == 'pc' ? <MondrianColor $width="5vw" $bleft /> : null}
     </ItemContainer>
   )
 }

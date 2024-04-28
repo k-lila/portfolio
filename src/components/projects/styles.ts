@@ -14,6 +14,9 @@ export const ProjectMin = styled.div`
       font-size: 32px;
     }
   }
+  @media screen and (min-width: 1025px) {
+    font-size: 3vmin;
+  }
 `
 export const ProjectDefault = styled.div`
   height: 100%;
@@ -23,7 +26,6 @@ export const ProjectDefault = styled.div`
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  padding: 5%;
   animation: ${showComponent} 0.2s;
   h3 {
     text-align: center;
@@ -32,6 +34,9 @@ export const ProjectDefault = styled.div`
     h3 {
       font-size: 1.25em;
     }
+  }
+  @media screen and (min-width: 1025px) {
+    font-size: 2.5vmin;
   }
 `
 export const ProjectExpand = styled.div`
@@ -43,6 +48,9 @@ export const ProjectExpand = styled.div`
   h3 {
     text-align: center;
     margin-top: 3%;
+  }
+  @media screen and (min-width: 1025px) {
+    font-size: 2.5vmin;
   }
 `
 
@@ -86,6 +94,9 @@ export const Back = styled.button`
   &:active {
     transform: scale(0.95);
   }
+  @media screen and (min-width: 1025px) {
+    font-size: 2.5vmin;
+  }
 `
 export const Expand = styled.button`
   background-color: white;
@@ -98,5 +109,9 @@ export const Expand = styled.button`
   transition: all 0.1s;
   &:active {
     transform: scale(0.95);
+  }
+  @media screen and (min-width: 1025px) {
+    font-size: 2.5vmin;
+    padding: 0.75% 6%;
   }
 `

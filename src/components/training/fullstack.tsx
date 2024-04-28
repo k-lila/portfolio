@@ -1,7 +1,11 @@
+import { useSelector } from 'react-redux'
 import ItemContainer from '../../containers/itemContainer/ItemContainer'
+import { MondrianColor } from '../mondrianBox/MondrianBox'
 import Training from './training.styled'
+import { RootReducer } from '../../store'
 
 const FullStack = () => {
+  const device = useSelector((state: RootReducer) => state.device.device)
   return (
     <ItemContainer>
       <Training>
@@ -23,6 +27,7 @@ const FullStack = () => {
           />
         </a>
       </Training>
+      {device == 'pc' ? <MondrianColor $bleft $width="25vw" /> : null}
     </ItemContainer>
   )
 }

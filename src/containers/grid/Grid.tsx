@@ -22,7 +22,10 @@ const Grid = () => {
     }
   }, [dispatch])
 
-  const cols = sectionLayouts[section][device].columns
+  const cols =
+    expand === 'none'
+      ? sectionLayouts[section][device].columns
+      : projectsLayout[expand][device].columns
   const rows =
     expand === 'none'
       ? sectionLayouts[section][device].rows
