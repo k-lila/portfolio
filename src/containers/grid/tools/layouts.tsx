@@ -66,7 +66,7 @@ export const projectsLayout: Layouts = {
     },
     pc: {
       columns: '5vw 5vw 5vw 14vw 30vw 14vw 5vw 6vw 5vw',
-      rows: '6svh 2svh 2svh 49svh 3svh 8svh 3svh 8svh 5svh 2svh'
+      rows: '8svh 2svh 2svh 47svh 3svh 8svh 3svh 8svh 5svh 2svh'
     }
   },
   expandB: {
@@ -80,7 +80,7 @@ export const projectsLayout: Layouts = {
     },
     pc: {
       columns: '5vw 5vw 5vw 14vw 30vw 14vw 5vw 6vw 5vw',
-      rows: '6svh 2svh 2svh 8svh 3svh 49svh 3svh 8svh 5svh 2svh'
+      rows: '8svh 2svh 2svh 8svh 3svh 47svh 3svh 8svh 5svh 2svh'
     }
   },
   expandC: {
@@ -94,7 +94,7 @@ export const projectsLayout: Layouts = {
     },
     pc: {
       columns: '5vw 5vw 5vw 14vw 30vw 14vw 5vw 6vw 5vw',
-      rows: '6svh 2svh 2svh 8svh 3svh 8svh 3svh 49svh 5svh 2svh'
+      rows: '8svh 2svh 2svh 8svh 3svh 8svh 3svh 47svh 5svh 2svh'
     }
   }
 }

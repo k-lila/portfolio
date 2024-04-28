@@ -3,7 +3,7 @@ import { RootReducer } from '../../store'
 import ItemContainer from '../../containers/itemContainer/ItemContainer'
 import { ProjectDefault, ProjectMin } from './styles'
 import { BtnExpand } from './ProjectBtn'
-import Repositories from '../reposList/Repositories'
+import Repositories from '../repositories/Repositories'
 
 const ProjectC = () => {
   const expand = useSelector((state: RootReducer) => state.expand.expand)

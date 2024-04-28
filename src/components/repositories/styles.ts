@@ -26,6 +26,32 @@ export const UlRepos = styled.ul`
       height: 100%;
     }
   }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    li {
+      width: 80%;
+    }
+  }
+
+  @media screen and (min-width: 1025px) {
+    display: grid;
+    padding: 1vmin 2vmin;
+    gap: 4vmin;
+    grid-template-columns: 1fr 1fr 1fr;
+    li {
+      font-size: 2.5vmin;
+      width: 100%;
+      height: 100%;
+      div {
+        margin-top: 5%;
+      }
+    }
+
+    & > div {
+      grid-column: span 3;
+      padding: 0 20%;
+    }
+  }
 `
 
 const loadingAnimation = keyframes`
