@@ -12,22 +12,39 @@ import { RootReducer } from '../../store'
 
 const ProjectA = () => {
   const expand = useSelector((state: RootReducer) => state.expand.expand)
+  const device = useSelector((state: RootReducer) => state.device.device)
   return (
     <ItemContainer>
       {expand == 'none' ? (
         <ProjectDefault>
           <h3>Front end</h3>
-          <p>A evolução do meu aprendizado no desenvolvimento web</p>
+          <p>Desenvolvimento web</p>
           <BtnExpand target="expandA" />
         </ProjectDefault>
       ) : expand == 'expandA' ? (
         <ProjectExpand>
           <Projects>
-            <p>
-              <span>Portfólio:</span> esta página foi construída utilizando
-              React, Redux e Styled Components. Seu layout foi inspirado na obra
-              de Piet Mondrian.
-            </p>
+            {device != 'cel' ? (
+              <p>
+                <span>Portfólio: </span>Esta página foi meu primeiro projeto
+                autoral com React. Utilizei Styled Components para a aplicação
+                do CSS, e Redux para organizar o estado geral da página.
+                Inspirado no artista plástico Piet Mondrian, utilizei uma grid
+                para organizar tanto o layout animado quanto os componentes que
+                variam de cor, conforme a paleta do artista. O layout geral da
+                página é, virtualmente, o mesmo, de modo que as diferentes
+                seções são conseguidas através da modificação dos dados
+                referentes à largura e altura das colunas e linhas da grid. Os
+                componentes específicos de cada seção são, por conseguinte,
+                inseridos nessa grid animada.
+              </p>
+            ) : (
+              <p>
+                <span>Portfólio: </span>esta página foi construída utilizando
+                React, Redux e Styled Components. Seu layout foi inspirado na
+                obra de Piet Mondrian.
+              </p>
+            )}
             <nav>
               <a
                 href="https://github.com/k-lila/portfolio"
@@ -40,11 +57,26 @@ const ProjectA = () => {
             <Spacer />
           </Projects>
           <Projects>
-            <p>
-              <span>Perlin-ascii:</span> um projeto focado em Javascript.
-              Utilizei a biblioteca P5.js para gerar e visualizar, com cores e
-              caracteres ASCII, o ruído de Perlin.
-            </p>
+            {device != 'cel' ? (
+              <p>
+                <span>Perlin-ascii:</span> um projeto focado em Javascript.
+                Utilizei a biblioteca P5.js para gerar e visualizar, com cores e
+                caracteres ASCII, o ruído de Perlin. O ruído de Perlin gera
+                números aleatórios, porém, de uma forma que não ocorre grandes
+                saltos na sequência de um número para o outro. Aqui, temos um
+                ruído em 3 dimensões, de modo que o tempo é considerado como a
+                terceira dimensão. Coloquei como opções para o usuário, além da
+                personalização da paleta de cores, a possibilidade de modificar
+                algumas variáveis que incidem diretamente sobre o próprio ruído
+                gerado.
+              </p>
+            ) : (
+              <p>
+                <span>Perlin-ascii: </span>um projeto focado em Javascript.
+                Utilizei a biblioteca P5.js para gerar e visualizar, com cores e
+                caracteres ASCII, o ruído de Perlin.
+              </p>
+            )}
             <nav>
               <a
                 href="https://perlin-ascii.vercel.app/"
@@ -64,11 +96,25 @@ const ProjectA = () => {
             <Spacer />
           </Projects>
           <Projects>
-            <p>
-              <span>Ocupação Guarani:</span> uma pequena página idealizada para
-              visualizar os dados do sítio RS TQ-141. Foi utilizado apenas HTML,
-              Javascript, CSS, e Bootstrap.
-            </p>
+            {device != 'cel' ? (
+              <p>
+                <span>Ocupação Guarani: </span>uma pequena página idealizada
+                para visualizar os dados do sítio RS TQ-141, localizado à margem
+                do rio Taquari. As evidências foram coletadas em 2017, e indicam
+                uma ocupação Guarani pré-colonial. Tive acesso à planilha que
+                continha dos dados dessa escavação, e a partir dela gerei os
+                plots que podem ser visualizados. Foi utilizado apenas HTML,
+                Javascript e CSS com o framework Bootstrap, para a construção da
+                página. Este foi o meu primeiro projeto autoral no
+                desenvolvimento web.
+              </p>
+            ) : (
+              <p>
+                <span>Ocupação Guarani:</span> uma pequena página idealizada
+                para visualizar os dados do sítio RS TQ-141. Foi utilizado
+                apenas HTML, Javascript, CSS, e Bootstrap.
+              </p>
+            )}
             <nav>
               <a
                 href="https://ocupacao-guarani.vercel.app/"

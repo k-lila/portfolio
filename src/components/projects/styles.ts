@@ -26,7 +26,10 @@ export const ProjectDefault = styled.div`
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  animation: ${showComponent} 0.2s;
+  opacity: 0;
+  animation: ${showComponent} 0.2s forwards;
+  animation-delay: 0.2s;
+
   h3 {
     text-align: center;
   }
@@ -36,7 +39,7 @@ export const ProjectDefault = styled.div`
     }
   }
   @media screen and (min-width: 1025px) {
-    font-size: 2.5vmin;
+    font-size: 3vmin;
   }
 `
 export const ProjectExpand = styled.div`
@@ -44,7 +47,9 @@ export const ProjectExpand = styled.div`
   height: max-content;
   display: flex;
   flex-direction: column;
-  animation: ${showComponent} 0.5s;
+  opacity: 0;
+  animation: ${showComponent} 0.5s forwards;
+  animation-delay: 0.3s;
   h3 {
     text-align: center;
     margin-top: 3%;
@@ -57,7 +62,7 @@ export const ProjectExpand = styled.div`
 export const Projects = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 5%;
+  padding: 2% 5%;
   text-align: justify;
   span {
     font-weight: bold;
@@ -112,6 +117,6 @@ export const Expand = styled.button`
   }
   @media screen and (min-width: 1025px) {
     font-size: 2.5vmin;
-    padding: 0.75% 6%;
+    padding: 0.25em 6%;
   }
 `

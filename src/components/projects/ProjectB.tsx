@@ -12,24 +12,45 @@ import { RootReducer } from '../../store'
 
 const ProjectB = () => {
   const expand = useSelector((state: RootReducer) => state.expand.expand)
+  const device = useSelector((state: RootReducer) => state.device.device)
   return (
     <ItemContainer>
       {expand == 'none' ? (
         <ProjectDefault>
           <h3>Python</h3>
-          <p>Os primeiros passos na programação</p>
+          <p>Primeiros passos</p>
           <BtnExpand target="expandB" />
         </ProjectDefault>
       ) : expand == 'expandB' ? (
         <ProjectExpand>
           <Projects>
-            <p>
-              <span>GOESWallpaper:</span> um pequeno script python que seleciona
-              a imagem mais recente disponibilizada pelos satélites GOES 16/18,
-              e a salva como plano de fundo do computador. Desenvolvi este
-              projeto para ter uma noção de como organizar uma aplicação
-              funcional.
-            </p>
+            {device != 'cel' ? (
+              <p>
+                <span>GOESWallpaper: </span> Um pequeno script escrito em Python
+                que coloca de wallpapper do computador a imagem mais atual da
+                Terra. A fonte das imagens são os satélites GOES-16 e GOES-18,
+                satélites estacionários de observação do clima na Terra operados
+                pela NOAA - National Oceanic and Atmospheric Administration -
+                uma instituição do Departamento de Comércio dos Estados Unidos.
+                O satélite GOES- 16 cobre a área das Américas, e o GOES-18 a
+                área do pacífico. Para ambos estão disponíveis diversos tipos de
+                imagens. Utilizei Python para extrair uma relação de todas as
+                imagens disponíveis em tempo real no diretório on-line dos
+                satélites. Após configurado, o script salva somente a imagem
+                mais atual do tipo de imagem escolhido pelo usuário, e a
+                sobrescreve cada vez que encontra uma atualização. Desenvolvi
+                este projeto para ter uma noção de como organizar uma aplicação
+                funcional em Python.
+              </p>
+            ) : (
+              <p>
+                <span>GOESWallpaper: </span>um pequeno script python que
+                seleciona a imagem mais recente disponibilizada pelos satélites
+                GOES 16/18, e a salva como plano de fundo do computador.
+                Desenvolvi este projeto para ter uma noção de como organizar uma
+                aplicação funcional.
+              </p>
+            )}
             <nav>
               <a
                 href="https://github.com/k-lila/GOESWallpaper"
@@ -42,12 +63,26 @@ const ProjectB = () => {
             <Spacer />
           </Projects>
           <Projects>
-            <p>
-              <span>Harenator:</span> a ideia desse projeto é desenvolver um
-              sintetizador musical do zero. Para isso, utilizo Python e a
-              biblioteca numpy no cálculo das ondas sonoras, e a biblioteca
-              pygame para criar um teclado interativo.
-            </p>
+            {device != 'cel' ? (
+              <p>
+                <span>Harenator: </span>A ideia desse projeto é desenvolver um
+                sintetizador musical do zero. Para isso, utilizo Python e a
+                biblioteca numpy no cálculo das ondas sonoras, e a biblioteca
+                pygame para criar um teclado interativo. Ao iniciar o script, o
+                teclado do computador é transformado em um teclado musical, e
+                possui todas as notas do piano, assim como alguns timbres
+                personalizados, controle de volume nas teclas e mais algumas
+                funcionalidades. Concebi este projeto como uma forma de aprender
+                a programação orientada a objetos em Python.
+              </p>
+            ) : (
+              <p>
+                <span>Harenator: </span>a ideia desse projeto é desenvolver um
+                sintetizador musical do zero. Para isso, utilizo Python e a
+                biblioteca numpy no cálculo das ondas sonoras, e a biblioteca
+                pygame para criar um teclado interativo.
+              </p>
+            )}
             <nav>
               <a
                 href="https://github.com/k-lila/Harenator"

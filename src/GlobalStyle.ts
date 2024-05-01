@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     user-select: none;
+    font-family: "Encode Sans", sans-serif;
     @media screen and (min-width: 768px) and (max-width: 1024px) {
       font-size: 24px;
     }

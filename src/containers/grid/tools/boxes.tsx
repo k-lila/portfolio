@@ -1,6 +1,7 @@
 import React from 'react'
 import { genLayout } from './layouts'
 import { colorBoxes, componentArrangement } from './arrangements'
+import Citation from '../../../components/citation/Citation'
 
 const boxGen = (section: string, device: string) => {
   const boxes = genLayout(section === 'about' ? true : false)
@@ -11,7 +12,7 @@ const boxGen = (section: string, device: string) => {
       if (index == 9) {
         component = componentArrangement[section][19]
       } else if (index == 19) {
-        component = <p>asdasdasdasdasd</p>
+        component = <Citation />
       }
     }
 
