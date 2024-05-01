@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Loading, UlRepos } from './styles'
 import { BtnBack } from '../projects/ProjectBtn'
+import ItemContainer from '../../containers/itemContainer/ItemContainer'
 
 type Repository = {
   id: number
@@ -37,13 +38,15 @@ const Repositories = () => {
   }, [])
   if (loading) {
     return (
-      <Loading>
-        <div>
-          <span />
-          <span />
-          <span />
-        </div>
-      </Loading>
+      <ItemContainer>
+        <Loading>
+          <div>
+            <span />
+            <span />
+            <span />
+          </div>
+        </Loading>
+      </ItemContainer>
     )
   } else if (error) {
     return (

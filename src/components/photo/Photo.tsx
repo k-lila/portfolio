@@ -9,7 +9,7 @@ const Photo = () => {
   return (
     <ItemContainer>
       {device == 'pc' ? <MondrianColor $width="5vw" $bright /> : null}
-      <Img src="./foto.jpg" />
+      <Img src="./foto.png" />
     </ItemContainer>
   )
 }

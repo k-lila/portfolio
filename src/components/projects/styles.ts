@@ -81,6 +81,14 @@ export const Projects = styled.div`
       }
     }
   }
+  @media screen and (min-width: 1025px) {
+    nav {
+      margin: 2vmin 0;
+      a {
+        height: 5vmin;
+      }
+    }
+  }
 `
 export const Spacer = styled.div`
   height: 2px;
@@ -101,6 +109,7 @@ export const Back = styled.button`
   }
   @media screen and (min-width: 1025px) {
     font-size: 2.5vmin;
+    width: 200px;
   }
 `
 export const Expand = styled.button`

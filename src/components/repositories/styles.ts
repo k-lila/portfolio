@@ -36,12 +36,13 @@ export const UlRepos = styled.ul`
   @media screen and (min-width: 1025px) {
     display: grid;
     padding: 1vmin 2vmin;
-    gap: 4vmin;
+    column-gap: 3vmin;
+    row-gap: 0;
     grid-template-columns: 1fr 1fr 1fr;
     li {
       font-size: 2.5vmin;
       width: 100%;
-      height: 100%;
+      height: max-content;
       div {
         margin-top: 5%;
       }

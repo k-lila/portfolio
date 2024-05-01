@@ -4,6 +4,7 @@ const DescriptionStyled = styled.article`
   height: max-content;
   text-align: justify;
   padding: 0 0.75em;
+
   h3 {
     margin-top: 2%;
     text-align: right;

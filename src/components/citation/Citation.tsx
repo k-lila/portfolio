@@ -6,7 +6,7 @@ const Citation = () => {
     <ItemContainer>
       <Quote>
         <P>Todos os homens têm, por natureza, desejo de conhecer</P>
-        <Ref>Aristóteles (Metafísica)</Ref>
+        <Ref>Aristóteles, Metafísica</Ref>
       </Quote>
     </ItemContainer>
   )
