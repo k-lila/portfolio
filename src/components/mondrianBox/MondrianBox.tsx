@@ -11,15 +11,14 @@ export type MondrianGridProps = {
 }
 
 type MondrianSimpleProps = {
+  children?: ReactNode
+  $first?: boolean
   $horizontal?: boolean
-  $grid?: string
 }
 
 type MondrianCompoundProps = {
   $horizontal?: boolean
   $first?: boolean
-  $gridA?: string
-  $gridB?: string
 }
 
 type MondrianBlockProps = {
@@ -29,9 +28,17 @@ type MondrianBlockProps = {
   $grid?: string
 }
 
-export const MondrianColor = ({ ...props }: BoxProps) => {
-  const [background, setbackground] = useState('white')
-  const [duration, setduration] = useState(random.int(500, 1500))
+const randNum = (num1: number, num2: number) => {
+  return random.int(num1, num2)
+}
+
+const randGrid = () => {
+  const gridA = randNum(20, 80)
+  const gridB = 100 - gridA
+  return `${gridA}% ${gridB}%`
+}
+
+const randColor = () => {
   const palette = [
     '#314290',
     '#4A71C0',
@@ -42,10 +49,15 @@ export const MondrianColor = ({ ...props }: BoxProps) => {
     '#AB3A2C',
     'black'
   ]
+  return palette[random.int(0, palette.length - 1)]
+}
 
+export const MondrianColor = ({ ...props }: BoxProps) => {
+  const [background, setbackground] = useState('white')
+  const [duration, setduration] = useState(randNum(500, 1500))
   useEffect(() => {
     const timer = setInterval(() => {
-      setbackground(palette[random.int(0, palette.length - 1)])
+      setbackground(randColor())
     }, duration)
     return () => {
       clearInterval(timer)
@@ -53,7 +65,7 @@ export const MondrianColor = ({ ...props }: BoxProps) => {
   })
   useEffect(() => {
     const timer = setInterval(() => {
-      const durat = random.int(5000, 20000)
+      const durat = randNum(5000, 20000)
       setduration(durat)
     }, duration)
 
@@ -65,36 +77,43 @@ export const MondrianColor = ({ ...props }: BoxProps) => {
 }
 
 export const MondrianSimple = ({ ...props }: MondrianSimpleProps) => {
+  const [gridSimple, setGridSimple] = useState(randGrid())
+  const [duration, setduration] = useState(randNum(2000, 10000))
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setGridSimple(randGrid())
+    }, duration)
+    return () => {
+      clearInterval(timer)
+    }
+  })
+  useEffect(() => {
+    const timer = setInterval(() => {
+      const durat = randNum(5000, 20000)
+      setduration(durat)
+    }, duration)
+
+    return () => {
+      clearInterval(timer)
+    }
+  })
   return (
     <MGrid
       $horizontal={props.$horizontal}
-      $gcol={!props.$horizontal ? props.$grid : '1fr'}
-      $grow={props.$horizontal ? props.$grid : '1fr'}
+      $gcol={!props.$horizontal ? gridSimple : '1fr'}
+      $grow={props.$horizontal ? gridSimple : '1fr'}
     >
-      <MondrianColor $bbot={props.$horizontal} $bright={!props.$horizontal} />
-      <MondrianColor />
+      {props.$first ? props.children : <MondrianColor />}
+      {!props.$first && props.children ? props.children : <MondrianColor />}
     </MGrid>
   )
 }
 
 export const MondrianCompound = ({ ...props }: MondrianCompoundProps) => {
   return (
-    <MGrid
-      $horizontal={props.$horizontal}
-      $gcol={props.$horizontal ? '1fr' : props.$gridA}
-      $grow={props.$horizontal ? props.$gridA : '1fr'}
-    >
-      {props.$first ? (
-        <MondrianSimple $grid={props.$gridB} $horizontal={!props.$horizontal} />
-      ) : (
-        <MondrianColor $bbot={props.$horizontal} $bright={!props.$horizontal} />
-      )}
-      {props.$first ? (
-        <MondrianColor $bleft={!props.$horizontal} $btop={props.$horizontal} />
-      ) : (
-        <MondrianSimple $grid={props.$gridB} $horizontal={!props.$horizontal} />
-      )}
-    </MGrid>
+    <MondrianSimple $horizontal={props.$horizontal} $first={props.$first}>
+      <MondrianSimple $horizontal={!props.$horizontal} />
+    </MondrianSimple>
   )
 }
 

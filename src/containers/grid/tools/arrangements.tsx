@@ -17,7 +17,6 @@ import {
 import ProjectA from '../../../components/projects/ProjectA'
 import ProjectB from '../../../components/projects/ProjectB'
 import ProjectC from '../../../components/projects/ProjectC'
-import Box from '../../../components/box/box'
 
 type componentArrangement = {
   [key: string]: {
@@ -59,96 +58,69 @@ export const componentArrangement: componentArrangement = {
 export const colorBoxes: ColorBoxes = {
   cel: {
     about: {
-      0: <MondrianCompound $gridA="80% 20%" $gridB="35% 65%" />,
-      2: <MondrianCompound $first $gridA="65% 35%" $gridB="65% 35%" />,
-      3: <MondrianCompound $gridA="40% 60%" $gridB="60% 40%" />,
-      5: <MondrianCompound $gridA="45% 55%" $gridB="70% 30%" />,
-      9: (
-        <MondrianBlock
-          $grid="40% 60%"
-          childrenA={<MondrianSimple $grid="30% 70%" $horizontal />}
-          childrenB={
-            <MondrianCompound
-              $horizontal
-              $first
-              $gridA="75% 25%"
-              $gridB="70% 30%"
-            />
-          }
-        />
-      ),
-      12: <MondrianSimple $grid="10% 90%" />,
-      14: <MondrianSimple $grid="35% 65%" />,
-      20: <MondrianCompound $gridA="30% 70%" $gridB="68% 32%" $horizontal />,
+      0: <MondrianCompound />,
+      2: <MondrianCompound $first />,
+      3: <MondrianCompound />,
+      5: <MondrianCompound />,
+      // 9: ,
+      12: <MondrianSimple />,
+      14: <MondrianSimple />,
+      20: <MondrianCompound $horizontal />,
       21: <MondrianColor />
     },
     skills: {
-      0: <MondrianCompound $gridA="50% 50%" $gridB="35% 65%" />,
-      2: <MondrianCompound $first $gridA="65% 35%" $gridB="55% 45%" />,
-      6: <MondrianCompound $first $gridB="72% 28%" />,
-      5: <MondrianCompound $horizontal $first $gridA="60% 40%" />,
+      0: <MondrianCompound />,
+      2: <MondrianCompound $first />,
+      6: <MondrianCompound $first />,
+      5: <MondrianCompound $horizontal $first />,
       11: <MondrianColor />,
       13: <MondrianSimple />,
-      14: <MondrianSimple $grid="65% 35%" />,
+      14: <MondrianSimple />,
       18: <MondrianColor />,
-      20: (
-        <MondrianCompound
-          $horizontal
-          $first
-          $gridA="80% 20%"
-          $gridB="60% 40%"
-        />
-      ),
-      22: <MondrianCompound $horizontal $gridA="37% 63%" $gridB="45% 55%" />
+      20: <MondrianCompound $horizontal $first />,
+      22: <MondrianCompound $horizontal />
     },
     projects: {
       0: <MondrianCompound />,
-      2: <MondrianCompound $gridA="43% 57%" $gridB="70% 30%" />,
-      8: <MondrianCompound $first $gridA="65% 35%" $gridB="68% 32%" />,
-      10: <MondrianCompound $first $gridA="58% 42%" $gridB="38% 62%" />,
+      2: <MondrianCompound />,
+      8: <MondrianCompound $first />,
+      10: <MondrianCompound $first />,
       14: <MondrianSimple />,
-      18: <MondrianSimple $horizontal $grid="68%" />,
-      20: <MondrianCompound $horizontal $gridA="30% 70%" $gridB="65% 35%" />,
+      18: <MondrianSimple $horizontal />,
+      20: <MondrianCompound $horizontal />,
       22: <MondrianColor />
     }
   },
   pc: {
     about: {
-      0: <MondrianCompound $gridA="80% 20%" $gridB="35% 65%" />,
-      2: <MondrianCompound $first $gridA="65% 35%" $gridB="65% 35%" />,
-      3: <MondrianCompound $gridA="40% 60%" $gridB="60% 40%" />,
-      5: <MondrianCompound $gridA="45% 55%" $gridB="70% 30%" />,
-      14: <MondrianSimple $grid="35% 65%" />,
-      20: <MondrianCompound $gridA="30% 70%" $gridB="68% 32%" $horizontal />,
+      0: <MondrianCompound />,
+      2: <MondrianCompound $first />,
+      3: <MondrianCompound />,
+      5: <MondrianCompound />,
+      14: <MondrianSimple />,
+      20: <MondrianCompound $horizontal />,
       21: <MondrianColor />
     },
     skills: {
-      0: <MondrianCompound $gridA="50% 50%" $gridB="35% 65%" />,
-      2: <MondrianCompound $first $gridA="65% 35%" $gridB="55% 45%" />,
-      6: <MondrianCompound $first $gridB="72% 28%" />,
-      5: <MondrianCompound $horizontal $first $gridA="60% 40%" />,
+      0: <MondrianCompound />,
+      2: <MondrianCompound $first />,
+      6: <MondrianCompound $first />,
+      5: <MondrianCompound $horizontal $first />,
       11: <MondrianColor />,
       13: <MondrianSimple />,
-      14: <MondrianSimple $grid="65% 35%" />,
+      14: <MondrianSimple />,
       18: <MondrianColor />,
-      20: (
-        <MondrianCompound
-          $horizontal
-          $first
-          $gridA="80% 20%"
-          $gridB="60% 40%"
-        />
-      ),
-      22: <MondrianCompound $horizontal $gridA="37% 63%" $gridB="45% 55%" />
+      20: <MondrianCompound $horizontal $first />,
+      22: <MondrianCompound $horizontal />
     },
     projects: {
       0: <MondrianCompound />,
-      2: <MondrianCompound $gridA="43% 57%" $gridB="70% 30%" />,
-      8: <MondrianCompound $first $gridA="65% 35%" $gridB="68% 32%" />,
-      10: <MondrianCompound $first $gridA="58% 42%" $gridB="38% 62%" />,
+      2: <MondrianCompound />,
+      8: <MondrianCompound $first />,
+      10: <MondrianCompound $first />,
       14: <MondrianSimple />,
-      18: <MondrianSimple $horizontal $grid="68%" />,
-      20: <MondrianCompound $horizontal $gridA="30% 70%" $gridB="65% 35%" />,
+      18: <MondrianSimple $horizontal />,
+      20: <MondrianCompound $horizontal />,
       22: <MondrianColor />
     }
   }
