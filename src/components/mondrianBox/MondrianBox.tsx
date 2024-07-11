@@ -13,8 +13,8 @@ export type MondrianGridProps = {
 }
 
 type MondrianSimpleProps = {
-  children?: ReactNode
-  $first?: boolean
+  childrenA?: ReactNode
+  childrenB?: ReactNode
   $horizontal?: boolean
 }
 
@@ -34,14 +34,16 @@ const randNum = (num1: number, num2: number) => {
   return random.int(num1, num2)
 }
 
+const randBool = () => {
+  return randNum(0, 1) === 1
+}
+
 const randGrid = (device: string) => {
   let gridA = 0
   if (device == 'cel') {
     gridA = randNum(40, 60)
-  } else if (device == 'tab') {
-    gridA = randNum(30, 70)
   } else {
-    gridA = randNum(20, 80)
+    gridA = randNum(30, 70)
   }
   const gridB = 100 - gridA
   return `${gridA}% ${gridB}%`
@@ -88,7 +90,7 @@ export const MondrianColor = ({ ...props }: BoxProps) => {
 export const MondrianSimple = ({ ...props }: MondrianSimpleProps) => {
   const device = useSelector((state: RootReducer) => state.device.device)
   const [gridSimple, setGridSimple] = useState(randGrid(device))
-  const [duration, setduration] = useState(randNum(2000, 10000))
+  const [duration, setduration] = useState(randNum(5000, 10000))
   useEffect(() => {
     const timer = setInterval(() => {
       setGridSimple(randGrid(device))
@@ -113,35 +115,71 @@ export const MondrianSimple = ({ ...props }: MondrianSimpleProps) => {
       $gcol={!props.$horizontal ? gridSimple : '1fr'}
       $grow={props.$horizontal ? gridSimple : '1fr'}
     >
-      {props.$first ? props.children : <MondrianColor />}
-      {!props.$first && props.children ? props.children : <MondrianColor />}
+      {props.childrenA ? props.childrenA : <MondrianColor />}
+      {props.childrenB ? props.childrenB : <MondrianColor />}
     </MGrid>
   )
 }
 
 export const MondrianCompound = ({ ...props }: MondrianCompoundProps) => {
   return (
-    <MondrianSimple $horizontal={props.$horizontal} $first={props.$first}>
-      <MondrianSimple $horizontal={!props.$horizontal} />
-    </MondrianSimple>
+    <MondrianSimple
+      $horizontal={props.$horizontal}
+      childrenA={
+        props.$first ? (
+          <MondrianSimple $horizontal={!props.$horizontal} />
+        ) : (
+          <MondrianColor />
+        )
+      }
+      childrenB={
+        !props.$first ? (
+          <MondrianSimple $horizontal={!props.$horizontal} />
+        ) : (
+          <MondrianColor />
+        )
+      }
+    />
   )
 }
 
-export const MondrianBlock = ({ ...props }: MondrianBlockProps) => {
+export const MondrianBlock = () => {
+  const horizontal = randBool()
+  const compound = randNum(0, 3)
+  const first = randBool()
   return (
-    <MGrid
-      $horizontal={props.$horizontal}
-      $gcol={!props.$horizontal ? props.$grid : '1fr'}
-      $grow={props.$horizontal ? props.$grid : '1fr'}
-    >
-      {props.childrenA ? (
-        <Box $bbot={props.$horizontal} $bright={!props.$horizontal}>
-          {props.childrenA}
-        </Box>
-      ) : (
-        <MondrianColor $bbot={props.$horizontal} $bright={!props.$horizontal} />
-      )}
-      {props.childrenB ? <Box>{props.childrenB}</Box> : <MondrianColor />}
-    </MGrid>
+    <MondrianSimple
+      $horizontal={horizontal}
+      childrenA={
+        <MondrianSimple
+          childrenA={
+            compound == 0 ? (
+              <MondrianCompound $first={first} $horizontal={horizontal} />
+            ) : null
+          }
+          childrenB={
+            compound == 1 ? (
+              <MondrianCompound $first={first} $horizontal={horizontal} />
+            ) : null
+          }
+          $horizontal={!horizontal}
+        />
+      }
+      childrenB={
+        <MondrianSimple
+          childrenA={
+            compound == 2 ? (
+              <MondrianCompound $first={first} $horizontal={horizontal} />
+            ) : null
+          }
+          childrenB={
+            compound == 3 ? (
+              <MondrianCompound $first={first} $horizontal={horizontal} />
+            ) : null
+          }
+          $horizontal={!horizontal}
+        />
+      }
+    />
   )
 }

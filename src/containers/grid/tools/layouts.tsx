@@ -35,7 +35,7 @@ export const sectionLayouts: Layouts = {
     },
     pc: {
       columns: '5vw 12vw 10vw 10vw 15vw 10vw 10vw 12svw 5vw',
-      rows: '8svh 2svh 10svh 5svh 10svh 5svh 10svh 5svh 28svh 5svh'
+      rows: '8svh 2svh 10svh 3svh 10svh 3svh 10svh 3svh 34svh 5svh'
     }
   },
   projects: {
@@ -62,11 +62,11 @@ export const projectsLayout: Layouts = {
     },
     tab: {
       columns: '10vw 5vw 3vw 15vw 24vw 15vw 3vw 5vw 10vw',
-      rows: '8svh 2svh 2svh 48svh 4svh 8svh 4svh 8svh 5svh 2svh'
+      rows: '8svh 2svh 2svh 55svh 2svh 8svh 2svh 8svh 2svh 2svh'
     },
     pc: {
       columns: '5vw 5vw 5vw 14vw 30vw 14vw 5vw 6vw 5vw',
-      rows: '8svh 2svh 2svh 47svh 3svh 8svh 3svh 8svh 5svh 2svh'
+      rows: '8svh 2svh 2svh 52svh 2svh 8svh 2svh 8svh 2svh 2svh'
     }
   },
   expandB: {
@@ -76,11 +76,11 @@ export const projectsLayout: Layouts = {
     },
     tab: {
       columns: '10vw 5vw 3vw 15vw 24vw 15vw 3vw 5vw 10vw',
-      rows: '8svh 2svh 2svh 8svh 4svh 48svh 4svh 8svh 5svh 2svh'
+      rows: '8svh 2svh 2svh 8svh 2svh 55svh 2svh 8svh 2svh 2svh'
     },
     pc: {
       columns: '5vw 5vw 5vw 14vw 30vw 14vw 5vw 6vw 5vw',
-      rows: '8svh 2svh 2svh 8svh 3svh 47svh 3svh 8svh 5svh 2svh'
+      rows: '8svh 2svh 2svh 8svh 2svh 52svh 2svh 8svh 2svh 2svh'
     }
   },
   expandC: {
@@ -90,11 +90,11 @@ export const projectsLayout: Layouts = {
     },
     tab: {
       columns: '10vw 5vw 3vw 15vw 24vw 15vw 3vw 5vw 10vw',
-      rows: '8svh 2svh 2svh 8svh 4svh 8svh 4svh 48svh 5svh 2svh'
+      rows: '8svh 2svh 2svh 8svh 2svh 8svh 2svh 55svh 2svh 2svh'
     },
     pc: {
       columns: '5vw 5vw 5vw 14vw 30vw 14vw 5vw 6vw 5vw',
-      rows: '8svh 2svh 2svh 8svh 3svh 8svh 3svh 47svh 5svh 2svh'
+      rows: '8svh 2svh 2svh 8svh 2svh 8svh 2svh 52svh 2svh 2svh'
     }
   }
 }

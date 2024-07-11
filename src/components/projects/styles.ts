@@ -95,6 +95,7 @@ export const Spacer = styled.div`
   background-color: black;
 `
 export const Back = styled.button`
+  cursor: pointer;
   background-color: white;
   padding: 1%;
   width: 50%;
@@ -113,6 +114,7 @@ export const Back = styled.button`
   }
 `
 export const Expand = styled.button`
+  cursor: pointer;
   background-color: white;
   padding: 1% 6%;
   width: min-content;

@@ -62,7 +62,7 @@ export const colorBoxes: ColorBoxes = {
       2: <MondrianCompound $first />,
       3: <MondrianCompound />,
       5: <MondrianCompound />,
-      // 9: ,
+      9: <MondrianBlock />,
       12: <MondrianSimple />,
       14: <MondrianSimple />,
       20: <MondrianCompound $horizontal />,
@@ -108,10 +108,10 @@ export const colorBoxes: ColorBoxes = {
       5: <MondrianCompound $horizontal $first />,
       11: <MondrianColor />,
       13: <MondrianSimple />,
-      14: <MondrianSimple />,
+      14: <MondrianCompound $first />,
       18: <MondrianColor />,
-      20: <MondrianCompound $horizontal $first />,
-      22: <MondrianCompound $horizontal />
+      20: <MondrianBlock />,
+      22: <MondrianBlock />
     },
     projects: {
       0: <MondrianCompound />,
