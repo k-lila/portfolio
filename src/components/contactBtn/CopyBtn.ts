@@ -9,7 +9,7 @@ const CopyBtn = styled.button`
   margin: 0 10px;
   height: 100%;
   img {
-    height: 70%;
+    height: 90%;
   }
 `
 

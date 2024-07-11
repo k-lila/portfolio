@@ -10,7 +10,7 @@ const Presentation = () => {
     <ItemContainer>
       {device == 'pc' ? <MondrianColor $bright $width="14vw" /> : null}
       <PresentationStyled>
-        <p>Desenvolvedor Front-End</p>
+        <p>Desenvolvedor</p>
         <span>
           <MondrianColor />
         </span>

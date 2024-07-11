@@ -12,10 +12,10 @@ export const Quote = styled.div`
 
 export const P = styled.p`
   font-size: 3vmin;
-  letter-spacing: 0.1em;
-  font-style: italic;
+  letter-spacing: 0.125em;
+  margin-bottom: 1px;
 `
 
 export const Ref = styled.p`
-  font-size: 2.25vmin;
+  font-size: 2vmin;
 `

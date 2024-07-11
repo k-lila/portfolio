@@ -9,6 +9,8 @@ import {
   Spacer
 } from './styles'
 import { RootReducer } from '../../store'
+import github from '../../assets/logos/github-mark.png'
+import open from '../../assets/logos/open_in_new_FILL0_wght400_GRAD0_opsz24.png'
 
 const ProjectA = () => {
   const expand = useSelector((state: RootReducer) => state.expand.expand)
@@ -18,11 +20,50 @@ const ProjectA = () => {
       {expand == 'none' ? (
         <ProjectDefault>
           <h3>Front end</h3>
-          <p>Desenvolvimento web</p>
+          <p>React, HTML, CSS e JS</p>
           <BtnExpand target="expandA" />
         </ProjectDefault>
       ) : expand == 'expandA' ? (
         <ProjectExpand>
+          <Projects>
+            {device != 'cel' ? (
+              <p>
+                <span>efood: </span>Esta página foi meu primeiro projeto autoral
+                com React. Utilizei Styled Components para a aplicação do CSS, e
+                Redux para organizar o estado geral da página. Inspirado no
+                artista plástico Piet Mondrian, utilizei uma grid para organizar
+                tanto o layout animado quanto os componentes que variam de cor,
+                conforme a paleta do artista. O layout geral da página é,
+                virtualmente, o mesmo, de modo que as diferentes seções são
+                conseguidas através da modificação dos dados referentes à
+                largura e altura das colunas e linhas da grid. Os componentes
+                específicos de cada seção são, por conseguinte, inseridos nessa
+                grid animada.
+              </p>
+            ) : (
+              <p>
+                <span>efood: </span>trabalho final do curso de Front-end da
+                EBAC.
+              </p>
+            )}
+            <nav>
+              <a
+                href="https://efood-k-lila.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={open} />
+              </a>
+              <a
+                href="https://github.com/k-lila/ebac_efood"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={github} />
+              </a>
+            </nav>
+            <Spacer />
+          </Projects>
           <Projects>
             {device != 'cel' ? (
               <p>
@@ -51,7 +92,7 @@ const ProjectA = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src="./logos/github-mark.png" />
+                <img src={github} />
               </a>
             </nav>
             <Spacer />
@@ -83,14 +124,14 @@ const ProjectA = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src="./logos/open_in_new_FILL0_wght400_GRAD0_opsz24.png" />
+                <img src={open} />
               </a>
               <a
                 href="https://github.com/k-lila/perlin-ASCII"
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src="./logos/github-mark.png" />
+                <img src={github} />
               </a>
             </nav>
             <Spacer />
@@ -121,14 +162,14 @@ const ProjectA = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src="./logos/open_in_new_FILL0_wght400_GRAD0_opsz24.png" />
+                <img src={open} />
               </a>
               <a
                 href="https://github.com/k-lila/ocupacao-guarani"
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src="./logos/github-mark.png" />
+                <img src={github} />
               </a>
             </nav>
             <Spacer />

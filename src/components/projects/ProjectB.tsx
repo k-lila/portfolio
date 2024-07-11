@@ -9,6 +9,8 @@ import {
   Spacer
 } from './styles'
 import { RootReducer } from '../../store'
+import github from '../../assets/logos/github-mark.png'
+import open from '../../assets/logos/open_in_new_FILL0_wght400_GRAD0_opsz24.png'
 
 const ProjectB = () => {
   const expand = useSelector((state: RootReducer) => state.expand.expand)
@@ -18,11 +20,50 @@ const ProjectB = () => {
       {expand == 'none' ? (
         <ProjectDefault>
           <h3>Python</h3>
-          <p>Primeiros passos</p>
+          <p>Django e outros</p>
           <BtnExpand target="expandB" />
         </ProjectDefault>
       ) : expand == 'expandB' ? (
         <ProjectExpand>
+          <Projects>
+            {device != 'cel' ? (
+              <p>
+                <span>Django Rest API: </span>Esta página foi meu primeiro
+                projeto autoral com React. Utilizei Styled Components para a
+                aplicação do CSS, e Redux para organizar o estado geral da
+                página. Inspirado no artista plástico Piet Mondrian, utilizei
+                uma grid para organizar tanto o layout animado quanto os
+                componentes que variam de cor, conforme a paleta do artista. O
+                layout geral da página é, virtualmente, o mesmo, de modo que as
+                diferentes seções são conseguidas através da modificação dos
+                dados referentes à largura e altura das colunas e linhas da
+                grid. Os componentes específicos de cada seção são, por
+                conseguinte, inseridos nessa grid animada.
+              </p>
+            ) : (
+              <p>
+                <span>Django Rest API: </span>projeto simples de uma api para
+                uma livraria.
+              </p>
+            )}
+            <nav>
+              <a
+                href="https://ebac-bookstore-api.onrender.com/bookstore/v1/product/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={open} />
+              </a>
+              <a
+                href="https://github.com/k-lila/django_rest"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={github} />
+              </a>
+            </nav>
+            <Spacer />
+          </Projects>
           <Projects>
             {device != 'cel' ? (
               <p>
@@ -57,7 +98,7 @@ const ProjectB = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src="./logos/github-mark.png" />
+                <img src={github} />
               </a>
             </nav>
             <Spacer />
@@ -89,7 +130,7 @@ const ProjectB = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src="./logos/github-mark.png" />
+                <img src={github} />
               </a>
             </nav>
             <Spacer />

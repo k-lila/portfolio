@@ -2,6 +2,8 @@ import random from 'random'
 import Box, { BoxProps } from '../box/box'
 import { MGrid } from './styles'
 import { ReactNode, useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
+import { RootReducer } from '../../store'
 
 export type MondrianGridProps = {
   children: ReactNode
@@ -32,8 +34,15 @@ const randNum = (num1: number, num2: number) => {
   return random.int(num1, num2)
 }
 
-const randGrid = () => {
-  const gridA = randNum(20, 80)
+const randGrid = (device: string) => {
+  let gridA = 0
+  if (device == 'cel') {
+    gridA = randNum(40, 60)
+  } else if (device == 'tab') {
+    gridA = randNum(30, 70)
+  } else {
+    gridA = randNum(20, 80)
+  }
   const gridB = 100 - gridA
   return `${gridA}% ${gridB}%`
 }
@@ -77,11 +86,12 @@ export const MondrianColor = ({ ...props }: BoxProps) => {
 }
 
 export const MondrianSimple = ({ ...props }: MondrianSimpleProps) => {
-  const [gridSimple, setGridSimple] = useState(randGrid())
+  const device = useSelector((state: RootReducer) => state.device.device)
+  const [gridSimple, setGridSimple] = useState(randGrid(device))
   const [duration, setduration] = useState(randNum(2000, 10000))
   useEffect(() => {
     const timer = setInterval(() => {
-      setGridSimple(randGrid())
+      setGridSimple(randGrid(device))
     }, duration)
     return () => {
       clearInterval(timer)

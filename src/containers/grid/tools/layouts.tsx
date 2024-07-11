@@ -27,21 +27,21 @@ export const sectionLayouts: Layouts = {
   skills: {
     cel: {
       columns: '5vw 2vw 12vw 20vw 20vw 12vw 12vw 2svw 5vw',
-      rows: '6svh 2svh 20svh 2svh 14svh 2svh 14svh 3svh 25.5svh 5svh'
+      rows: '6svh 2svh 20svh 4svh 8svh 4svh 8svh 4svh 35.5svh 2svh'
     },
     tab: {
       columns: '10vw 3vw 12vw 14vw 16vw 14vw 8vw 3svw 10vw',
-      rows: '8svh 2svh 18svh 4svh 12svh 4svh 12svh 4svh 22svh 5svh'
+      rows: '8svh 2svh 18svh 4svh 8svh 4svh 8svh 4svh 30svh 5svh'
     },
     pc: {
       columns: '5vw 12vw 10vw 10vw 15vw 10vw 10vw 12svw 5vw',
-      rows: '8svh 2svh 10svh 3svh 14svh 3svh 14svh 4svh 25svh 5svh'
+      rows: '8svh 2svh 10svh 5svh 10svh 5svh 10svh 5svh 28svh 5svh'
     }
   },
   projects: {
     cel: {
       columns: '5vw 5vw 5vw 15vw 30vw 15vw 3vw 7vw 5vw',
-      rows: '6svh 2svh 2svh 22svh 3svh 22svh 3svh 26svh 5svh 2.5svh'
+      rows: '6svh 3svh 3svh 22svh 3svh 22svh 3svh 26svh 3svh 2.5svh'
     },
     tab: {
       columns: '10vw 5vw 3vw 15vw 24vw 15vw 3vw 5vw 10vw',

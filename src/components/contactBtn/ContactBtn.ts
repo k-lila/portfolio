@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 const ContactBtn = styled.div`
+  background-color: white;
   height: 18%;
   padding: 1%;
   border-top: 1vmin solid black;
@@ -19,6 +20,7 @@ const ContactBtn = styled.div`
     justify-content: center;
     align-items: center;
     margin: 2%;
+    padding-left: 5px;
   }
   img {
     object-fit: contain;

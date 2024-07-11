@@ -7,11 +7,12 @@ export const GridSkills = styled.div`
   row-gap: 10%;
   column-gap: 3vmin;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 45% 45%;
 
   @media screen and (min-width: 1025px) {
     display: flex;
+    padding: 1vmin;
   }
 `
 export const ImgContainer = styled.div`
@@ -22,7 +23,7 @@ export const ImgContainer = styled.div`
   justify-content: center;
   img {
     width: auto;
-    height: auto;
+    height: 95%;
     max-width: 100%;
     max-height: 100%;
   }

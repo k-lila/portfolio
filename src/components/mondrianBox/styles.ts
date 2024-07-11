@@ -6,8 +6,8 @@ const vertical = keyframes`
   to {background-color: black; height: 100%;}
 `
 const horizontal = keyframes`
-  from {width: 0;}
-  to {width: 100%;}
+  from {background-color: white; width: 0;}
+  to {background-color: black; width: 100%;}
 `
 export const MGrid = styled.div<MondrianGridProps>`
   gap: 1vmin;
@@ -22,5 +22,5 @@ export const MGrid = styled.div<MondrianGridProps>`
   height: 100%;
   animation: ${(props) => (props.$horizontal ? horizontal : vertical)} 0.3s
     ease-in forwards;
-  transition: all 0.2s;
+  transition: all 1s ease-in;
 `

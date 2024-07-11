@@ -1,14 +1,14 @@
 import styled from 'styled-components'
 
-const Training = styled.article`
+const Training = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
   justify-content: space-between;
   font-size: 0.9em;
-  article {
+  h3 {
     text-align: justify;
-    margin-left: 3%;
+    margin: 0 3%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -20,34 +20,46 @@ const Training = styled.article`
     align-items: center;
     justify-content: center;
     border: 0.75svw solid black;
-    background-color: transparent;
+    background-color: white;
     margin: auto 3%;
-    width: 20%;
+    width: 10vw;
     height: 60%;
-    -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.75);
     transition: all 0.1s;
     &:active {
       transform: scale(0.95);
     }
+    img {
+      width: 4vmin;
+      height: 4vmin;
+    }
   }
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {
+    h3 {
+      font-size: 3.5vmin;
+    }
     a {
-      width: 15%;
-      -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
-      box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+      width: 12%;
+      -webkit-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.75);
     }
   }
 
   @media screen and (min-width: 1025px) {
-    article {
-      font-size: 2.5vmin;
+    padding: 0 2%;
+    h3 {
+      font-size: 3vmin;
     }
     a {
+      width: 15%;
       border: 0.75vmin solid black;
+      -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
     }
   }
 `

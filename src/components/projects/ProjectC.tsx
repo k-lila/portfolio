@@ -11,7 +11,7 @@ const ProjectC = () => {
     <ItemContainer>
       {expand == 'none' ? (
         <ProjectDefault>
-          <h3>Repositórios</h3>
+          <h3>Códigos</h3>
           <p>Repositórios do Github</p>
           <BtnExpand target="expandC" />
         </ProjectDefault>
@@ -19,7 +19,7 @@ const ProjectC = () => {
         <Repositories />
       ) : (
         <ProjectMin>
-          <h3>Repositórios</h3>
+          <h3>Códigos</h3>
           <BtnExpand target="expandC" />
         </ProjectMin>
       )}

@@ -2,11 +2,14 @@ import ContactBtn from '../../components/contactBtn/ContactBtn'
 import ContactListStyled from './styles'
 import CopyBtn from '../../components/contactBtn/CopyBtn'
 import ItemContainer from '../itemContainer/ItemContainer'
-import Box from '../../components/box/box'
 import { useSelector } from 'react-redux'
 import { RootReducer } from '../../store'
 import { MondrianColor } from '../../components/mondrianBox/MondrianBox'
-
+import call from '../../assets/logos/add_call_FILL0_wght400_GRAD0_opsz24.png'
+import copy from '../../assets/logos/content_copy_FILL0_wght400_GRAD0_opsz24.png'
+import mail from '../../assets/logos/mail_FILL0_wght400_GRAD0_opsz24.png'
+import github from '../../assets/logos/GitHub_Logo.png'
+import linkdin from '../../assets/logos/LI-Logo.png'
 const handleClick = (text: string) => {
   navigator.clipboard.writeText(text)
   alert(`${text} copiado!`)
@@ -18,41 +21,29 @@ const ContactList = () => {
     <ItemContainer>
       <ContactListStyled>
         <ContactBtn>
-          <a href="tel:+55123456789">
-            <img
-              src="/logos/add_call_FILL0_wght400_GRAD0_opsz24.png"
-              alt="Adicionar telefone"
-            />
+          <a href="tel:+5555991416741">
+            <img src={call} alt="Adicionar telefone" />
           </a>
-          <CopyBtn onClick={() => handleClick('55123456789')}>
-            <img
-              src="/logos/content_copy_FILL0_wght400_GRAD0_opsz24.png"
-              alt="copiar"
-            />
+          <CopyBtn onClick={() => handleClick('55991416741')}>
+            <img src={copy} alt="copiar" />
           </CopyBtn>
         </ContactBtn>
         <ContactBtn>
           <a href="mailto:krishnalilapalandi@gmail.com">
-            <img
-              src="/logos/mail_FILL0_wght400_GRAD0_opsz24.png"
-              alt="E-mail"
-            />
+            <img src={mail} alt="E-mail" />
           </a>
           <CopyBtn onClick={() => handleClick('55123456789')}>
-            <img
-              src="/logos/content_copy_FILL0_wght400_GRAD0_opsz24.png"
-              alt="copiar"
-            />
+            <img src={copy} alt="copiar" />
           </CopyBtn>
         </ContactBtn>
         <ContactBtn>
           <a href="https://github.com/k-lila/" target="_blank" rel="noreferrer">
-            <img src="/logos/GitHub_Logo.png" alt="GitHub" />
+            <img src={github} alt="GitHub" />
           </a>
         </ContactBtn>
         <ContactBtn>
           <a href="https://br.linkedin.com/" target="_blank" rel="noreferrer">
-            <img src="/logos/LI-Logo.png" alt="LinkedIn" />
+            <img src={linkdin} alt="LinkedIn" />
           </a>
         </ContactBtn>
       </ContactListStyled>

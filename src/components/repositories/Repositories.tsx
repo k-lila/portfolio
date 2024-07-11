@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import { Loading, UlRepos } from './styles'
 import { BtnBack } from '../projects/ProjectBtn'
 import ItemContainer from '../../containers/itemContainer/ItemContainer'
+import github from '../../assets/logos/github-mark.png'
+import open from '../../assets/logos/open_in_new_FILL0_wght400_GRAD0_opsz24.png'
 
 type Repository = {
   id: number
@@ -36,6 +38,13 @@ const Repositories = () => {
         setLoading(false)
       })
   }, [])
+
+  if (repos.length > 1) {
+    repos.sort((a, b) => {
+      return new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+    })
+  }
+
   if (loading) {
     return (
       <ItemContainer>
@@ -75,14 +84,11 @@ const Repositories = () => {
             </p>
             <div>
               <a target="_blank" href={repositorio.svn_url} rel="noreferrer">
-                <img src="./logos/github-mark.png" alt="Repositório Github" />
+                <img src={github} alt="Repositório Github" />
               </a>
               {repositorio.homepage ? (
                 <a target="_blank" href={repositorio.homepage} rel="noreferrer">
-                  <img
-                    src="./logos/open_in_new_FILL0_wght400_GRAD0_opsz24.png"
-                    alt="Abrir link"
-                  />
+                  <img src={open} alt="Abrir link" />
                 </a>
               ) : null}
             </div>
