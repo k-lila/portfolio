@@ -28,22 +28,22 @@ const ProjectA = () => {
           <Projects>
             {device != 'cel' ? (
               <p>
-                <span>efood: </span>Esta página foi meu primeiro projeto autoral
-                com React. Utilizei Styled Components para a aplicação do CSS, e
-                Redux para organizar o estado geral da página. Inspirado no
-                artista plástico Piet Mondrian, utilizei uma grid para organizar
-                tanto o layout animado quanto os componentes que variam de cor,
-                conforme a paleta do artista. O layout geral da página é,
-                virtualmente, o mesmo, de modo que as diferentes seções são
-                conseguidas através da modificação dos dados referentes à
-                largura e altura das colunas e linhas da grid. Os componentes
-                específicos de cada seção são, por conseguinte, inseridos nessa
-                grid animada.
+                <span>efood: </span>trabalho final do curso de Front-end da
+                EBAC. A página foi construída com Typescript, React, Redux e
+                Styled Components, e representa um serviço de restaurantes. Ela
+                se comunica com duas APIs da EBAC. Uma delas alimenta a página
+                com os dados dos restaurantes, assim como as informações dos
+                cardápios. Outra, auxilia na simulação de pagamento do carrinho
+                de compras. O layout foi fornecido como parte do trabalho final,
+                meu trabalho consistiu em construí-lo com de maneira mais fiel
+                possível.
               </p>
             ) : (
               <p>
                 <span>efood: </span>trabalho final do curso de Front-end da
-                EBAC.
+                EBAC. A página representa um serviço de restaurantes, e
+                comunica-se com duas APIs. Uma delas alimenta a página com
+                informações, e a outra auxilia na simulação de pagamento.
               </p>
             )}
             <nav>

@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 const DescriptionStyled = styled.article`
+  background-color: #f6f5f2;
+
   height: max-content;
   text-align: justify;
   padding: 0 0.75em;

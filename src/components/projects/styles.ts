@@ -43,6 +43,7 @@ export const ProjectDefault = styled.div`
   }
 `
 export const ProjectExpand = styled.div`
+  background-color: #f6f5f2;
   padding: 2% 1%;
   height: max-content;
   display: flex;

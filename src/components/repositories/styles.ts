@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components'
 
 export const UlRepos = styled.ul`
+  background-color: #f6f5f2;
   width: 100%;
   height: max-content;
   display: block;

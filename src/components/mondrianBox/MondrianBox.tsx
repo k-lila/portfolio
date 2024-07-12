@@ -23,13 +23,6 @@ type MondrianCompoundProps = {
   $first?: boolean
 }
 
-type MondrianBlockProps = {
-  childrenA?: ReactNode
-  childrenB?: ReactNode
-  $horizontal?: boolean
-  $grid?: string
-}
-
 const randNum = (num1: number, num2: number) => {
   return random.int(num1, num2)
 }
@@ -76,7 +69,7 @@ export const MondrianColor = ({ ...props }: BoxProps) => {
   })
   useEffect(() => {
     const timer = setInterval(() => {
-      const durat = randNum(5000, 20000)
+      const durat = randNum(10000, 20000)
       setduration(durat)
     }, duration)
 
@@ -101,7 +94,7 @@ export const MondrianSimple = ({ ...props }: MondrianSimpleProps) => {
   })
   useEffect(() => {
     const timer = setInterval(() => {
-      const durat = randNum(5000, 20000)
+      const durat = randNum(15000, 30000)
       setduration(durat)
     }, duration)
 

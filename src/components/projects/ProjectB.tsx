@@ -28,22 +28,20 @@ const ProjectB = () => {
           <Projects>
             {device != 'cel' ? (
               <p>
-                <span>Django Rest API: </span>Esta página foi meu primeiro
-                projeto autoral com React. Utilizei Styled Components para a
-                aplicação do CSS, e Redux para organizar o estado geral da
-                página. Inspirado no artista plástico Piet Mondrian, utilizei
-                uma grid para organizar tanto o layout animado quanto os
-                componentes que variam de cor, conforme a paleta do artista. O
-                layout geral da página é, virtualmente, o mesmo, de modo que as
-                diferentes seções são conseguidas através da modificação dos
-                dados referentes à largura e altura das colunas e linhas da
-                grid. Os componentes específicos de cada seção são, por
-                conseguinte, inseridos nessa grid animada.
+                <span>Django Rest API: </span>projeto de uma API para uma
+                livraria. A API é construída através de Python, Django e Django
+                Rest Framework. Possui endpoints para catalogar ou consultar
+                tanto os produtos quanto suas categorias. Além disso, possui
+                outro endpoit para as ordens de compra. O banco de dados
+                configurado para este projeto é o PostgreSQL, e está organizado
+                de modo a ser possível produzir um multi-container Docker e
+                disponibilizá-lo em serviços de Cloud.
               </p>
             ) : (
               <p>
-                <span>Django Rest API: </span>projeto simples de uma api para
-                uma livraria.
+                <span>Django Rest API: </span>projeto de uma API para uma
+                livraria. Essa API lida com um banco de dados, com endpoints
+                para produtos, suas categorias e possíveis ordens de compra.
               </p>
             )}
             <nav>
