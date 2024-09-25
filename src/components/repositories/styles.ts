@@ -1,26 +1,36 @@
 import styled, { keyframes } from 'styled-components'
 
 export const UlRepos = styled.ul`
-  background-color: #f6f5f2;
   width: 100%;
   height: max-content;
-  display: block;
+  grid-column: span 2;
+  display: grid;
+  gap: 2vmin;
+  grid-template-columns: 1fr 1fr;
+  p,
+  b {
+    font-size: 0.9em;
+  }
   li {
-    background-color: #c6c6c6;
-    border-radius: 0.25em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: black;
     padding: 3%;
     list-style: none;
-    width: 95%;
-    margin: 5% auto;
   }
 
   div {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: 2% 0;
-    height: 2em;
+    margin: 1vmin 0;
+    height: 1.5em;
     a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: white;
       height: 100%;
     }
     img {
@@ -28,56 +38,40 @@ export const UlRepos = styled.ul`
     }
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
-    li {
-      width: 80%;
+  @media screen and (max-width: 767px) {
+    margin-top: 2vmin;
+    grid-template-columns: 1fr;
+    p,
+    b {
+      font-size: 1em;
     }
-  }
-
-  @media screen and (min-width: 1025px) {
-    display: grid;
-    padding: 1vmin 2vmin;
-    column-gap: 3vmin;
-    row-gap: 0;
-    grid-template-columns: 1fr 1fr 1fr;
-    li {
-      font-size: 2.5vmin;
-      width: 100%;
-      height: max-content;
-      div {
-        margin-top: 5%;
-      }
-    }
-
-    & > div {
-      grid-column: span 3;
-      padding: 0 20%;
-    }
+    gap: 3vmin;
   }
 `
 
 const loadingAnimation = keyframes`
-  0% {grid-template-columns: calc(50% - 0.5vmin) calc(50% - 0.5vmin); grid-template-rows: calc(50% - 0.5vmin) calc(50% - 0.5vmin);}
-  25% {grid-template-columns: calc(30% - 0.5vmin) calc(70% - 0.5vmin); grid-template-rows: calc(30% - 0.5vmin) calc(70% - 0.5vmin);}
-  50% {grid-template-columns: calc(30% - 0.5vmin) calc(70% - 0.5vmin); grid-template-rows: calc(70% - 0.5vmin) calc(30% - 0.5vmin);}
-  75% {grid-template-columns: calc(70% - 0.5vmin) calc(30% - 0.5vmin); grid-template-rows: calc(70% - 0.5vmin) calc(30% - 0.5vmin);}
-  100% {grid-template-columns: calc(50% - 0.5vmin) calc(50% - 0.5vmin); grid-template-rows: calc(50% - 0.5vmin) calc(50% - 0.5vmin);}
+  0% {grid-template-columns: calc(50% - 0.5vmin) 1fr; grid-template-rows: calc(50% - 0.5vmin) 1fr;}
+  25% {grid-template-columns: calc(30% - 0.5vmin) 1fr; grid-template-rows: calc(30% - 0.5vmin) 1fr;}
+  50% {grid-template-columns: calc(30% - 0.5vmin) 1fr; grid-template-rows: calc(70% - 0.5vmin) 1fr;}
+  75% {grid-template-columns: calc(70% - 0.5vmin) 1fr; grid-template-rows: calc(70% - 0.5vmin) 1fr;}
+  100% {grid-template-columns: calc(50% - 0.5vmin) 1fr; grid-template-rows: calc(50% - 0.5vmin) 1fr}
 `
 
 export const Loading = styled.div`
-  height: 100%;
+  height: 30vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-
+  grid-column: span 2;
+  background-color: black;
   div {
     padding: 1vmin;
-    background-color: black;
+    background-color: transparent;
     height: 25vmin;
     width: 25vmin;
     display: grid;
-    gap: 1vmin;
+    gap: 2vmin;
     animation: ${loadingAnimation} 3s infinite;
     > :nth-child(1) {
       grid-row: 2 span;
@@ -92,5 +86,14 @@ export const Loading = styled.div`
   }
   span {
     background-color: white;
+  }
+  @media screen and (max-width: 767px) {
+    gap: 5vmin;
+    div {
+      height: 30vmin;
+      width: 30vmin;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
   }
 `

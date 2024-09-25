@@ -1,14 +1,15 @@
-import { Provider } from 'react-redux'
-import { store } from './store'
-import GlobalStyle from './GlobalStyle'
-import Grid from './containers/grid/Grid'
+import { BrowserRouter } from 'react-router-dom'
+import { Container, GlobalStyle } from './styles/styles'
+import { Paths } from './routes'
 
 function App() {
   return (
-    <Provider store={store}>
+    <BrowserRouter>
       <GlobalStyle />
-      <Grid />
-    </Provider>
+      <Container>
+        <Paths />
+      </Container>
+    </BrowserRouter>
   )
 }
 
