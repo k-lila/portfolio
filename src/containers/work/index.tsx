@@ -22,8 +22,8 @@ export const Work = () => {
             </CloseProjects>
             <Project
               name="portfólio"
-              description="sta página foi construída utilizando algumas ferramentas
-                básicas de React, como React-Router-DOM, Redux e Styled Components.
+              description="esta página foi construída utilizando algumas ferramentas
+                básicas de React, como React-Router-DOM e Styled Components.
                 Seu layout foi inspirado na obra de Piet Mondrian."
               github="https://github.com/k-lila/portfolio"
             />
@@ -39,25 +39,23 @@ export const Work = () => {
             <Project
               name="rede social"
               description="projeto de uma rede social inspirada no X, antigo Twitter.
-          Desenvolvida em Django e estilizada com Bootstrap, a plataforma permite
-          aos usuários fazer postagens, seguir perfis e curtir conteúdos.
-          O projeto possui automação de deploy no PythonAnywhere e integração
-          via webhook do GitHub."
-              link="http://klila.pythonanywhere.com/"
+                Desenvolvida em Django e estilizada com Bootstrap, a plataforma permite
+                aos usuários fazer postagens, seguir perfis e curtir conteúdos.
+                O projeto pode ser configurado para automação de deploy no PythonAnywhere e integração
+                via webhook do GitHub."
               github="https://github.com/k-lila/socialmedia"
             />
             <Project
               name="api bookstore"
-              description="projeto de uma API para uma
-                livraria. Essa API lida com um banco de dados, com endpoints
+              description="projeto de uma API CRUD para uma
+                livraria. Essa API lida com um banco de dados, endpoints
                 para produtos, suas categorias e possíveis ordens de compra."
-              link="https://ebac-bookstore-api.onrender.com/bookstore/v1/product/"
               github="https://github.com/k-lila/django_rest"
             />
           </>
         ) : (
           <OpenProjects onClick={() => setOpenA(!openA)}>
-            Desenvolvimento Web
+            desenvolvimento Web
           </OpenProjects>
         )}
       </Projects>
@@ -71,12 +69,12 @@ export const Work = () => {
               <span className="material-symbols-outlined">remove</span>
             </CloseProjects>
             <Project
-              name="harenator"
-              description="a ideia desse projeto é desenvolver um
-                sintetizador musical do zero. Para isso, utilizo Python e a
-                biblioteca numpy no cálculo das ondas sonoras, e a biblioteca
-                pygame para criar um teclado interativo."
-              github="https://github.com/k-lila/Harenator"
+              name="mondrianer"
+              description="inspirado na obra de Piet Mondrian, a página lida com uma
+              função recursiva que cria, com Typescript e React, padrões semelhantes aos
+              da obra de Mondrian."
+              link="https://mondrianer.vercel.app/"
+              github="https://github.com/k-lila/mondrianer"
             />
             <Project
               name="perlin-ascii"
@@ -86,11 +84,26 @@ export const Work = () => {
               link="https://perlin-ascii.vercel.app/"
               github="https://github.com/k-lila/perlin-ASCII"
             />
-            <Project name="intertwine" description="" link="" github="" />
+            <Project
+              name="intertwine"
+              description="uma primeira aproximação da arte generativa com
+              as ferramentas de desenvolvimento web. Escrito somente com javascript,
+              joga com linhas e pontos em uma tag HTML <canvas>."
+              link="https://intertwine-steel.vercel.app/"
+              github="https://github.com/k-lila/intertwine"
+            />
+            <Project
+              name="harenator"
+              description="a ideia desse projeto é desenvolver um
+                sintetizador musical do zero. Para isso, utilizo Python e a
+                biblioteca numpy no cálculo das ondas sonoras, e a biblioteca
+                pygame para criar um teclado interativo."
+              github="https://github.com/k-lila/Harenator"
+            />
           </>
         ) : (
           <OpenProjects onClick={() => setOpenB(!openB)}>
-            Arte com códigos
+            arte com códigos
           </OpenProjects>
         )}
       </Projects>

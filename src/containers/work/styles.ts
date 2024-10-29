@@ -32,10 +32,9 @@ export const OpenProjects = styled.button`
   margin: 0 auto;
   width: 100%;
   height: 50px;
+  font-size: 1.25em;
   @media screen and (max-width: 767px) {
-  }
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
-    font-size: 1.25em;
+    font-size: 1em;
   }
 `
 

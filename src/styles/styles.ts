@@ -2,20 +2,25 @@ import styled, { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Tomorrow", sans-serif;
-  font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Tomorrow", sans-serif;
+  }
+
+  body {
+    background-color: black;
+    font-size: 16px;
+
     @media screen and (max-width: 767px) {
       font-size: 16px;
     }
     @media screen and (min-width: 768px) and (max-width: 1024px) {
       font-size: 20px;
     }
-  }
-  body {
-    background-color: black;
+    @media screen and (min-width: 1024px) and (max-height: 800px) {
+      font-size: 12px;
+    }
   }
 `
 export const Container = styled.div`

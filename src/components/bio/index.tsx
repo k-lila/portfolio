@@ -15,17 +15,18 @@ export const Bio = () => {
               <span className="material-symbols-outlined">remove</span>
             </CloseBtn>
           ) : null}
-          <p>
-            Filosofia, tecnologia, arte. Três pala Lorem ipsum, dolor sit amet
-            consectetur adipisicing elit. Praesentium, enim eum! Accusantium,
-            quo ipsum! Cum quasi perspiciatis, vitae non magni corrupti
-            deserunt, porro nemo, corporis labore modi ad quibusdam. Eius!
+          <p style={{ marginBottom: '1em' }}>
+            Sou filho dos anos 90. Acompanhei a evolução do celular para o
+            smartfone, a multiplicação do poder de processamento dos
+            computadores e a internet tornando o mundo sempre on-line. Hoje, ser
+            um desenvolvedor web é uma realidade, não uma possibilidade
+            distante.
           </p>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Praesentium, enim eum! Accusantium, quo ipsum! Cum quasi
-            perspiciatis, vitae non magni corrupti deserunt, porro nemo,
-            corporis labore modi ad quibusdam. Eius!
+            Focado em Python e Javascript, venho explorando as possibilidades do
+            desenvolvimento web há alguns anos. Como tenho um desejo constante
+            por aprendizado, o ritmo acelerado da tecnologia mantém meu
+            interesse pela área sempre animado.
           </p>
         </BioContainer>
       ) : (

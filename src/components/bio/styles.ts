@@ -33,6 +33,7 @@ export const BioContainer = styled.article`
   height: 100%;
   text-align: right;
   margin: 2vmin 0;
+  line-height: 1.25em;
 
   @media screen and (max-width: 767px) {
     width: 100%;
