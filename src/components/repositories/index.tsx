@@ -22,7 +22,7 @@ const Repositories = () => {
   const [error, setError] = useState('')
 
   useEffect(() => {
-    fetch('https://api.github.com/users/k-lila/repos')
+    fetch('https://api.github.com/users/k-lila/repos?per_page=100')
       .then((res) => res.json())
       .then((resJson) => {
         setTimeout(() => {
@@ -36,11 +36,9 @@ const Repositories = () => {
       })
   }, [])
 
-  if (repos.length > 1) {
-    repos.sort((a, b) => {
-      return new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
-    })
-  }
+  repos.sort((a, b) => {
+    return new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()
+  })
 
   if (loading) {
     return (
@@ -61,6 +59,7 @@ const Repositories = () => {
       </p>
     )
   } else {
+    console.log(repos)
     return (
       <UlRepos>
         {repos.map((repositorio) => (
