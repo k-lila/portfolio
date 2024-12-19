@@ -11,16 +11,6 @@ export const GlobalStyle = createGlobalStyle`
   body {
     background-color: black;
     font-size: 16px;
-
-    @media screen and (max-width: 767px) {
-      font-size: 16px;
-    }
-    @media screen and (min-width: 768px) and (max-width: 1024px) {
-      font-size: 20px;
-    }
-    @media screen and (min-width: 1024px) and (max-height: 800px) {
-      font-size: 12px;
-    }
   }
 `
 export const Container = styled.div`
