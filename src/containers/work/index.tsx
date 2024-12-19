@@ -3,6 +3,7 @@ import { Project } from '../../components/project'
 import { Projects } from '../projects'
 import { CloseProjects, OpenProjects, WorkStyled } from './styles'
 import Repositories from '../../components/repositories'
+import remove from '../../assets/icons/remove.png'
 
 export const Work = () => {
   const [openA, setOpenA] = useState(false)
@@ -18,8 +19,17 @@ export const Work = () => {
         {openA ? (
           <>
             <CloseProjects onClick={() => setOpenA(!openA)}>
-              <span className="material-symbols-outlined">remove</span>
+              <img src={remove} alt="close" />
             </CloseProjects>
+            <Project
+              name="gym trackr"
+              description="projeto da interface de um aplicativo para usuários de academias
+              e personal trainers. Foi escrito em React, typescripte e estilizado com Bootstrap.
+              Utiliza também outras ferramentas de desenvolvimento web, como React-Router-DOM.
+              Essa interface irá se comunicar, futuramente, com uma API Django."
+              link="https://gymtrackr.vercel.app/"
+              github="https://github.com/k-lila/gym_interface"
+            />
             <Project
               name="portfólio"
               description="esta página foi construída utilizando algumas ferramentas
@@ -66,8 +76,15 @@ export const Work = () => {
         {openB ? (
           <>
             <CloseProjects onClick={() => setOpenB(!openB)}>
-              <span className="material-symbols-outlined">remove</span>
+              <img src={remove} alt="close" />
             </CloseProjects>
+            <Project
+              name="light being"
+              description="um primeiro estudo na biblioteca Three.JS. Utilizei apenas javascript,
+              html e Three.JS. O objeto renderizado parece algo como uma alga-viva."
+              link="https://light-being.vercel.app/"
+              github="https://github.com/k-lila/light-being"
+            />
             <Project
               name="mondrianer"
               description="inspirado na obra de Piet Mondrian, a página lida com uma
@@ -114,7 +131,7 @@ export const Work = () => {
         {openC ? (
           <>
             <CloseProjects onClick={() => setOpenC(!openC)}>
-              <span className="material-symbols-outlined">remove</span>
+              <img src={remove} alt="close" />
             </CloseProjects>
             <Repositories />
           </>

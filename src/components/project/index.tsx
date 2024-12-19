@@ -1,5 +1,6 @@
 import { Links, LogoLink, ProjectStyled } from './styled'
 import gitlogo from '../../assets/logos/github-mark-white.png'
+import open from '../../assets/icons/open_in_new.png'
 
 type ProjectProps = {
   name: string
@@ -20,11 +21,11 @@ export const Project = ({ ...props }: ProjectProps) => {
       <Links>
         {props.link ? (
           <LogoLink href={props.link} target="_blank" rel="noreferrer">
-            <span className="material-symbols-outlined">open_in_new</span>
+            <img src={open} alt="open" />
           </LogoLink>
         ) : null}
         <LogoLink href={props.github} target="_blank" rel="noreferrer">
-          <img src={gitlogo} />
+          <img style={{ padding: '1px' }} src={gitlogo} alt="github" />
         </LogoLink>
       </Links>
     </ProjectStyled>

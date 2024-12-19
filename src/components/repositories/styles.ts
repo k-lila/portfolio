@@ -88,6 +88,7 @@ export const Loading = styled.div`
     background-color: white;
   }
   @media screen and (max-width: 767px) {
+    margin-top: 2vmin;
     gap: 5vmin;
     div {
       height: 30vmin;

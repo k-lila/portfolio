@@ -36,12 +36,7 @@ export const LogoLink = styled.a`
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  span {
-    font-size: 1.5em;
-    color: white;
-  }
   img {
     height: 100%;
-    padding: 1px;
   }
 `

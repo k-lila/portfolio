@@ -18,15 +18,15 @@ export const Bio = () => {
           <p style={{ marginBottom: '1em' }}>
             Sou filho dos anos 90. Acompanhei a evolução do celular para o
             smartfone, a multiplicação do poder de processamento dos
-            computadores e a internet tornando o mundo sempre on-line. Hoje, ser
-            um desenvolvedor web é uma realidade, não uma possibilidade
-            distante.
+            computadores e a internet tornando o mundo sempre on-line. Ser um
+            desenvolvedor deixou de ser uma realidade distante para ser meu
+            cotidiano.
           </p>
           <p>
             Focado em Python e Javascript, venho explorando as possibilidades do
-            desenvolvimento web há alguns anos. Como tenho um desejo constante
-            por aprendizado, o ritmo acelerado da tecnologia mantém meu
-            interesse pela área sempre animado.
+            desenvolvimento web há alguns anos. Tenho um desejo constante por
+            aprendizado, e o ritmo acelerado da tecnologia mantém meu interesse
+            pela área sempre desperto.
           </p>
         </BioContainer>
       ) : (

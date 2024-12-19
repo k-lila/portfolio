@@ -46,11 +46,10 @@ export const CloseProjects = styled.button`
   align-items: center;
   justify-content: end;
   height: fit-content;
+  cursor: pointer;
 
-  span {
-    font-size: 1.5em;
-    font-weight: bolder;
-    cursor: pointer;
+  img {
+    height: 1.75em;
   }
   @media screen and (max-width: 767px) {
     margin-left: 90%;

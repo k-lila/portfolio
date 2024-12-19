@@ -5,6 +5,7 @@ import { ChooseGrid, CloseBtn } from './styles'
 import { About } from '../about'
 import { Work } from '../work'
 import { EntranceStyled } from '../entrance/styles'
+import close from '../../assets/icons/close.png'
 
 export const Modals = () => {
   const [about, setAbout] = useState(false)
@@ -50,7 +51,7 @@ export const Modals = () => {
       {about ? (
         <Modal $open={aboutVisible} $side={device == 'pc' ? 'left' : ''}>
           <CloseBtn onClick={closeAbout}>
-            <span className="material-symbols-outlined">close</span>
+            <img src={close} alt="close" />
           </CloseBtn>
           <About />
         </Modal>
@@ -58,7 +59,7 @@ export const Modals = () => {
       {work ? (
         <Modal $open={workVisible} $side={device == 'pc' ? 'right' : ''}>
           <CloseBtn onClick={closeWork}>
-            <span className="material-symbols-outlined">close</span>
+            <img src={close} alt="close" />
           </CloseBtn>
           <Work />
         </Modal>

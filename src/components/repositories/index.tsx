@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import github from '../../assets/logos/github-mark-white.png'
 import { Loading, UlRepos } from './styles'
+import open from '../../assets/icons/open_in_new.png'
 
 type Repository = {
   id: number
@@ -78,11 +79,15 @@ const Repositories = () => {
             </p>
             <div>
               <a target="_blank" href={repositorio.svn_url} rel="noreferrer">
-                <img src={github} alt="Repositório Github" />
+                <img
+                  style={{ padding: '1px' }}
+                  src={github}
+                  alt="Repositório Github"
+                />
               </a>
               {repositorio.homepage ? (
                 <a target="_blank" href={repositorio.homepage} rel="noreferrer">
-                  <span className="material-symbols-outlined">open_in_new</span>
+                  <img src={open} alt="open" />
                 </a>
               ) : null}
             </div>

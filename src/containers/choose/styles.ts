@@ -41,7 +41,7 @@ export const CloseBtn = styled.button<{ $right?: string; $top?: string }>`
   color: white;
   background-color: transparent;
   animation: ${fadeIn} 0.3s ease-in forwards;
-  span {
-    font-size: 1.75em;
+  img {
+    height: 1.75em;
   }
 `
