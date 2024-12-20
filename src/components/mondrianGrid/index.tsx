@@ -36,7 +36,7 @@ export const MondrianGrid = ({ ...props }: MondrianGridProps) => {
 
   useEffect(() => {
     const timer2 = setInterval(() => {
-      const durat = randNum(5000, 12000)
+      const durat = randNum(5000, 20000)
       setduration(durat)
     }, duration)
 

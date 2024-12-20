@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { BioBtn, BioContainer, BioStyled } from './styles'
 import { CloseBtn } from '../../containers/choose/styles'
 import { discoverDevice } from '../../utils/discoverdevice'
+import close from '../../assets/icons/remove.png'
 
 export const Bio = () => {
   const device = discoverDevice()
@@ -12,7 +13,7 @@ export const Bio = () => {
         <BioContainer>
           {device == 'cel' ? (
             <CloseBtn $top="0" $right="0" onClick={() => setOpen(!open)}>
-              <span className="material-symbols-outlined">remove</span>
+              <img style={{ filter: 'invert(100%)' }} src={close} alt="close" />
             </CloseBtn>
           ) : null}
           <p style={{ marginBottom: '1em' }}>

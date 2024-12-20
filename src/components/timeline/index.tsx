@@ -7,6 +7,7 @@ import {
 } from './styles'
 import { CloseBtn } from '../../containers/choose/styles'
 import { discoverDevice } from '../../utils/discoverdevice'
+import close from '../../assets/icons/remove.png'
 
 export const Timeline = () => {
   const device = discoverDevice()
@@ -18,7 +19,7 @@ export const Timeline = () => {
         <TimelineContainer>
           {device == 'cel' ? (
             <CloseBtn onClick={() => setOpen(!open)}>
-              <span className="material-symbols-outlined">remove</span>
+              <img style={{ filter: 'invert(100%)' }} src={close} alt="close" />
             </CloseBtn>
           ) : null}
           <p>2022/2024</p>

@@ -39,18 +39,20 @@ export const OpenProjects = styled.button`
 `
 
 export const CloseProjects = styled.button`
+  margin-left: auto;
   grid-column: span 2;
   border: none;
   background-color: transparent;
   display: flex;
   align-items: center;
-  justify-content: end;
   height: fit-content;
+  width: fit-content;
   cursor: pointer;
 
   img {
     height: 1.75em;
   }
+
   @media screen and (max-width: 767px) {
     margin-left: 90%;
   }
