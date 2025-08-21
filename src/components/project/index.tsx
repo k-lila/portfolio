@@ -1,6 +1,4 @@
-import { Links, LogoLink, ProjectStyled } from './styled'
-import gitlogo from '../../assets/logos/github-mark-white.png'
-import open from '../../assets/icons/open_in_new.png'
+import { ProjectStyled } from './styles'
 
 type ProjectProps = {
   name: string
@@ -9,25 +7,37 @@ type ProjectProps = {
   github: string
 }
 
-export const Project = ({ ...props }: ProjectProps) => {
+const Project = ({ ...props }: ProjectProps) => {
   return (
     <ProjectStyled>
-      <p>
+      <p className="description">
         <span>
           <b>{props.name}: </b>
         </span>
         {props.description}
       </p>
-      <Links>
+      <div className="links">
         {props.link ? (
-          <LogoLink href={props.link} target="_blank" rel="noreferrer">
-            <img src={open} alt="open" />
-          </LogoLink>
+          <a
+            className="links__btn"
+            href={props.link}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="bi bi-box-arrow-up-right"></i>
+          </a>
         ) : null}
-        <LogoLink href={props.github} target="_blank" rel="noreferrer">
-          <img style={{ padding: '1px' }} src={gitlogo} alt="github" />
-        </LogoLink>
-      </Links>
+        <a
+          className="links__btn"
+          href={props.github}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i className="bi bi-github"></i>
+        </a>
+      </div>
     </ProjectStyled>
   )
 }
+
+export default Project
