@@ -106,8 +106,8 @@ export const ProjectsStyled = styled.div<{
       }
       grid-column: span 1;
       grid-row: span 1;
-      border-top: 1px solid rgba(0, 0, 0, 0.5);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+      border-top: 2px solid rgba(0, 0, 0, 0.5);
+      border-bottom: 2px solid rgba(0, 0, 0, 0.5);
     }
     .webprojects {
       &__projects {
@@ -145,11 +145,11 @@ export const ProjectsStyled = styled.div<{
       margin-top: 0;
     }
     .projects {
-      border-left: 1px solid rgba(0, 0, 0, 0.5);
-      border-right: 1px solid rgba(0, 0, 0, 0.5);
+      border-left: 2px solid rgba(0, 0, 0, 0.5);
+      border-right: 2px solid rgba(0, 0, 0, 0.5);
       &__header {
         padding: 0.5em 0;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2);
       }
       &__vermais {
         display: none;

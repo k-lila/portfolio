@@ -21,8 +21,8 @@ export const TitleStyled = styled.article<{ $opentitle: boolean }>`
   @media (max-width: 480px) {
     padding: 0 1em;
     h1 {
-      font-size: ${(props) => (props.$opentitle ? '1.5em' : '3.5em')};
-      margin-bottom: ${(props) => (props.$opentitle ? '-0.75em' : '0')};
+      font-size: ${(props) => (props.$opentitle ? '1.25em' : '3.5em')};
+      margin-bottom: ${(props) => (props.$opentitle ? '-0.8em' : '0')};
     }
     p {
       font-size: ${(props) => (props.$opentitle ? '1em' : '1.5em')};
