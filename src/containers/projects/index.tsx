@@ -1,4 +1,6 @@
+import React from 'react'
 import InternalContent from '../../components/internalcontent'
+import Project from '../../components/project'
 import ToggleBtn from '../../components/togglebtn'
 import useGitRepo from '../../hooks/useGitRepo'
 import useInternalShowControler from '../../hooks/useInternalShowControler'
@@ -39,7 +41,13 @@ const Projects = ({ openabout }: { openabout: boolean }) => {
           <button onClick={() => setToggle(1)}>ver mais</button>
         </div>
         <div className="webprojects__projects">
-          {webProjects().map((m) => m)}
+          {webProjects.map((projectProps, i) => {
+            // return <Project key={i} name={projectProps.name} description={projectProps.description} techs={projectProps.techs} link={projectProps.link} github={projectProps.github}/>
+            return <React.Fragment key={i} >
+            <Project name={projectProps.name} description={projectProps.description} techs={projectProps.techs} link={projectProps.link} github={projectProps.github}/>
+            <div className='spacer' />
+            </React.Fragment>
+          })}
           <h2>code art</h2>
           {artProjects().map((m) => m)}
         </div>

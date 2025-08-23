@@ -19,19 +19,14 @@ export const ProjectStyled = styled.div`
     align-items: center;
     justify-content: center;
     p {
-      background-color: rgba(220, 230, 240);
       padding: 0 0.5em;
       border-radius: 0.25em 0.25em 0 0;
-      // border: 1px solid black;
-      // border-bottom: 2px solid rgba(220, 230, 240);
-      margin-bottom: -2px;
       font-size: 0.75em;
-      z-index: 1;
+      color: rgba(50, 50, 50);
     }
     &__container {
-      background-color: rgba(220, 230, 240);
-      border-radius: 0.25em;
-      // border: 1px solid black;
+      border: 1px solid;
+      border-image: linear-gradient(to top, rgba(150, 150, 150) 0.5em, transparent 0.5em) 1;
       padding: 0.25em;
       display: flex;
       align-items: center;
@@ -49,15 +44,16 @@ export const ProjectStyled = styled.div`
     height: fit-content;
     justify-content: space-around;
     align-items: center;
-    padding-top: 0.5em;
+    padding: 0.25em 0;
     font-size: 1.2em;
-    border-top: 1px solid rgba(220, 230, 240);
     &__btn {
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 0.25em 1em;
       text-decoration: none;
+      border: 1px solid rgba(150, 150, 150);
+      border-radius: 0.25em;
     }
   }
 `

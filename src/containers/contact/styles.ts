@@ -5,18 +5,21 @@ export const ContactStyled = styled.div<{ $openabout: boolean }>`
   margin: 0 auto;
   height: 100%;
   display: ${(props) => (props.$openabout ? 'grid' : 'none')};
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   gap: 1em;
   padding: 1em;
   align-items: center;
 
   .card {
     flex-direction: column;
-    justify-content: space-evenly;
-    background-color: transparent;
+    justify-content: space-around;
+    background-color: rgba(220, 230, 240);
+    border-radius: 0.25em;
     align-items: start;
-    max-width: 600px;
+    max-width: 400px;
+    height: 10em;
+    padding: 1em 2em;
     p {
       font-size: 1.25em;
     }

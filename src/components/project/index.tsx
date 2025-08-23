@@ -18,7 +18,7 @@ import styled from '../../assets/javascript/Styled-components.png'
 import threejs from '../../assets/javascript/Threejs.svg'
 import p5js from '../../assets/javascript/p5JS.svg'
 
-type ProjectProps = {
+export type ProjectProps = {
   name: string
   description: string
   techs: string[];
@@ -47,9 +47,9 @@ const techIcons: Record<string, string> = {
 };
 
 const Project = ({ ...props }: ProjectProps) => {
-  const logos = props.techs.map((tech) => {
+  const logos = props.techs.map((tech, i) => {
     const src = techIcons[tech.toLowerCase()];
-    return <img src={src} alt={`${tech} logo`} />
+    return <img key={i} src={src} alt={`${tech} logo`} />
   })
 
   return (
@@ -61,10 +61,10 @@ const Project = ({ ...props }: ProjectProps) => {
         {props.description}
       </p>
       <div className='logos'>
-        <p>tecnologias</p>
         <div className='logos__container'>
           {logos}
         </div>
+        <p>tecnologias</p>
       </div>
       <div className="links">
         {props.link ? (

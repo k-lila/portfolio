@@ -8,7 +8,7 @@ const Contact = ({ openabout }: { openabout: boolean }) => {
     <ContactStyled $openabout={open}>
       <InternalContent
         open={openInternal}
-        spancolumn={3}
+        spancolumn={1}
         spanrow={1}
         className="card"
       >

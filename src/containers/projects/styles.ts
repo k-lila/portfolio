@@ -56,7 +56,7 @@ export const ProjectsStyled = styled.div<{
       justify-content: center;
       padding-bottom: 0.75em;
       bottom: 0;
-      background: linear-gradient(to top, white 0%, white 2em, rgba(255, 255, 255, 0.2) 100%);
+      background: linear-gradient(to top, rgba(235, 245, 255) 0%, rgba(235, 245, 255) 3em, rgba(255, 255, 255) 3em, rgba(255, 255, 255, 0.2) 100%);
       opacity: 0;
       animation: ${(props) => (props.$toggle == 0 ? fadeIn : fadeOut)} 0.5s forwards;
       button {
