@@ -10,6 +10,6 @@ export const ContentContainerStyled = styled.section<{ $selected: string }>`
   overflow: hidden;
 
   @media (max-width: 480px) {
-  height: ${(props) => (props.$selected == 'projects' ? '85svh' : props.$selected == 'contact' ? '30vh' : 0)};
+    height: ${(props) => (props.$selected == 'projects' ? '85svh' : props.$selected == 'contact' ? '30vh' : 0)};
   }
 `

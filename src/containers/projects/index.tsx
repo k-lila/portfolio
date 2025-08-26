@@ -29,7 +29,7 @@ const Projects = ({ openabout }: { openabout: boolean }) => {
         spanrow={3}
       >
         <div className="projects__header">
-          <h2>Javascript</h2>
+          <h2>front-end</h2>
           <ToggleBtn
             btnNum={1}
             toggle={toggle}
@@ -42,7 +42,6 @@ const Projects = ({ openabout }: { openabout: boolean }) => {
         </div>
         <div className="webprojects__projects">
           {webProjects.map((projectProps, i) => {
-            // return <Project key={i} name={projectProps.name} description={projectProps.description} techs={projectProps.techs} link={projectProps.link} github={projectProps.github}/>
             return <React.Fragment key={i} >
             <Project name={projectProps.name} description={projectProps.description} techs={projectProps.techs} link={projectProps.link} github={projectProps.github}/>
             <div className='spacer' />
@@ -59,7 +58,7 @@ const Projects = ({ openabout }: { openabout: boolean }) => {
         spanrow={3}
       >
         <div className="projects__header">
-          <h2>Java</h2>
+          <h2>backend</h2>
           <ToggleBtn
             btnNum={2}
             toggle={toggle}
@@ -71,7 +70,12 @@ const Projects = ({ openabout }: { openabout: boolean }) => {
           <button onClick={() => setToggle(2)}>ver mais</button>
         </div>
         <div className="backendprojects__projects">
-          {backEndProjects().map((m) => m)}
+          {backEndProjects.map((projectProps, i) => {
+            return <React.Fragment key={i} >
+            <Project name={projectProps.name} description={projectProps.description} techs={projectProps.techs} link={projectProps.link} github={projectProps.github}/>
+            <div className='spacer' />
+            </React.Fragment>
+          })}
         </div>
       </InternalContent>
       <InternalContent
@@ -81,7 +85,7 @@ const Projects = ({ openabout }: { openabout: boolean }) => {
         spanrow={3}
       >
         <div className="projects__header">
-          <h2>repo</h2>
+          <h2>repositórios</h2>
           <ToggleBtn
             btnNum={3}
             toggle={toggle}

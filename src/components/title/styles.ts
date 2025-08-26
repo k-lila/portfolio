@@ -1,47 +1,54 @@
 import styled from 'styled-components'
 
-export const TitleStyled = styled.article<{ $opentitle: boolean }>`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 1000px;
+export const TitleStyled = styled.div<{ $open: string }>`
+  transition: all 0.3s ease-in;
+  position: relative;
+  max-width: 1400px;
+
 
   h1 {
-    transition: all 0.2s 0.1s ease-in;
-    font-size: ${(props) => (props.$opentitle ? '2em' : '5em')};
-    margin-bottom: ${(props) => (props.$opentitle ? '-20px' : '0')};
+    transform-origin: bottom left;
+    bottom: 0;
+    position: absolute;
+    transition: all 0.3s ease-in;
+    inline-size:  ${(props) => (props.$open == 'contact' ? '70%' : '80%')};
   }
   p {
-    transition: all 0.2s 0.1s ease-in;
-    margin-left: auto;
-    font-size: ${(props) => (props.$opentitle ? '1em' : '2em')};
-    margin-bottom: ${(props) => (props.$opentitle ? '0' : '1em')};
+    transform-origin: bottom right;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    transition: all 0.3s ease-in;
   }
 
   @media (max-width: 480px) {
-    padding: 0 1em;
+    width: calc(100% - 2em);
+    margin-top: 1em;
     h1 {
-      font-size: ${(props) => (props.$opentitle ? '1.25em' : '3.5em')};
-      margin-bottom: ${(props) => (props.$opentitle ? '-0.8em' : '0')};
+      font-size: ${(props) => (props.$open == '' ? '3em' : props.$open == 'projects' ? '1.5em' : '2em')};
     }
     p {
-      font-size: ${(props) => (props.$opentitle ? '1em' : '1.5em')};
-      margin-bottom: ${(props) => (props.$opentitle ? '-0.25em' : '0.5em')};
+      font-size: ${(props) => (props.$open == '' ? '1.5em' : props.$open == 'projects' ? '1em' : '1.25em')};
     }
   }
 
-  @media (min-width: 481px) and (max-width: 768px) {
-    width: 90vw;
-  }
-
-  @media (min-width: 769px) and (max-width: 1024px) {
-    width: 75vw;
-  }
-
-  @media (min-width: 1025px) and (max-width: 1440px) {
-    width: 75vw;
+  @media (min-width: 481px) and (max-width: 1440px) {
+    width: ${(props) => props.$open == '' ? '50vw' : props.$open == 'projects' ? '75vw' : '50vw'};
+    h1 {
+      font-size: ${(props) => (props.$open == '' ? '4.5em' : props.$open == 'projects' ? '2em' : '3em')};
+    }
+    p {
+      font-size: ${(props) => (props.$open == '' ? '2em' : props.$open == 'projects' ? '1.5em' : '1.5em')};
+    }
   }
 
   @media (min-width: 1441px) {
+    width: ${(props) => props.$open == '' ? '50vw' : props.$open == 'projects' ? '75vw' : '30vw'};
+    h1 {
+      font-size: ${(props) => (props.$open == '' ? '5em' : props.$open == 'projects' ? '2em' : '2.5em')};
+    }
+    p {
+      font-size: ${(props) => (props.$open == '' ? '2em' : props.$open == 'projects' ? '1.5em' : '1.75em')};
+    }
   }
 `

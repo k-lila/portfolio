@@ -76,6 +76,7 @@ export const ProjectsStyled = styled.div<{
         }
       }
     }
+
     .backendprojects {
       &__projects {
         overflow-y: auto;
@@ -138,12 +139,8 @@ export const ProjectsStyled = styled.div<{
     }
   }
   @media screen and (min-width: 481px) {
-    width: 90%;
+    width: 75vw;
     margin: 0 auto;
-    .backendprojects {
-      height: fit-content;
-      margin-top: 0;
-    }
     .projects {
       border-left: 2px solid rgba(0, 0, 0, 0.5);
       border-right: 2px solid rgba(0, 0, 0, 0.5);
@@ -155,4 +152,17 @@ export const ProjectsStyled = styled.div<{
         display: none;
       }
     }
+  }
+  @media (min-width: 481px) and (max-width: 1440px) and (min-height: 800px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+    .webprojects,
+    .backendprojects {
+      grid-row: span 2;
+      grid-column: span 1;
+    }
+    .repositories {
+      grid-column: span 2;
+    }
+  }
 `

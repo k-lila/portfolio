@@ -3,10 +3,10 @@ import { TitleStyled } from './styles'
 import { RootReducer } from '../../store'
 
 const Title = () => {
-  const menuState = useSelector((state: RootReducer) => state.menu)
+  const selected = useSelector((state: RootReducer) => state.menu.selected)
 
   return (
-    <TitleStyled $opentitle={menuState.selected != ''}>
+    <TitleStyled $open={selected}>
       <h1>Krishna Lila Palandi</h1>
       <p>desenvolvedor</p>
     </TitleStyled>
