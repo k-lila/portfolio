@@ -13,17 +13,34 @@ export const ContactStyled = styled.div<{ $openabout: boolean }>`
     background-color: rgba(220, 230, 240);
     border-radius: 0.25em;
     align-items: start;
-    width: 100%;
+    width: fit-content;
     height: 10em;
     padding: 1em 2em;
     margin-top: 0;
-    p {
-      font-size: 1.25em;
+
+    &__info {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      font-size: 1.5em;
+      text-decoration: underline;
+      i {
+        margin-right: 0.5em;
+      }
+      p {
+      }
     }
   }
 
   @media (max-width: 480px) {
     width: 90vw;
+    .card {
+    height: 8em;
+      padding: 0 1em;
+      &__info {
+        font-size: 1em;
+      }
+    }
   }
 
   @media (min-width: 481px) and (max-width: 1440px) {

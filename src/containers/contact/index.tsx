@@ -12,8 +12,14 @@ const Contact = ({ openabout }: { openabout: boolean }) => {
         spanrow={1}
         className="card"
       >
-        <p className="mail">krishnalilapalandi@gmail.com</p>
-        <p className="linkedin">linkedasdashdas</p>
+        <div className='card__info'>
+          <i className="bi bi-envelope"></i>
+          <p className="mail">krishnalilapalandi@gmail.com</p>
+        </div>
+        <div className='card__info'>
+          <i className="bi bi-linkedin"></i>
+          <p className="linkedin">linkedasdashdas</p>
+        </div>
       </InternalContent>
     </ContactStyled>
   )
