@@ -25,10 +25,10 @@ export const TitleStyled = styled.div<{ $open: string }>`
     width: calc(100% - 2em);
     margin-top: 1em;
     h1 {
-      font-size: ${(props) => (props.$open == '' ? '3em' : props.$open == 'projects' ? '1.5em' : '2em')};
+      font-size: ${(props) => (props.$open == '' ? '2.5em' : props.$open == 'projects' ? '1.25em' : '2em')};
     }
     p {
-      font-size: ${(props) => (props.$open == '' ? '1.5em' : props.$open == 'projects' ? '1em' : '1.25em')};
+      font-size: ${(props) => (props.$open == '' ? '1.25em' : props.$open == 'projects' ? '0.75em' : '1.25em')};
     }
   }
 
