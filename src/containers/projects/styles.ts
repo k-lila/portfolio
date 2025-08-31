@@ -56,14 +56,17 @@ export const ProjectsStyled = styled.div<{
       justify-content: center;
       padding-bottom: 0.75em;
       bottom: 0;
-      background: linear-gradient(to top, rgba(235, 245, 255) 0%, rgba(235, 245, 255) 3em, rgba(255, 255, 255) 3em, rgba(255, 255, 255, 0.2) 100%);
+      background: linear-gradient(to top, white 0%, white 3em, white 3em, rgba(255, 255, 255, 0.2) 100%);
       opacity: 0;
       animation: ${(props) => (props.$toggle == 0 ? fadeIn : fadeOut)} 0.5s forwards;
       button {
         font-size: 1.25em;
+        padding: 0.5em 1em;
         border: none;
+        border-radius: 0.25em;
         background-color: transparent;
         padding: 0.1em 0.5em;
+
       }
     }
   }
@@ -86,6 +89,22 @@ export const ProjectsStyled = styled.div<{
       &__projects {
         overflow-y: auto;
         width: 100%;
+      }
+      &__repo {
+        background-color: rgba(230, 240, 250);
+        margin: 0.75em 0.25em;
+        display: flex;
+        flex-direction: column;
+        padding: 0.5em;
+        p {
+          margin: 0.1em 0;
+        }
+        &__links {
+          display: flex;
+          align-items: center;
+          padding: 0.5em;
+          justify-content: space-around;
+        }
       }
     }
 
@@ -163,6 +182,14 @@ export const ProjectsStyled = styled.div<{
     }
     .repositories {
       grid-column: span 2;
+      &__projects {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      &__repo {
+
+      }
     }
   }
 `

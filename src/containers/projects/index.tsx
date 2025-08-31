@@ -103,7 +103,7 @@ const Projects = ({ openabout }: { openabout: boolean }) => {
             <div>{error}</div>
           ) : (
             repos.map((repositorio) => (
-              <li key={repositorio.id}>
+              <li key={repositorio.id} className='repositories__repo'>
                 <p>
                   <b>Nome: </b>
                   {repositorio.name}
@@ -116,7 +116,7 @@ const Projects = ({ openabout }: { openabout: boolean }) => {
                   <b>Último update: </b>
                   {splitDateTime(repositorio.updated_at)[0]}
                 </p>
-                <div>
+                <div className='repositories__repo__links'>
                   <a
                     target="_blank"
                     href={repositorio.svn_url}
