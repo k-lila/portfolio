@@ -12,4 +12,8 @@ export const GlobalStyle = createGlobalStyle`
     cursor: pointer;
   }
 
+  button:focus {
+    -webkit-tap-highlight-color: transparent;
+  }
+
 `
