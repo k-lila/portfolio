@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  background-color: ${(props) => props.theme.colors.secondary};
+  background-color: black;
   height: 100svh;
   padding: 1vmin;
   .view {
@@ -11,8 +11,8 @@ export const Container = styled.div`
     height: 100%;
     align-items: center;
     justify-content: center;
-    background-color: ${(props) => props.theme.colors.primary};
-    border-radius: ${(props) => props.theme.border.radius};
+    background-color: white;
+    border-radius: 1em;
   }
 
   @media (max-width: 480px) {

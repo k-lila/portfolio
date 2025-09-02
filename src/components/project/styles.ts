@@ -12,6 +12,25 @@ export const ProjectStyled = styled.div`
     line-height: 1.5em;
   }
 
+  .logo {
+    img {
+      cursor: pointer;
+    }
+    position: relative;
+    &__popup {
+      position: absolute;
+      top: -2em;
+      left: 0;
+    }
+  }
+
+  .logo__popup:hover {
+    top: 1em;
+  }
+
+
+
+
   .logos {
     margin: 1em;
     display: flex;

@@ -49,7 +49,7 @@ const techIcons: Record<string, string> = {
 const Project = ({ ...props }: ProjectProps) => {
   const logos = props.techs.map((tech, i) => {
     const src = techIcons[tech.toLowerCase()];
-    return <img key={i} src={src} alt={`${tech} logo`} />
+    return <img key={i} src={src} alt={`${tech} logo`} title={tech}/>
   })
 
   return (

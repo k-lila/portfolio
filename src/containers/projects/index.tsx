@@ -48,7 +48,12 @@ const Projects = ({ openabout }: { openabout: boolean }) => {
             </React.Fragment>
           })}
           <h2>code art</h2>
-          {artProjects().map((m) => m)}
+          {artProjects.map((projectProps, i) => {
+            return <React.Fragment key={i} >
+            <Project name={projectProps.name} description={projectProps.description} techs={projectProps.techs} link={projectProps.link} github={projectProps.github}/>
+            <div className='spacer' />
+            </React.Fragment>
+          })}
         </div>
       </InternalContent>
       <InternalContent
