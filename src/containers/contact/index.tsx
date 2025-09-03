@@ -14,11 +14,20 @@ const Contact = ({ openabout }: { openabout: boolean }) => {
       >
         <div className='card__info'>
           <i className="bi bi-envelope"></i>
-          <p className="mail">krishnalilapalandi@gmail.com</p>
+          <a href="mailto:krishnalilapalandi@gmail.com" className="mail">
+            krishnalilapalandi@gmail.com
+          </a>
         </div>
         <div className='card__info'>
           <i className="bi bi-linkedin"></i>
-          <p className="linkedin">linkedasdashdas</p>
+          <a
+            href="https://www.linkedin.com/in/krishna-lila-palandi/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="linkedin"
+          >
+              Linkedin
+          </a>
         </div>
       </InternalContent>
     </ContactStyled>

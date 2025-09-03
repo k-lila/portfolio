@@ -12,4 +12,9 @@ export const ContentContainerStyled = styled.section<{ $selected: string }>`
   @media (max-width: 480px) {
     height: ${(props) => (props.$selected == 'projects' ? '85svh' : props.$selected == 'contact' ? '30vh' : 0)};
   }
+
+  @media (min-width: 481px) and (max-width: 1440px) and (min-height: 500px) {
+    height: ${(props) => (props.$selected == 'projects' ? '70svh' : props.$selected == 'contact' ? '35vh' : 0)};
+  }
+
 `

@@ -3,7 +3,6 @@ import styled from 'styled-components'
 export const ContactStyled = styled.div<{ $openabout: boolean }>`
   width: 90%;
   margin: 0 auto;
-  height: 100%;
   display: ${(props) => (props.$openabout ? 'grid' : 'none')};
   padding: 1em;
 
@@ -14,7 +13,7 @@ export const ContactStyled = styled.div<{ $openabout: boolean }>`
     border-radius: 0.25em;
     align-items: start;
     width: fit-content;
-    height: 10em;
+    height: fit-content;
     padding: 1em 2em;
     margin-top: 0;
 
@@ -24,6 +23,7 @@ export const ContactStyled = styled.div<{ $openabout: boolean }>`
       align-items: center;
       font-size: 1.5em;
       text-decoration: underline;
+      margin: 1em 0;
       i {
         margin-right: 0.5em;
       }

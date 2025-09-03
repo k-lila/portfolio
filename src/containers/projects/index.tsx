@@ -63,7 +63,7 @@ const Projects = ({ openabout }: { openabout: boolean }) => {
         spanrow={3}
       >
         <div className="projects__header">
-          <h2>backend</h2>
+          <h2>back-end</h2>
           <ToggleBtn
             btnNum={2}
             toggle={toggle}
