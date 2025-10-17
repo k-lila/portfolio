@@ -2,10 +2,16 @@ import { ProjectProps } from '../../../components/project'
 
 const backEndProjects: ProjectProps[] = [
   {
-    name:"CRUD com JDBC",
-    description:"Java + JDBC + PostgreSQL + Junit",
-    techs:['java', 'postgresql', 'junit'],
-    github:"https://github.com/k-lila/crud_jdbc"
+    name: "Microsserviços",
+    description: "Spring + MongoDB + Eureka",
+    techs: ['java', 'mongodb', 'spring', 'docker'],
+    github: "https://github.com/k-lila/springcloud-microservices"
+  },
+  {
+    name:"Monolito",
+    description:"Java + Hibernate + JSF + WildFly",
+    techs:['java', 'postgresql'],
+    github:"https://github.com/k-lila/monolito-java"
   },
   {
     name:"CRUD com Hibernate",
@@ -14,10 +20,10 @@ const backEndProjects: ProjectProps[] = [
     github:"https://github.com/k-lila/CRUD_Hibernate"
   },
   {
-    name:"Monolito",
-    description:"Java + Hibernate + JSF + WildFly",
-    techs:['java', 'postgresql'],
-    github:"https://github.com/k-lila/monolito-java"
+    name:"CRUD com JDBC",
+    description:"Java + JDBC + PostgreSQL + Junit",
+    techs:['java', 'postgresql', 'junit'],
+    github:"https://github.com/k-lila/crud_jdbc"
   }
 ]
 
