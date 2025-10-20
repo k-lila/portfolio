@@ -11,14 +11,14 @@ function useShowControler() {
     if (selected == 'projects' && !openContact) {
       setTimeout(() => {
         setOpenProjects(true)
-      }, 200)
+      }, 300)
     } else {
       setOpenProjects(false)
     }
     if (selected == 'contact' && !openProjects) {
       setTimeout(() => {
         setOpenContact(true)
-      }, 200)
+      }, 300)
     } else {
       setOpenContact(false)
     }

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const MenuStyled = styled.div<{ $open: string, $animate: boolean }>`
+export const MenuStyled = styled.div<{ $open: string }>`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,65 +24,6 @@ export const MenuStyled = styled.div<{ $open: string, $animate: boolean }>`
       border-radius: 0.125em;
       }
     }
-
-  .btn-animated {
-    animation: ${(props) => props.$animate ? 'btnAnimation 0.75s forwards' : 'none'};
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: calc(100% - 1em);
-    left: calc(100% + 1em);
-    background: linear-gradient(to right, white, rgba(150, 160, 150), white);
-  }
-
-  .--delay {
-    animation-delay: 0.5s;
-  }
-
-  @keyframes btnAnimation {
-    0% {
-      top: calc(100% - 1px);
-      left: calc(100% + 1px);
-      background: linear-gradient(to right, white, rgba(150, 160, 150), white);
-    }
-    24% {
-      background: linear-gradient(to right, white, rgba(150, 160, 150), white);
-    }
-
-    25% {
-      top: calc(100% - 1px);
-      left: calc(-100% + 1px);
-      background: linear-gradient(to top, white, rgba(150, 160, 150), white);
-    }
-    49% {
-      background: linear-gradient(to top, white, rgba(150, 160, 150), white);
-    }
-
-    50% {
-      top: calc(-100% + 1px);
-      left: calc(-100% + 1px);
-      background: linear-gradient(to right, white, rgba(150, 160, 150), white);
-    }
-    74% {
-      background: linear-gradient(to right, white, rgba(150, 160, 150), white);
-    }
-    75% {
-      top: calc(-100% + 1px);
-      left: calc(100% - 2px);
-      background: linear-gradient(to top, white, rgba(150, 160, 150), white);
-    }
-    99% {
-      background: linear-gradient(to top, white, rgba(150, 160, 150), white);
-    }
-    100% {
-      top: calc(100% + 1px);
-      left: calc(100% - 2px);
-      background: linear-gradient(to top, white, rgba(150, 160, 150), white);
-    }
-  }
-
-
-
 
   @media (max-width: 480px) {
     width: 90vw;

@@ -14,7 +14,7 @@ function useInternalShowControler(openSection: boolean) {
       setOpenInternal(false)
       setTimeout(() => {
         setOpen(false)
-      }, 200)
+      }, 250)
     }
   }, [openSection])
 

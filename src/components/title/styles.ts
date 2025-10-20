@@ -25,7 +25,7 @@ export const TitleStyled = styled.div<{ $open: string }>`
     width: calc(100% - 2em);
     margin-top: 1em;
     h1 {
-      font-size: ${(props) => (props.$open == '' ? '2.5em' : props.$open == 'projects' ? '1.3em' : '2em')};
+      font-size: ${(props) => (props.$open == '' ? '2.75em' : props.$open == 'projects' ? '1.3em' : '2em')};
     }
     p {
       font-size: ${(props) => (props.$open == '' ? '1.25em' : props.$open == 'projects' ? '0.8em' : '1.25em')};
@@ -45,7 +45,7 @@ export const TitleStyled = styled.div<{ $open: string }>`
   @media (min-width: 1441px) {
     width: ${(props) => props.$open == '' ? '50vw' : props.$open == 'projects' ? '75vw' : '30vw'};
     h1 {
-      font-size: ${(props) => (props.$open == '' ? '5em' : props.$open == 'projects' ? '2em' : '2.5em')};
+      font-size: ${(props) => (props.$open == '' ? '4.5em' : props.$open == 'projects' ? '2em' : '2.5em')};
     }
     p {
       font-size: ${(props) => (props.$open == '' ? '2em' : props.$open == 'projects' ? '1.5em' : '1.75em')};
