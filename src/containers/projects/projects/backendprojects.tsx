@@ -8,7 +8,7 @@ const backEndProjects: ProjectProps[] = [
     github: "https://github.com/k-lila/springcloud-microservices"
   },
   {
-    name:"Monolito",
+    name:"Monolit0",
     description:"Java + Hibernate + JSF + WildFly",
     techs:['java', 'postgresql'],
     github:"https://github.com/k-lila/monolito-java"

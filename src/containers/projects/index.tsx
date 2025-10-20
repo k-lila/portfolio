@@ -8,7 +8,7 @@ import useToggle from '../../hooks/useToggle'
 import artProjects from './projects/artprojects'
 import backEndProjects from './projects/backendprojects'
 import webProjects from './projects/webprojects'
-import { ProjectsStyled } from './styles'
+import { Loading, ProjectsStyled } from './styles'
 
 const splitDateTime = (input: string) => {
   const [date, time] = input.split('T')
@@ -103,7 +103,13 @@ const Projects = ({ openabout }: { openabout: boolean }) => {
         </div>
         <div className="repositories__projects">
           {loading ? (
-            <div>loading</div>
+            <Loading>
+              <div>
+                <span />
+                <span />
+                <span />
+              </div>
+            </Loading>
           ) : error.length > 0 ? (
             <div>{error}</div>
           ) : (

@@ -89,6 +89,7 @@ export const ProjectsStyled = styled.div<{
       &__projects {
         overflow-y: auto;
         width: 100%;
+        height: 100%;
       }
       &__repo {
         background-color: rgba(230, 240, 250);
@@ -191,5 +192,51 @@ export const ProjectsStyled = styled.div<{
 
       }
     }
+  }
+`
+const loadingAnimation = keyframes`
+  0% {grid-template-columns: calc(50% - 0.5vmin) 1fr; grid-template-rows: calc(50% - 0.5vmin) 1fr;}
+  25% {grid-template-columns: calc(30% - 0.5vmin) 1fr; grid-template-rows: calc(30% - 0.5vmin) 1fr;}
+  50% {grid-template-columns: calc(30% - 0.5vmin) 1fr; grid-template-rows: calc(70% - 0.5vmin) 1fr;}
+  75% {grid-template-columns: calc(70% - 0.5vmin) 1fr; grid-template-rows: calc(70% - 0.5vmin) 1fr;}
+  100% {grid-template-columns: calc(50% - 0.5vmin) 1fr; grid-template-rows: calc(50% - 0.5vmin) 1fr}
+`
+
+export const Loading = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: span 2;
+  height: 100%;
+  div {
+    padding: 1vmin;
+    height: 15vmin;
+    width: 15vmin;
+    display: grid;
+    gap: 1vmin;
+    animation: ${loadingAnimation} 3s infinite;
+    > :nth-child(1) {
+      grid-row: 2 span;
+      background-color: #4a71c0;
+    }
+    > :nth-child(2) {
+      background-color: #ab3a2c;
+    }
+    > :nth-child(3) {
+      background-color: #f0d32d;
+    }
+  }
+  span {
+    background-color: white;
+  }
+  @media screen and (max-width: 767px) {
+    gap: 5vmin;
+    div {
+      height: 4em;
+      width: 4em;
+    }
+  }
+  @media screen and (min-width: 481px) and (max-width: 1440px) {
+    grid-column: span 3;
   }
 `
