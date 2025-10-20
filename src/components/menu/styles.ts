@@ -19,6 +19,7 @@ export const MenuStyled = styled.div<{ $open: string }>`
     position: relative;
     overflow: hidden;
     span {
+      transition: all 0.3s;
       font-size: ${(props) => (props.$open ? '2em' : '2.5em')};
       padding: 0 0.5em;
       border-radius: 0.125em;
