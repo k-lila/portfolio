@@ -3,7 +3,7 @@ import { ProjectProps } from '../../../components/project'
 const backEndProjects: ProjectProps[] = [
   {
     name: "memelândia",
-    description: "Projeto em microsserviços para gerenciamento de memes, feito com Java, Spring Cloud e MongoDB. Observabilidade implementada com Zipkin",
+    description: "projeto em microsserviços para gerenciamento de memes, feito com Java, Spring Cloud e MongoDB. Observabilidade implementada com Zipkin",
     techs: ['java', 'mongodb', 'spring', 'docker', 'swagger', 'zipkin'],
     github: "https://github.com/k-lila/memelandia"
   },
