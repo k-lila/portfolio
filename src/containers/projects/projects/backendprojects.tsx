@@ -2,26 +2,26 @@ import { ProjectProps } from '../../../components/project'
 
 const backEndProjects: ProjectProps[] = [
   {
-    name: "Microsserviços",
-    description: "Spring + MongoDB + Eureka",
-    techs: ['java', 'mongodb', 'spring', 'docker'],
+    name: "memelândia",
+    description: "Projeto em microsserviços para gerenciamento de memes, feito com Java, Spring Cloud e MongoDB. Observabilidade implementada com Zipkin",
+    techs: ['java', 'mongodb', 'spring', 'docker', 'swagger', 'zipkin'],
+    github: "https://github.com/k-lila/memelandia"
+  },
+  {
+    name: "microsserviços",
+    description: "uma aplicação em microsserviços com Spring Cloud que simula um pequeno sistema ERP. Possui os domínios de: clientes, produtos, estoque e vendas.",
+    techs: ['java', 'mongodb', 'spring', 'docker', 'swagger'],
     github: "https://github.com/k-lila/springcloud-microservices"
   },
   {
-    name:"Monolit0",
-    description:"Java + Hibernate + JSF + WildFly",
-    techs:['java', 'postgresql'],
-    github:"https://github.com/k-lila/monolito-java"
-  },
-  {
     name:"CRUD com Hibernate",
-    description:"Java + Hibernate + PostgreSQL + JUnit",
+    description:"CRUD com Java, driver JDBC, e Hibernate como ORM. Utiliza PostgreSQL como banco de dados.",
     techs:['java', 'postgresql', 'junit'],
     github:"https://github.com/k-lila/CRUD_Hibernate"
   },
   {
     name:"CRUD com JDBC",
-    description:"Java + JDBC + PostgreSQL + Junit",
+    description:"CRUD implementado somente com Java e driver JDBC. Utiliza PostgreSQL como banco de dados.",
     techs:['java', 'postgresql', 'junit'],
     github:"https://github.com/k-lila/crud_jdbc"
   }

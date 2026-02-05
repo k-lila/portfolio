@@ -13,23 +13,24 @@ export const ProjectStyled = styled.div`
   }
 
   .logo {
+    position: relative;
     img {
       cursor: pointer;
     }
-    position: relative;
     &__popup {
+      display: none;
       position: absolute;
-      top: -2em;
-      left: 0;
+      top: -1.15em;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(230, 240, 250);
+      padding: 0.1em 0.3em;
+      border-radius: 0.2em;
+    }
+    &:hover .logo__popup {
+      display: block;
     }
   }
-
-  .logo__popup:hover {
-    top: 1em;
-  }
-
-
-
 
   .logos {
     margin: 1em;

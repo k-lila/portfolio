@@ -17,6 +17,8 @@ import docker from '../../assets/tools/Docker.svg'
 import styled from '../../assets/javascript/Styled-components.png'
 import threejs from '../../assets/javascript/Threejs.svg'
 import p5js from '../../assets/javascript/p5JS.svg'
+import swagger from '../../assets/tools/Swagger.svg'
+import zipkin from '../../assets/tools/Zipkin.svg'
 
 export type ProjectProps = {
   name: string
@@ -43,13 +45,20 @@ const techIcons: Record<string, string> = {
   docker,
   styled,
   threejs,
-  p5js
+  p5js,
+  swagger,
+  zipkin
 };
 
 const Project = ({ ...props }: ProjectProps) => {
-  const logos = props.techs.map((tech, i) => {
+  const logos = props.techs.sort().map((tech, i) => {
     const src = techIcons[tech.toLowerCase()];
-    return <img key={i} src={src} alt={`${tech} logo`} title={tech}/>
+    return (
+    <div key={i} className='logo'>
+      <img src={src} alt={`${tech} logo`} title={tech}/>
+      <div className='logo__popup'>{tech}</div>
+    </div>
+    )
   })
 
   return (
