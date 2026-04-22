@@ -21,13 +21,12 @@ export const ContactStyled = styled.div<{ $openabout: boolean }>`
       width: 100%;
       display: flex;
       align-items: center;
+      justify-content: center;
       font-size: 1.5em;
       text-decoration: underline;
       margin: 1em 0;
-      i {
-        margin-right: 0.5em;
-      }
-      p {
+      img {
+        height: 1.25em;
       }
     }
   }

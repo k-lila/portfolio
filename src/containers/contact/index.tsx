@@ -1,6 +1,7 @@
 import InternalContent from '../../components/internalcontent'
 import useInternalShowControler from '../../hooks/useInternalShowControler'
 import { ContactStyled } from './styles'
+import linkedin from '../../assets/linkedin.png'
 
 const Contact = ({ openabout }: { openabout: boolean }) => {
   const { open, openInternal } = useInternalShowControler(openabout)
@@ -19,14 +20,13 @@ const Contact = ({ openabout }: { openabout: boolean }) => {
           </a>
         </div>
         <div className='card__info'>
-          <i className="bi bi-linkedin"></i>
           <a
             href="https://www.linkedin.com/in/krishna-lila-palandi/"
             target="_blank"
             rel="noopener noreferrer"
             className="linkedin"
           >
-              Linkedin
+            <img src={linkedin} alt="LinkedIn" className="linkedin-icon" />
           </a>
         </div>
       </InternalContent>
