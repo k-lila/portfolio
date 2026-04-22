@@ -10,7 +10,7 @@ const webProjects: ProjectProps[] = [
   },
   {
     name:"portfólio",
-    description:"esta página foi construída utilizando algumas ferramentas básicas de React, como React-Router-DOM e Styled Components. Seu layout foi inspirado na obra de Piet Mondrian.",
+    description:"esta página foi construída utilizando algumas ferramentas básicas de React, como Redux e Styled Components. Seu layout é minimalista e responsivo.",
     techs:['typescript', 'html', 'css', 'react', 'redux', 'styled'],
     link: "https://k-lila-portfolio.vercel.app/",
     github:"https://github.com/k-lila/portfolio"
