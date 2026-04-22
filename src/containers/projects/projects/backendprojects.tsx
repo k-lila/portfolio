@@ -2,6 +2,12 @@ import { ProjectProps } from '../../../components/project'
 
 const backEndProjects: ProjectProps[] = [
   {
+    name: "user-service",
+    description: "projeto em microsserviços para gerenciamento de usuários, feito com Java, Spring Cloud, MongoDB e Redis. Autenticação e autorização implementadas com OAuth2. Camada de cache e limitador de acesso com Redis. Observabilidade implementada com Zipkin",
+    techs: ['java', 'mongodb', 'spring', 'docker', 'swagger', 'zipkin', 'redis'],
+    github: "https://github.com/k-lila/user-service"
+  },
+  {
     name: "memelândia",
     description: "projeto em microsserviços para gerenciamento de memes, feito com Java, Spring Cloud e MongoDB. Observabilidade implementada com Zipkin",
     techs: ['java', 'mongodb', 'spring', 'docker', 'swagger', 'zipkin'],

@@ -19,6 +19,7 @@ import threejs from '../../assets/javascript/Threejs.svg'
 import p5js from '../../assets/javascript/p5JS.svg'
 import swagger from '../../assets/tools/Swagger.svg'
 import zipkin from '../../assets/tools/Zipkin.svg'
+import redis from '../../assets/database/Redis.svg'
 
 export type ProjectProps = {
   name: string
@@ -47,7 +48,8 @@ const techIcons: Record<string, string> = {
   threejs,
   p5js,
   swagger,
-  zipkin
+  zipkin,
+  redis
 };
 
 const Project = ({ ...props }: ProjectProps) => {
